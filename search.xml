@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>git 常用命令</title>
+    <url>/2022/08/15/git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><p>touch 创建<br>git init 创建仓库<br>git status 查看状态<br>git add .  全部到缓存区<br>git commit -m “注释”<br>git log    查看仓库<br>git-log    间接查看<br>git reset –hard commitID  回退<br>git reflog     操作记录<br>git branch   查看分支<br>git branch 名字<br>git checkout 名字  切换分之<br>git checkout -b  创建并切换<br>git merge 名字   合并分之<br>git branch -d b1 检查删除<br>git branch -D b1 强制删除<br>ssh-keygen -t rsa   创建ssh<br>cat ～/.ssh/id_rsa.pub 查看ssh<br>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#101;&#101;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#101;&#101;&#46;&#x63;&#x6f;&#109;</a> 查看链接的ssh    <br>git remote add 仓库名字（origin） 地址   链接仓库    <br>git remote rm 仓库名称<br>git remote    查看链接的仓库<br>git push -f –set-upstream 远端仓库 本地分支名:远端分支名      可以简化后面三个        -f:强制推送  –set-upstream :链接远端分支<br>git branch -vv 查看链接的远端分支<br>git clone ssh地址 本地目录<br>git fetch 《remote name》 《branch name》<br>git pull 《remote name》 《branch name》</p>
+<p>仓库地址 <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#101;&#101;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#101;&#101;&#x2e;&#x63;&#x6f;&#109;</a>:yyl1546139844/yyl.git</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>html</title>
+    <url>/2022/08/15/html-css/</url>
+    <content><![CDATA[<h1 id="html-css"><a href="#html-css" class="headerlink" title="html/css"></a>html/css</h1><h2 id="一-文本属性"><a href="#一-文本属性" class="headerlink" title="一.文本属性"></a>一.文本属性</h2><p>文字整体为上边距，下边距和文本。</p>
+<h2 id="二-元素显示模式"><a href="#二-元素显示模式" class="headerlink" title="二.元素显示模式"></a>二.元素显示模式</h2><h6 id="行内元素，块元素，行内块元素"><a href="#行内元素，块元素，行内块元素" class="headerlink" title="行内元素，块元素，行内块元素"></a>行内元素，块元素，行内块元素</h6><p>行内元素：<code>&lt;h1&gt;&lt;p&gt;&lt;div&gt;&lt;ul&gt;&lt;ol&gt;&lt;li&gt;</code></p>
+<p>块元素:<code>&lt;a&gt;&lt;strong&gt;&lt;b&gt;&lt;em&gt;&lt;del&gt;&lt;s&gt;&lt;ins&gt;&lt;u&gt;&lt;span&gt;</code></p>
+<p>行内块元素：<code>&lt;img/&gt;&lt;input/&gt;&lt;td&gt;</code></p>
+<h2 id="三-盒子模型"><a href="#三-盒子模型" class="headerlink" title="三.盒子模型"></a>三.盒子模型</h2><p>外边距，边框，内边距</p>
+<p><img src="C:\Users\15461\AppData\Roaming\Typora\typora-user-images\image-20220724224745320.png" alt="image-20220724224745320"></p>
+<h2 id="四-布局方式"><a href="#四-布局方式" class="headerlink" title="四.布局方式"></a>四.布局方式</h2><p>普通流，浮动，定位</p>
+<h3 id="1-普通流"><a href="#1-普通流" class="headerlink" title="1.普通流"></a>1.普通流</h3><h3 id="2-浮动"><a href="#2-浮动" class="headerlink" title="2.浮动"></a>2.浮动</h3><h6 id="特性：脱标，一行显示，行内块元素特性，搭配标准流的父元素。"><a href="#特性：脱标，一行显示，行内块元素特性，搭配标准流的父元素。" class="headerlink" title="特性：脱标，一行显示，行内块元素特性，搭配标准流的父元素。"></a>特性：脱标，一行显示，行内块元素特性，搭配标准流的父元素。</h6><h6 id="浮动的元素会压住后面的标准流，但不会影响前面的标准流。"><a href="#浮动的元素会压住后面的标准流，但不会影响前面的标准流。" class="headerlink" title="浮动的元素会压住后面的标准流，但不会影响前面的标准流。"></a>浮动的元素会压住后面的标准流，但不会影响前面的标准流。</h6><h6 id="清除浮动：clear：both-可以让父元素检测到高度"><a href="#清除浮动：clear：both-可以让父元素检测到高度" class="headerlink" title="清除浮动：clear：both  可以让父元素检测到高度"></a>清除浮动：<code>clear：both</code>  可以让父元素检测到高度</h6><p>1.额外标签法：在最后一个浮动元素后加<code>&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;</code></p>
+<p>2.父元素添加<code>overflow：</code></p>
+<p>3.after伪元素</p>
+<p>4.双伪元素</p>
+<h3 id="3-定位"><a href="#3-定位" class="headerlink" title="3.定位"></a>3.定位</h3><h4 id="1-定位模式"><a href="#1-定位模式" class="headerlink" title="1.定位模式"></a>1.定位模式</h4><p><img src="C:\Users\15461\AppData\Roaming\Typora\typora-user-images\image-20220724224538160.png" alt="image-20220724224538160"></p>
+<p><img src="C:\Users\15461\AppData\Roaming\Typora\typora-user-images\image-20220724224506465.png" alt="image-20220724224506465"></p>
+<h5 id="1-静态定位"><a href="#1-静态定位" class="headerlink" title="1.静态定位"></a>1.静态定位</h5><p><img src="C:\Users\15461\AppData\Roaming\Typora\typora-user-images\image-20220725173118099.png" alt="image-20220725173118099"></p>
+<h5 id="2-相对定位"><a href="#2-相对定位" class="headerlink" title="2.相对定位"></a>2.相对定位</h5><p><img src="C:\Users\15461\AppData\Roaming\Typora\typora-user-images\image-20220725173251854.png" alt="image-20220725173251854"></p>
+<h5 id="3-绝对定位"><a href="#3-绝对定位" class="headerlink" title="3.绝对定位"></a>3.绝对定位</h5><p><img src="C:\Users\15461\AppData\Roaming\Typora\typora-user-images\image-20220725173538177.png" alt="image-20220725173538177"></p>
+<h5 id="4-子绝父相"><a href="#4-子绝父相" class="headerlink" title="4.子绝父相"></a>4.子绝父相</h5><p><img src="C:\Users\15461\AppData\Roaming\Typora\typora-user-images\image-20220725174011240.png" alt="image-20220725174011240"></p>
+<h5 id="5-固定定位"><a href="#5-固定定位" class="headerlink" title="5.固定定位"></a>5.固定定位</h5><p><img src="C:\Users\15461\AppData\Roaming\Typora\typora-user-images\image-20220725174932655.png" alt="image-20220725174932655"></p>
+]]></content>
+      <categories>
+        <category>html</category>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+</search>
