@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>leetcode - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="yyl,"> 
+    <meta name="description" content="1.给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，数,"> 
+    <meta name="author" content="yyl"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="leetcode - Hexo"/>
+    <meta name="twitter:description" content="1.给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，数,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="leetcode - Hexo"/>
+    <meta property="og:description" content="1.给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，数,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">leetcode</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">leetcode</h1>
+        <div class="stuff">
+            <span>八月 16, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%88%B7%E9%A2%98/" rel="tag">刷题</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>1.给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class count &#123;</span><br><span class="line">    public:</span><br><span class="line">    vector&lt;int&gt;twosum(vector&lt;int&gt; nums,int target)&#123;</span><br><span class="line">        int i,j;</span><br><span class="line">        i=0;j=1;</span><br><span class="line">        for(;i&lt;nums.size()-1;i++)&#123;</span><br><span class="line">            j=i+1;</span><br><span class="line">            for(;j&lt;nums.size();j++;</span><br><span class="line">                if (nums[i]+nums[j]==target)</span><br><span class="line">                 return &#123;i,j&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        return&#123;0,0&#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">    vector&lt;int&gt; nums=&#123;2,9,5,2,3&#125;;</span><br><span class="line">    count y ;</span><br><span class="line">    vector&lt;int&gt; v=y.twosum(nums,5);</span><br><span class="line">    cout&lt;&lt;&#x27;&#123;&#x27;&lt;&lt;v[0]&lt;&lt;&#x27;,&#x27;&lt;&lt;v[1]&lt;&lt;&#x27;&#125;&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。</p>
+<p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p>
+<p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">struct ListNode&#123;</span><br><span class="line">    int val;</span><br><span class="line">    ListNode *next;</span><br><span class="line">    ListNode() : val(0),next(nullptr)&#123;&#125;</span><br><span class="line">    ListNode(int x) :val(x),next(nullptr)&#123;&#125;</span><br><span class="line">    ListNode (int x,ListNode *next) : val(x) ,next(next)&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">class Solution &#123;</span><br><span class="line">    public:</span><br><span class="line">    ListNode* addTwoNumbers(ListNode*l1,ListNode*l2)&#123;</span><br><span class="line">        int y =0;</span><br><span class="line">        ListNode*p=l1;</span><br><span class="line">        ListNode*q=l2;</span><br><span class="line">        ListNode*head =new ListNode;</span><br><span class="line">        head -&gt;val =0 ;</span><br><span class="line">        head -&gt;next =nullptr;</span><br><span class="line">        ListNode*m=head;</span><br><span class="line">        while (q!=nullptr &amp;&amp; p!=nullptr) &#123;</span><br><span class="line">        if (p-&gt;val + q-&gt;val+y &gt;=10 )&#123;</span><br><span class="line"></span><br><span class="line">        int a = p-&gt;val + q-&gt;val+y;</span><br><span class="line">        a =a%10;</span><br><span class="line">        ListNode*n = new ListNode;</span><br><span class="line">        n-&gt;val=a;</span><br><span class="line">        n-&gt;next=nullptr;</span><br><span class="line">        m-&gt;next=n;</span><br><span class="line">        m=n;</span><br><span class="line">        y =1;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">        q=q-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">        int a = p-&gt;val + q-&gt;val+y;</span><br><span class="line">        ListNode*n = new ListNode;</span><br><span class="line">        n-&gt;val=a;</span><br><span class="line">        n-&gt;next=nullptr;</span><br><span class="line">        m-&gt;next=n;</span><br><span class="line">        m=n;</span><br><span class="line">        y=0;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">        q=q-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (p==nullptr &amp;&amp;q!=nullptr)&#123;</span><br><span class="line">           while(q!=nullptr)&#123;</span><br><span class="line">                if (q-&gt;val+y &gt;=10 )&#123;</span><br><span class="line">    </span><br><span class="line">                 int a = q-&gt;val+y;</span><br><span class="line">                 a =a%10;</span><br><span class="line">                 ListNode*n = new ListNode;</span><br><span class="line">                 n-&gt;val=a;</span><br><span class="line">                 n-&gt;next=nullptr;</span><br><span class="line">                 m-&gt;next=n;</span><br><span class="line">                 m=n;</span><br><span class="line">                 y =1;</span><br><span class="line">                 q=q-&gt;next;</span><br><span class="line">                                        &#125;</span><br><span class="line">                else &#123;</span><br><span class="line">    </span><br><span class="line">                 int a = q-&gt;val+y;</span><br><span class="line">                 ListNode*n = new ListNode;</span><br><span class="line">                 n-&gt;val=a;</span><br><span class="line">                 n-&gt;next=nullptr;</span><br><span class="line">                 m-&gt;next=n;</span><br><span class="line">                 m=n;</span><br><span class="line">                 y=0;</span><br><span class="line">                 q=q-&gt;next;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        else if (p!=nullptr &amp;&amp; q==nullptr) &#123;</span><br><span class="line">                   while(p!=nullptr)&#123;</span><br><span class="line">                if (p-&gt;val+y &gt;=10 )&#123;</span><br><span class="line">    </span><br><span class="line">                 int a = p-&gt;val+y;</span><br><span class="line">                 a =a%10;</span><br><span class="line">                 ListNode*n = new ListNode;</span><br><span class="line">                 n-&gt;val=a;</span><br><span class="line">                 n-&gt;next=nullptr;</span><br><span class="line">                 m-&gt;next=n;</span><br><span class="line">                 m=n;</span><br><span class="line">                 y =1;</span><br><span class="line">                 p=p-&gt;next;</span><br><span class="line">                                        &#125;</span><br><span class="line">                else &#123;</span><br><span class="line">    </span><br><span class="line">                 int a = p-&gt;val+y;</span><br><span class="line">                 ListNode*n = new ListNode;</span><br><span class="line">                 n-&gt;val=a;</span><br><span class="line">                 n-&gt;next=nullptr;</span><br><span class="line">                 m-&gt;next=n;</span><br><span class="line">                 m=n;</span><br><span class="line">                 y=0;</span><br><span class="line">                 p=p-&gt;next;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">        if(y==0)</span><br><span class="line">        &#123;&#125;</span><br><span class="line">        else &#123;</span><br><span class="line">                int a = y;</span><br><span class="line">                 ListNode*n = new ListNode;</span><br><span class="line">                 n-&gt;val=a;</span><br><span class="line">                 n-&gt;next=nullptr;</span><br><span class="line">                 m-&gt;next=n;</span><br><span class="line">                 m=n;</span><br><span class="line">                 y=0;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    if (y==1) &#123;</span><br><span class="line">                    int a = y;</span><br><span class="line">                 ListNode*n = new ListNode;</span><br><span class="line">                 n-&gt;val=a;</span><br><span class="line">                 n-&gt;next=nullptr;</span><br><span class="line">                 m-&gt;next=n;</span><br><span class="line">                 m=n;</span><br><span class="line">                 y=0;</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;&#125;</span><br><span class="line">        </span><br><span class="line">    ListNode*l3=head-&gt;next;</span><br><span class="line">    delete(head);</span><br><span class="line">    return l3;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>3.给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class Solution &#123;</span><br><span class="line">    public:</span><br><span class="line">     int lengthOfLongestSubstring(string s) &#123;</span><br><span class="line">        int i=0 ,j=1,n=1,m=0;</span><br><span class="line">        while (s[i]!=&#x27;\0&#x27;) &#123;</span><br><span class="line">        while (s[j]!=&#x27;\0&#x27;) &#123;</span><br><span class="line">         int a=0;</span><br><span class="line">        for (int l=i; l&lt;j; l++) &#123;</span><br><span class="line">        if (s[l]==s[j]) &#123;</span><br><span class="line">        a =0;</span><br><span class="line">        break;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">        a =1;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (a==1) &#123;</span><br><span class="line">        n=n+1;</span><br><span class="line">        j++;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">        break;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (n&gt;m) &#123;</span><br><span class="line">        m=n;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">        if (j==i) &#123;</span><br><span class="line">        j=j+1;</span><br><span class="line">        n=1;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">        n=n-1;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return m;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">       </span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>4.给定两个大小分别为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的 中位数 。</p>
+<p>算法的时间复杂度应该为 O(log (m+n)) 。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class Solution &#123;</span><br><span class="line">  public:</span><br><span class="line">    double findMedianSortedArrays(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) &#123;</span><br><span class="line">        vector&lt;int&gt; sum;</span><br><span class="line">        int m = 0, n = 0;</span><br><span class="line">        if ((nums1.size() + nums2.size()) % 2 == 0) &#123;</span><br><span class="line">            for (int i = 0; i &lt;= (nums1.size() + nums2.size()) / 2; i++) &#123;</span><br><span class="line">                if (m &lt; nums1.size() &amp;&amp; n &lt; nums2.size()) &#123;</span><br><span class="line">                    if (nums1[m] &gt; nums2[n]) &#123;</span><br><span class="line">                        sum.push_back(nums2[n]);</span><br><span class="line">                        n++;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        sum.push_back(nums1[m]);</span><br><span class="line">                        m++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else if (m &lt; nums1.size() &amp;&amp; n &gt;= nums2.size()) &#123;</span><br><span class="line">                    sum.push_back(nums1[m]);</span><br><span class="line">                    m++;</span><br><span class="line">                &#125; else if (m &gt;= nums1.size() &amp;&amp; n &lt; nums2.size()) &#123;</span><br><span class="line">                    sum.push_back(nums2[n]);</span><br><span class="line">                    n++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            return (double((sum[sum.size() - 1] + sum[sum.size() - 2])) / 2);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line"></span><br><span class="line">            for (int i = 0; i &lt; (nums1.size() + nums2.size() + 1) / 2; i++) &#123;</span><br><span class="line">                if (m &lt; nums1.size() &amp;&amp; n &lt; nums2.size()) &#123;</span><br><span class="line">                    if (nums1[m] &gt; nums2[n]) &#123;</span><br><span class="line">                        sum.push_back(nums2[n]);</span><br><span class="line">                        n++;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        sum.push_back(nums1[m]);</span><br><span class="line">                        m++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else if (m &lt; nums1.size() &amp;&amp; n &gt;= nums2.size()) &#123;</span><br><span class="line">                    sum.push_back(nums1[m]);</span><br><span class="line">                    m++;</span><br><span class="line">                &#125; else if (n &lt; nums2.size() &amp;&amp; m &gt;= nums1.size()) &#123;</span><br><span class="line">                    sum.push_back(nums2[n]);</span><br><span class="line">                    n++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            return (sum[(nums1.size() + nums2.size() - 1) / 2]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>5.给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    string longestPalindrome(string s) &#123;</span><br><span class="line">        string s1=s;</span><br><span class="line">        string ls;</span><br><span class="line">        for (int i=0; s[i]!=&#x27;\0&#x27;; i++) &#123;</span><br><span class="line">        for (int j=i+ls.size(); j&lt;s.size()&amp;&amp;s[j]!=&#x27;\0&#x27;; j++) &#123;</span><br><span class="line">        int n=i;</span><br><span class="line">        memcpy(&amp;s1[0],&amp;s[i], j-i+1);</span><br><span class="line">        int m=j-i;</span><br><span class="line">        n=i;</span><br><span class="line">        for (; m&gt;=0; ) &#123;</span><br><span class="line">        if (s1[m]==s[n]) &#123;n++;m--;&#125;</span><br><span class="line">        else &#123;break;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">       if (m&gt;=0) &#123;&#125;</span><br><span class="line">       else  &#123;</span><br><span class="line">        if (ls.size()&lt;j-i+1) &#123;</span><br><span class="line">           ls=s1.substr(0,j-i+1);</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return ls;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
