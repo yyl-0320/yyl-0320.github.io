@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>git-命令</title>
-    <url>/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
+    <url>./yyl1546139844/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><p>touch 创建<br>git init 创建仓库<br>git status 查看状态<br>git add .  全部到缓存区<br>git commit -m “注释”<br>git log    查看仓库<br>git-log    间接查看<br>git reset –hard commitID  回退<br>git reflog     操作记录<br>git branch   查看分支<br>git branch 名字<br>git checkout 名字  切换分之<br>git checkout -b  创建并切换<br>git merge 名字   合并分之<br>git branch -d b1 检查删除<br>git branch -D b1 强制删除<br>ssh-keygen -t rsa   创建ssh<br>cat ～/.ssh/id_rsa.pub 查看ssh<br>ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#x65;&#101;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#x65;&#101;&#46;&#x63;&#x6f;&#109;</a> 查看链接的ssh    <br>git remote add 仓库名字（origin） 地址   链接仓库    <br>git remote rm 仓库名称<br>git remote    查看链接的仓库<br>git push -f –set-upstream 远端仓库 本地分支名:远端分支名      可以简化后面三个        -f:强制推送  –set-upstream :链接远端分支<br>git branch -vv 查看链接的远端分支<br>git clone ssh地址 本地目录<br>git fetch 《remote name》 《branch name》<br>git pull 《remote name》 《branch name》</p>
 <p>仓库地址 <a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#x65;&#x65;&#46;&#99;&#x6f;&#109;">&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#x65;&#x65;&#46;&#99;&#x6f;&#109;</a>:yyl1546139844/yyl.git</p>
 ]]></content>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title>html</title>
-    <url>/2022/08/15/html/</url>
+    <url>./yyl1546139844/2022/08/15/html/</url>
     <content><![CDATA[<h1 id="html-css"><a href="#html-css" class="headerlink" title="html/css"></a>html/css</h1><h2 id="一-文本属性"><a href="#一-文本属性" class="headerlink" title="一.文本属性"></a>一.文本属性</h2><p>文字整体为上边距，下边距和文本。</p>
 <h2 id="二-元素显示模式"><a href="#二-元素显示模式" class="headerlink" title="二.元素显示模式"></a>二.元素显示模式</h2><h3 id="行内元素，块元素，行内块元素"><a href="#行内元素，块元素，行内块元素" class="headerlink" title="行内元素，块元素，行内块元素"></a>行内元素，块元素，行内块元素</h3><p>行内元素：<code>&lt;h1&gt;&lt;p&gt;&lt;div&gt;&lt;ul&gt;&lt;ol&gt;&lt;li&gt;</code></p>
 <p>块元素:<code>&lt;a&gt;&lt;strong&gt;&lt;b&gt;&lt;em&gt;&lt;del&gt;&lt;s&gt;&lt;ins&gt;&lt;u&gt;&lt;span&gt;</code></p>
@@ -48,7 +48,7 @@
   </entry>
   <entry>
     <title>运行命令</title>
-    <url>/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
+    <url>./yyl1546139844/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="win-r"><a href="#win-r" class="headerlink" title="win + r"></a>win + r</h1><p>gpedit.msc 本地组策略编辑器</p>
 <p>regedit 注册表编辑器</p>
 <p>shell：文件夹   打开</p>
@@ -64,7 +64,7 @@
   </entry>
   <entry>
     <title>leetcode</title>
-    <url>/2022/08/16/leetcode/</url>
+    <url>./yyl1546139844/2022/08/16/leetcode/</url>
     <content><![CDATA[<h5 id="1-两数相加"><a href="#1-两数相加" class="headerlink" title="1.两数相加"></a>1.两数相加</h5><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。你可以按任意顺序返回答案。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class count &#123;</span><br><span class="line">    public:</span><br><span class="line">    vector&lt;int&gt;twosum(vector&lt;int&gt; nums,int target)&#123;</span><br><span class="line">        int i,j;</span><br><span class="line">        i=0;j=1;</span><br><span class="line">        for(;i&lt;nums.size()-1;i++)&#123;</span><br><span class="line">            j=i+1;</span><br><span class="line">            for(;j&lt;nums.size();j++;</span><br><span class="line">                if (nums[i]+nums[j]==target)</span><br><span class="line">                 return &#123;i,j&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        return&#123;0,0&#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">    vector&lt;int&gt; nums=&#123;2,9,5,2,3&#125;;</span><br><span class="line">    count y ;</span><br><span class="line">    vector&lt;int&gt; v=y.twosum(nums,5);</span><br><span class="line">    cout&lt;&lt;&#x27;&#123;&#x27;&lt;&lt;v[0]&lt;&lt;&#x27;,&#x27;&lt;&lt;v[1]&lt;&lt;&#x27;&#125;&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
