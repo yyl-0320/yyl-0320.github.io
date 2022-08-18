@@ -2,9 +2,9 @@
 <search>
   <entry>
     <title>git-命令</title>
-    <url>/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><p>touch 创建<br>git init 创建仓库<br>git status 查看状态<br>git add .  全部到缓存区<br>git commit -m “注释”<br>git log    查看仓库<br>git-log    间接查看<br>git reset –hard commitID  回退<br>git reflog     操作记录<br>git branch   查看分支<br>git branch 名字<br>git checkout 名字  切换分之<br>git checkout -b  创建并切换<br>git merge 名字   合并分之<br>git branch -d b1 检查删除<br>git branch -D b1 强制删除<br>ssh-keygen -t rsa   创建ssh<br>cat ～/.ssh/id_rsa.pub 查看ssh<br>ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#101;&#101;&#46;&#x63;&#111;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#101;&#101;&#46;&#x63;&#111;&#109;</a> 查看链接的ssh    <br>git remote add 仓库名字（origin） 地址   链接仓库    <br>git remote rm 仓库名称<br>git remote    查看链接的仓库<br>git push -f –set-upstream 远端仓库 本地分支名:远端分支名      可以简化后面三个        -f:强制推送  –set-upstream :链接远端分支<br>git branch -vv 查看链接的远端分支<br>git clone ssh地址 本地目录<br>git fetch 《remote name》 《branch name》<br>git pull 《remote name》 《branch name》</p>
-<p>仓库地址 <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#101;&#101;&#46;&#x63;&#x6f;&#109;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#101;&#101;&#46;&#x63;&#x6f;&#109;</a>:yyl1546139844/yyl.git</p>
+    <url>./yyl1546139844/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><p>touch 创建<br>git init 创建仓库<br>git status 查看状态<br>git add .  全部到缓存区<br>git commit -m “注释”<br>git log    查看仓库<br>git-log    间接查看<br>git reset –hard commitID  回退<br>git reflog     操作记录<br>git branch   查看分支<br>git branch 名字<br>git checkout 名字  切换分之<br>git checkout -b  创建并切换<br>git merge 名字   合并分之<br>git branch -d b1 检查删除<br>git branch -D b1 强制删除<br>ssh-keygen -t rsa   创建ssh<br>cat ～/.ssh/id_rsa.pub 查看ssh<br>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#105;&#116;&#x65;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#105;&#116;&#x65;&#x65;&#x2e;&#99;&#111;&#x6d;</a> 查看链接的ssh    <br>git remote add 仓库名字（origin） 地址   链接仓库    <br>git remote rm 仓库名称<br>git remote    查看链接的仓库<br>git push -f –set-upstream 远端仓库 本地分支名:远端分支名      可以简化后面三个        -f:强制推送  –set-upstream :链接远端分支<br>git branch -vv 查看链接的远端分支<br>git clone ssh地址 本地目录<br>git fetch 《remote name》 《branch name》<br>git pull 《remote name》 《branch name》</p>
+<p>仓库地址 <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x65;&#101;&#46;&#99;&#111;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x65;&#101;&#46;&#99;&#111;&#109;</a>:yyl1546139844/yyl.git</p>
 ]]></content>
       <categories>
         <category>git</category>
@@ -15,13 +15,13 @@
   </entry>
   <entry>
     <title>html</title>
-    <url>/2022/08/15/html/</url>
+    <url>./yyl1546139844/2022/08/15/html/</url>
     <content><![CDATA[<h1 id="html-css"><a href="#html-css" class="headerlink" title="html/css"></a>html/css</h1><h2 id="一-文本属性"><a href="#一-文本属性" class="headerlink" title="一.文本属性"></a>一.文本属性</h2><p>文字整体为上边距，下边距和文本。</p>
 <h2 id="二-元素显示模式"><a href="#二-元素显示模式" class="headerlink" title="二.元素显示模式"></a>二.元素显示模式</h2><h3 id="行内元素，块元素，行内块元素"><a href="#行内元素，块元素，行内块元素" class="headerlink" title="行内元素，块元素，行内块元素"></a>行内元素，块元素，行内块元素</h3><p>行内元素：<code>&lt;h1&gt;&lt;p&gt;&lt;div&gt;&lt;ul&gt;&lt;ol&gt;&lt;li&gt;</code></p>
 <p>块元素:<code>&lt;a&gt;&lt;strong&gt;&lt;b&gt;&lt;em&gt;&lt;del&gt;&lt;s&gt;&lt;ins&gt;&lt;u&gt;&lt;span&gt;</code></p>
 <p>行内块元素：<code>&lt;img/&gt;&lt;input/&gt;&lt;td&gt;</code></p>
 <h2 id="三-盒子模型"><a href="#三-盒子模型" class="headerlink" title="三.盒子模型"></a>三.盒子模型</h2><p>外边距，边框，内边距</p>
-<p><img src="/2022/08/15/html/image-20220724224745320.png" alt="image-20220724224745320"></p>
+<p><img src="./yyl1546139844/2022/08/15/html/image-20220724224745320.png" alt="image-20220724224745320"></p>
 <h2 id="四-布局方式"><a href="#四-布局方式" class="headerlink" title="四.布局方式"></a>四.布局方式</h2><p>普通流，浮动，定位</p>
 <h3 id="1-普通流"><a href="#1-普通流" class="headerlink" title="1.普通流"></a>1.普通流</h3><h3 id="2-浮动"><a href="#2-浮动" class="headerlink" title="2.浮动"></a>2.浮动</h3><p>特性：脱标，一行显示，行内块元素特性，搭配标准流的父元素。</p>
 <p> 浮动的元素会压住后面的标准流，但不会影响前面的标准流。</p>
@@ -30,13 +30,13 @@
 <p>2.父元素添加<code>overflow：</code></p>
 <p>3.after伪元素</p>
 <p>4.双伪元素</p>
-<h3 id="3-定位"><a href="#3-定位" class="headerlink" title="3.定位"></a>3.定位</h3><h4 id="1-定位模式"><a href="#1-定位模式" class="headerlink" title="1.定位模式"></a>1.定位模式</h4><p><img src="/2022/08/15/html/image-20220724224538160.png" alt="image-20220724224538160"></p>
-<p><img src="/2022/08/15/html/image-20220724224506465.png" alt="image-20220724224506465"></p>
-<h5 id="1-静态定位"><a href="#1-静态定位" class="headerlink" title="1.静态定位"></a>1.静态定位</h5><p><img src="/2022/08/15/html/image-20220725173118099.png" alt="image-20220725173118099"></p>
-<h5 id="2-相对定位"><a href="#2-相对定位" class="headerlink" title="2.相对定位"></a>2.相对定位</h5><p><img src="/2022/08/15/html/image-20220725173251854.png" alt="image-20220725173251854"></p>
-<h5 id="3-绝对定位"><a href="#3-绝对定位" class="headerlink" title="3.绝对定位"></a>3.绝对定位</h5><p><img src="/2022/08/15/html/image-20220725173538177.png" alt="image-20220725173538177"></p>
-<h5 id="4-子绝父相"><a href="#4-子绝父相" class="headerlink" title="4.子绝父相"></a>4.子绝父相</h5><p><img src="/2022/08/15/html/image-20220725174011240.png" alt="image-20220725174011240"></p>
-<h5 id="5-固定定位"><a href="#5-固定定位" class="headerlink" title="5.固定定位"></a>5.固定定位</h5><p><img src="/2022/08/15/html/image-20220725174932655.png"></p>
+<h3 id="3-定位"><a href="#3-定位" class="headerlink" title="3.定位"></a>3.定位</h3><h4 id="1-定位模式"><a href="#1-定位模式" class="headerlink" title="1.定位模式"></a>1.定位模式</h4><p><img src="./yyl1546139844/2022/08/15/html/image-20220724224538160.png" alt="image-20220724224538160"></p>
+<p><img src="./yyl1546139844/2022/08/15/html/image-20220724224506465.png" alt="image-20220724224506465"></p>
+<h5 id="1-静态定位"><a href="#1-静态定位" class="headerlink" title="1.静态定位"></a>1.静态定位</h5><p><img src="./yyl1546139844/2022/08/15/html/image-20220725173118099.png" alt="image-20220725173118099"></p>
+<h5 id="2-相对定位"><a href="#2-相对定位" class="headerlink" title="2.相对定位"></a>2.相对定位</h5><p><img src="./yyl1546139844/2022/08/15/html/image-20220725173251854.png" alt="image-20220725173251854"></p>
+<h5 id="3-绝对定位"><a href="#3-绝对定位" class="headerlink" title="3.绝对定位"></a>3.绝对定位</h5><p><img src="./yyl1546139844/2022/08/15/html/image-20220725173538177.png" alt="image-20220725173538177"></p>
+<h5 id="4-子绝父相"><a href="#4-子绝父相" class="headerlink" title="4.子绝父相"></a>4.子绝父相</h5><p><img src="./yyl1546139844/2022/08/15/html/image-20220725174011240.png" alt="image-20220725174011240"></p>
+<h5 id="5-固定定位"><a href="#5-固定定位" class="headerlink" title="5.固定定位"></a>5.固定定位</h5><p><img src="./yyl1546139844/2022/08/15/html/image-20220725174932655.png"></p>
 ]]></content>
       <categories>
         <category>html</category>
@@ -47,8 +47,92 @@
       </tags>
   </entry>
   <entry>
+    <title>博客搭建</title>
+    <url>./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h3 id="Hexo零基础搭建个人博客"><a href="#Hexo零基础搭建个人博客" class="headerlink" title="Hexo零基础搭建个人博客"></a>Hexo零基础搭建个人博客</h3><p>Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress<br>插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有<br>数百个主题和插件。</p>
+<h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>1、安装Node.js<br>直接到官网上下载安装即可<a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<p>Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)<br>Node自带npm<br>2、安装Git<br>Windows：下载并安装 <a href="https://git-scm.com/download/win">git</a>.<br>Mac：使用 Homebrew, <a href="https://www.macports.org/">MacPorts</a> 或者下载 安装程序。<br>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code><br>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.png"></p>
+<p>npm下载慢的话也可以下载淘宝下载源cnpm</p>
+<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<h4 id="二、开始安装Hexo"><a href="#二、开始安装Hexo" class="headerlink" title="二、开始安装Hexo"></a>二、开始安装Hexo</h4><p>1、安装hexo(cd进入到你要创立博客的文件内)<br><code>npm install -g hexo-cli</code><br><code>或者</code><br><code>cnpm install -g hexo-cli</code><br>安装完成可输入hexo -v查看版本</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/2.png"></p>
+<p>2、初始化hexo，新建存储博客的文件夹<br><code>hexo init myblog</code></p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/3.png"></p>
+<p>3、进入文件夹，安装一下npm<br>cd myblog<br>npm install<br>可以看到我们的hexo站点就已经安装好了，接下来就可以直接启动他了</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/4.png"></p>
+<p>4、启动服务站点<br><code>hexo g</code><br><code>hexo server</code></p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/5.png"></p>
+<p>访问<a href="http://localhost:4000/">http://localhost:4000/</a> 至此hero就搭建好了。可以在本地访问了</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/6.png"></p>
+<h4 id="三、Gitee上建站访问"><a href="#三、Gitee上建站访问" class="headerlink" title="三、Gitee上建站访问"></a>三、Gitee上建站访问</h4><p>可在github或者gitee上建站，gitee国内访问快一些</p>
+<p>1、新建仓库<br>仓库名和路径格式必须是：用户名 只有这样，将来要部署到Gite e page的时候，才会被识别.</p>
+<p>2、将hexo博客站点上传到gitee上<br>这里需要安装一个hexo的上传插件deploy-git</p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>3、修改hexo配置文件指定仓库路径<br>可在文件夹中直接打开文件，也可通过vim直接编辑</p>
+<p>找到Deployment加上（注意空格）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: 你的仓库路径</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/7.png"></p>
+<p>在URL中找到url地址改为<a href="https://gitee.com/XXX/XXX.git">https://gitee.com/XXX/XXX.git</a>     XXX为你的用户名</p>
+<p>在url 下面添加 <code>root: ./XXX</code>     XXX为你的用户名</p>
+<p>4、推送hexo站点文件<br>之后就可以推送博客站点到gitee上了</p>
+<p>推送命令<br><code>hexo d</code><br>扩展：</p>
+<p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
+<p>推送中会要求输入gitee的用户名和密码（如果不想每次都输可以<a href="yyl1546139844/2022/08/18/%E9%85%8D%E7%BD%AEssh/" title="配置ssh">配置ssh</a>，我这里就不做演示了）</p>
+<p>然后就可以看到gitee上有推上来的文件了</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/8.png"></p>
+<p>5、配置Pages服务<br>目前我们站点还无法访问需要开启Gitee Pages（gitee需要开启，github不需要）</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png"></p>
+<p>审核通过启动我们就可以访问啦。</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/10.png"></p>
+<p>gitee上传新文件之后，需要手动更新一下，更新后的页面才会生效</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png"></p>
+<p>多说一句：如果觉得这个访问路径太长了，我们可以去买一个域名，将该路径绑定到域名上，即可通过域名访问了。</p>
+<h4 id="四、GitHub上建站访问"><a href="#四、GitHub上建站访问" class="headerlink" title="四、GitHub上建站访问"></a>四、GitHub上建站访问</h4><p>在gitee上建站发现有限制条件，所有也可以采用github建站的方式。</p>
+<p>步骤和gitee一样。</p>
+<p>1、新建guthub仓库<br>仓库名称限制了为你的：用户名+.github.io</p>
+<p>2、安装hexo上传插件<br><code>npm install hexo-deployer-git --save</code><br>3、修改hexo配置文件指定仓库路径<br>可在文件夹中直接打开文件，也可通过vim直接编辑</p>
+<p><code>vim _config.yml #找到Deploymentdeploy:  type: git  repo: 你的github仓库路径  branch: master</code><br><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/12.png"></p>
+<p>4、推送站点到github<br><code>推送命令hexo d</code><br>推送过程中需要输入你的github用户名和密码。但是在2021年8月14日开始github官方就加强安全访问。不能通过原有账号密码git访问，密码需要用官方的token或者采用ssh公私钥访问。否则会出现鉴权失败（用户名密码错误）</p>
+<p>解决方式就是获取token，登录github设置setting-&gt;Developer Settings-&gt;Prosonal access tokens 创建一个新token。然后就可以拿这个token当密码输入了。用户名和token输入后，上传成功。</p>
+<p>建议使用<a href="yyl1546139844/2022/08/18/%E9%85%8D%E7%BD%AEssh/" title="配置ssh">配置ssh</a></p>
+<h4 id="5、尝试访问"><a href="#5、尝试访问" class="headerlink" title="5、尝试访问"></a>5、尝试访问</h4><p>输入你的仓库名称,即可访问成功。</p>
+<p><a href="https://xxx.github.io/">https://XXX.github.io/</a></p>
+<h4 id="五、更换主题"><a href="#五、更换主题" class="headerlink" title="五、更换主题"></a>五、更换主题</h4><p>到GitHub上搜索hexo主题或者hero自带的主题<a href="https://hexo.io/themes/%E3%80%82">https://hexo.io/themes/。</a></p>
+<p>1、找一个喜欢的。</p>
+<p>按照各自的主题文档上面一步步操作即可。</p>
+<p>一般步骤：</p>
+<p>1、下载解压2、放到主题包themes文件夹下面3、在hero配置文件_config.yml中修改为喜欢主题的名字4、hero server启动即可访问</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/13.png"></p>
+<h4 id="六、更新仓库"><a href="#六、更新仓库" class="headerlink" title="六、更新仓库"></a>六、更新仓库</h4><p>本地调试完之后。就可以更新到github上了</p>
+<p>//清理hexo clean//构建静态文件hexo g//上传至仓库hexo d</p>
+<h4 id="七、写文章"><a href="#七、写文章" class="headerlink" title="七、写文章"></a>七、写文章</h4><p>在站点文件夹中打开 git ，输入hexo new 博客名称。hexo会在source文件夹下_posts的创建一个markdowm的文件。这就是你要编写的文章。</p>
+<p>在上传更新到github上立马能够查看到。</p>
+<p>//清理hexo clean//构建静态文件hexo g//上传至仓库(上传报错多位网络原因，多上传几次即可)hexo d</p>
+<p>草稿箱<br>很多时候我们需要先写成草稿，而暂时不发布出去。draft page就可以满足我们的要求，我们的网站上是看不到草稿文件的。</p>
+<p>//新建草稿文件hexo new draft b//预览草稿文件hexo server –draft//发布草稿hexo publish b</p>
+<h4 id="八、新建页面"><a href="#八、新建页面" class="headerlink" title="八、新建页面"></a>八、新建页面</h4><p>有时我们不满足主题自由的一些页面，希望自己添加一些页面。</p>
+<p>我们可以新建页面,新建页面则会在hexo的source中新建该页面文件并生成md文件，这就是你要编辑的博客页了。</p>
+<p><code>hexo new page &quot;resouces&quot;</code></p>
+<p>然后打开主题的配置文件_config.yml，在菜单属性menu中的添加如下（注意不是Hexo的配置文件）</p>
+<p>将页面路径联接到页面上去</p>
+<p>菜单自定义名称：/生成的页面名称</p>
+<p><img src="./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/14.png"></p>
+<p>当我们点击资源时后会跳转到我们自定义的博客页了</p>
+<h4 id="九、常见问题"><a href="#九、常见问题" class="headerlink" title="九、常见问题"></a>九、常见问题</h4><h5 id="1-文章插入图片"><a href="#1-文章插入图片" class="headerlink" title="1.文章插入图片"></a>1.文章插入图片</h5><p>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true<br>安装插件:<code>npm install https://github.com/CodeFalling/hexo-asset-image -- save</code><br>运行hexo n “XXXXXX”,生成XXXXX.md博文时就会在/source/_posts目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。<br>添加图片:在想添加的位置写入<code>![](图片名字),例如![](1.png)</code>。</p>
+<h5 id="2-文章内跳转另一篇文章"><a href="#2-文章内跳转另一篇文章" class="headerlink" title="2.文章内跳转另一篇文章"></a>2.文章内跳转另一篇文章</h5><p><code>&#123;%post_link 文章名称(不加后缀) 显示文字%&#125;</code></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>leetcode</title>
-    <url>/2022/08/16/leetcode/</url>
+    <url>./yyl1546139844/2022/08/16/leetcode/</url>
     <content><![CDATA[<h5 id="1-两数相加"><a href="#1-两数相加" class="headerlink" title="1.两数相加"></a>1.两数相加</h5><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。你可以按任意顺序返回答案。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class count &#123;</span><br><span class="line">    public:</span><br><span class="line">    vector&lt;int&gt;twosum(vector&lt;int&gt; nums,int target)&#123;</span><br><span class="line">        int i,j;</span><br><span class="line">        i=0;j=1;</span><br><span class="line">        for(;i&lt;nums.size()-1;i++)&#123;</span><br><span class="line">            j=i+1;</span><br><span class="line">            for(;j&lt;nums.size();j++;</span><br><span class="line">                if (nums[i]+nums[j]==target)</span><br><span class="line">                 return &#123;i,j&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        return&#123;0,0&#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">    vector&lt;int&gt; nums=&#123;2,9,5,2,3&#125;;</span><br><span class="line">    count y ;</span><br><span class="line">    vector&lt;int&gt; v=y.twosum(nums,5);</span><br><span class="line">    cout&lt;&lt;&#x27;&#123;&#x27;&lt;&lt;v[0]&lt;&lt;&#x27;,&#x27;&lt;&lt;v[1]&lt;&lt;&#x27;&#125;&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -80,92 +164,8 @@
       </tags>
   </entry>
   <entry>
-    <title>博客搭建</title>
-    <url>/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h3 id="Hexo零基础搭建个人博客"><a href="#Hexo零基础搭建个人博客" class="headerlink" title="Hexo零基础搭建个人博客"></a>Hexo零基础搭建个人博客</h3><p>Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress<br>插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有<br>数百个主题和插件。</p>
-<h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>1、安装Node.js<br>直接到官网上下载安装即可<a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
-<p>Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)<br>Node自带npm<br>2、安装Git<br>Windows：下载并安装 <a href="https://git-scm.com/download/win">git</a>.<br>Mac：使用 Homebrew, <a href="https://www.macports.org/">MacPorts</a> 或者下载 安装程序。<br>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code><br>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.png"></p>
-<p>npm下载慢的话也可以下载淘宝下载源cnpm</p>
-<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
-<h4 id="二、开始安装Hexo"><a href="#二、开始安装Hexo" class="headerlink" title="二、开始安装Hexo"></a>二、开始安装Hexo</h4><p>1、安装hexo(cd进入到你要创立博客的文件内)<br><code>npm install -g hexo-cli</code><br><code>或者</code><br><code>cnpm install -g hexo-cli</code><br>安装完成可输入hexo -v查看版本</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/2.png"></p>
-<p>2、初始化hexo，新建存储博客的文件夹<br><code>hexo init myblog</code></p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/3.png"></p>
-<p>3、进入文件夹，安装一下npm<br>cd myblog<br>npm install<br>可以看到我们的hexo站点就已经安装好了，接下来就可以直接启动他了</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/4.png"></p>
-<p>4、启动服务站点<br><code>hexo g</code><br><code>hexo server</code></p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/5.png"></p>
-<p>访问<a href="http://localhost:4000/">http://localhost:4000/</a> 至此hero就搭建好了。可以在本地访问了</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/6.png"></p>
-<h4 id="三、Gitee上建站访问"><a href="#三、Gitee上建站访问" class="headerlink" title="三、Gitee上建站访问"></a>三、Gitee上建站访问</h4><p>可在github或者gitee上建站，gitee国内访问快一些</p>
-<p>1、新建仓库<br>仓库名和路径格式必须是：用户名 只有这样，将来要部署到Gite e page的时候，才会被识别.</p>
-<p>2、将hexo博客站点上传到gitee上<br>这里需要安装一个hexo的上传插件deploy-git</p>
-<p><code>npm install hexo-deployer-git --save</code></p>
-<p>3、修改hexo配置文件指定仓库路径<br>可在文件夹中直接打开文件，也可通过vim直接编辑</p>
-<p>找到Deployment加上（注意空格）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: 你的仓库路径</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/7.png"></p>
-<p>在URL中找到url地址改为<a href="https://gitee.com/XXX/XXX.git">https://gitee.com/XXX/XXX.git</a>     XXX为你的用户名</p>
-<p>在url 下面添加 <code>root: ./XXX</code>     XXX为你的用户名</p>
-<p>4、推送hexo站点文件<br>之后就可以推送博客站点到gitee上了</p>
-<p>推送命令<br><code>hexo d</code><br>扩展：</p>
-<p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
-<p>推送中会要求输入gitee的用户名和密码（如果不想每次都输可以<a href="/2022/08/18/%E9%85%8D%E7%BD%AEssh/" title="配置ssh">配置ssh</a>，我这里就不做演示了）</p>
-<p>然后就可以看到gitee上有推上来的文件了</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/8.png"></p>
-<p>5、配置Pages服务<br>目前我们站点还无法访问需要开启Gitee Pages（gitee需要开启，github不需要）</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png"></p>
-<p>审核通过启动我们就可以访问啦。</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/10.png"></p>
-<p>gitee上传新文件之后，需要手动更新一下，更新后的页面才会生效</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png"></p>
-<p>多说一句：如果觉得这个访问路径太长了，我们可以去买一个域名，将该路径绑定到域名上，即可通过域名访问了。</p>
-<h4 id="四、GitHub上建站访问"><a href="#四、GitHub上建站访问" class="headerlink" title="四、GitHub上建站访问"></a>四、GitHub上建站访问</h4><p>在gitee上建站发现有限制条件，所有也可以采用github建站的方式。</p>
-<p>步骤和gitee一样。</p>
-<p>1、新建guthub仓库<br>仓库名称限制了为你的：用户名+.github.io</p>
-<p>2、安装hexo上传插件<br><code>npm install hexo-deployer-git --save</code><br>3、修改hexo配置文件指定仓库路径<br>可在文件夹中直接打开文件，也可通过vim直接编辑</p>
-<p><code>vim _config.yml #找到Deploymentdeploy:  type: git  repo: 你的github仓库路径  branch: master</code><br><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/12.png"></p>
-<p>4、推送站点到github<br><code>推送命令hexo d</code><br>推送过程中需要输入你的github用户名和密码。但是在2021年8月14日开始github官方就加强安全访问。不能通过原有账号密码git访问，密码需要用官方的token或者采用ssh公私钥访问。否则会出现鉴权失败（用户名密码错误）</p>
-<p>解决方式就是获取token，登录github设置setting-&gt;Developer Settings-&gt;Prosonal access tokens 创建一个新token。然后就可以拿这个token当密码输入了。用户名和token输入后，上传成功。</p>
-<p>建议使用<a href="/2022/08/18/%E9%85%8D%E7%BD%AEssh/" title="配置ssh">配置ssh</a></p>
-<h4 id="5、尝试访问"><a href="#5、尝试访问" class="headerlink" title="5、尝试访问"></a>5、尝试访问</h4><p>输入你的仓库名称,即可访问成功。</p>
-<p><a href="https://xxx.github.io/">https://XXX.github.io/</a></p>
-<h4 id="五、更换主题"><a href="#五、更换主题" class="headerlink" title="五、更换主题"></a>五、更换主题</h4><p>到GitHub上搜索hexo主题或者hero自带的主题<a href="https://hexo.io/themes/%E3%80%82">https://hexo.io/themes/。</a></p>
-<p>1、找一个喜欢的。</p>
-<p>按照各自的主题文档上面一步步操作即可。</p>
-<p>一般步骤：</p>
-<p>1、下载解压2、放到主题包themes文件夹下面3、在hero配置文件_config.yml中修改为喜欢主题的名字4、hero server启动即可访问</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/13.png"></p>
-<h4 id="六、更新仓库"><a href="#六、更新仓库" class="headerlink" title="六、更新仓库"></a>六、更新仓库</h4><p>本地调试完之后。就可以更新到github上了</p>
-<p>//清理hexo clean//构建静态文件hexo g//上传至仓库hexo d</p>
-<h4 id="七、写文章"><a href="#七、写文章" class="headerlink" title="七、写文章"></a>七、写文章</h4><p>在站点文件夹中打开 git ，输入hexo new 博客名称。hexo会在source文件夹下_posts的创建一个markdowm的文件。这就是你要编写的文章。</p>
-<p>在上传更新到github上立马能够查看到。</p>
-<p>//清理hexo clean//构建静态文件hexo g//上传至仓库(上传报错多位网络原因，多上传几次即可)hexo d</p>
-<p>草稿箱<br>很多时候我们需要先写成草稿，而暂时不发布出去。draft page就可以满足我们的要求，我们的网站上是看不到草稿文件的。</p>
-<p>//新建草稿文件hexo new draft b//预览草稿文件hexo server –draft//发布草稿hexo publish b</p>
-<h4 id="八、新建页面"><a href="#八、新建页面" class="headerlink" title="八、新建页面"></a>八、新建页面</h4><p>有时我们不满足主题自由的一些页面，希望自己添加一些页面。</p>
-<p>我们可以新建页面,新建页面则会在hexo的source中新建该页面文件并生成md文件，这就是你要编辑的博客页了。</p>
-<p><code>hexo new page &quot;resouces&quot;</code></p>
-<p>然后打开主题的配置文件_config.yml，在菜单属性menu中的添加如下（注意不是Hexo的配置文件）</p>
-<p>将页面路径联接到页面上去</p>
-<p>菜单自定义名称：/生成的页面名称</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/14.png"></p>
-<p>当我们点击资源时后会跳转到我们自定义的博客页了</p>
-<h4 id="九、常见问题"><a href="#九、常见问题" class="headerlink" title="九、常见问题"></a>九、常见问题</h4><h5 id="1-文章插入图片"><a href="#1-文章插入图片" class="headerlink" title="1.文章插入图片"></a>1.文章插入图片</h5><p>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true<br>安装插件:<code>npm install https://github.com/CodeFalling/hexo-asset-image -- save</code><br>运行hexo n “XXXXXX”,生成XXXXX.md博文时就会在/source/_posts目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。<br>添加图片:在想添加的位置写入<code>![](图片名字),例如![](1.png)</code>。</p>
-<h5 id="2-文章内跳转另一篇文章"><a href="#2-文章内跳转另一篇文章" class="headerlink" title="2.文章内跳转另一篇文章"></a>2.文章内跳转另一篇文章</h5><p><code>&#123;%post_link 文章名称(不加后缀) 显示文字%&#125;</code></p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>运行命令</title>
-    <url>/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
+    <url>./yyl1546139844/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="win-r"><a href="#win-r" class="headerlink" title="win + r"></a>win + r</h1><p>gpedit.msc 本地组策略编辑器</p>
 <p>regedit 注册表编辑器</p>
 <p>shell：文件夹   打开</p>
@@ -181,7 +181,7 @@
   </entry>
   <entry>
     <title>配置ssh</title>
-    <url>/2022/08/18/%E9%85%8D%E7%BD%AEssh/</url>
+    <url>./yyl1546139844/2022/08/18/%E9%85%8D%E7%BD%AEssh/</url>
     <content><![CDATA[<p>1.生成ssh公钥</p>
 <p><code>ssh-keygen -t rsa</code></p>
 <p>回车</p>
