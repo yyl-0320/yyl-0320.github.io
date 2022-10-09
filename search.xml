@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>git-命令</title>
-    <url>./yyl1546139844/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
+    <url>/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><p>touch 创建<br>git init 创建仓库<br>git status 查看状态<br>git add .  全部到缓存区<br>git commit -m “注释”<br>git log    查看仓库<br>git-log    间接查看<br>git reset –hard commitID  回退<br>git reflog     操作记录<br>git branch   查看分支<br>git branch 名字<br>git checkout 名字  切换分之<br>git checkout -b  创建并切换<br>git merge 名字   合并分之<br>git branch -d b1 检查删除<br>git branch -D b1 强制删除<br>ssh-keygen -t rsa   创建ssh<br>cat ～/.ssh/id_rsa.pub 查看ssh<br>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#105;&#116;&#x65;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#105;&#116;&#x65;&#x65;&#x2e;&#99;&#111;&#x6d;</a> 查看链接的ssh    <br>git remote add 仓库名字（origin） 地址   链接仓库    <br>git remote rm 仓库名称<br>git remote    查看链接的仓库<br>git push -f –set-upstream 远端仓库 本地分支名:远端分支名      可以简化后面三个        -f:强制推送  –set-upstream :链接远端分支<br>git branch -vv 查看链接的远端分支<br>git clone ssh地址 本地目录<br>git fetch 《remote name》 《branch name》<br>git pull 《remote name》 《branch name》</p>
 <p>仓库地址 <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x65;&#101;&#46;&#99;&#111;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x65;&#101;&#46;&#99;&#111;&#109;</a>:yyl1546139844/yyl.git</p>
 ]]></content>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title>html</title>
-    <url>./yyl1546139844/2022/08/15/html/</url>
+    <url>/2022/08/15/html/</url>
     <content><![CDATA[<h1 id="html-css"><a href="#html-css" class="headerlink" title="html/css"></a>html/css</h1><h2 id="一-文本属性"><a href="#一-文本属性" class="headerlink" title="一.文本属性"></a>一.文本属性</h2><p>文字整体为上边距，下边距和文本。</p>
 <h2 id="二-元素显示模式"><a href="#二-元素显示模式" class="headerlink" title="二.元素显示模式"></a>二.元素显示模式</h2><h3 id="行内元素，块元素，行内块元素"><a href="#行内元素，块元素，行内块元素" class="headerlink" title="行内元素，块元素，行内块元素"></a>行内元素，块元素，行内块元素</h3><p>行内元素：<code>&lt;h1&gt;&lt;p&gt;&lt;div&gt;&lt;ul&gt;&lt;ol&gt;&lt;li&gt;</code></p>
 <p>块元素:<code>&lt;a&gt;&lt;strong&gt;&lt;b&gt;&lt;em&gt;&lt;del&gt;&lt;s&gt;&lt;ins&gt;&lt;u&gt;&lt;span&gt;</code></p>
@@ -48,7 +48,7 @@
   </entry>
   <entry>
     <title>博客搭建</title>
-    <url>./yyl1546139844/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <url>/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h3 id="Hexo零基础搭建个人博客"><a href="#Hexo零基础搭建个人博客" class="headerlink" title="Hexo零基础搭建个人博客"></a>Hexo零基础搭建个人博客</h3><p>Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress<br>插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有<br>数百个主题和插件。</p>
 <h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>1、安装Node.js<br>直接到官网上下载安装即可<a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
 <p>Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)<br>Node自带npm<br>2、安装Git<br>Windows：下载并安装 <a href="https://git-scm.com/download/win">git</a>.<br>Mac：使用 Homebrew, <a href="https://www.macports.org/">MacPorts</a> 或者下载 安装程序。<br>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code><br>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></p>
@@ -131,7 +131,7 @@
   </entry>
   <entry>
     <title>leetcode</title>
-    <url>./yyl1546139844/2022/08/16/leetcode/</url>
+    <url>/2022/08/16/leetcode/</url>
     <content><![CDATA[<h5 id="1-两数相加"><a href="#1-两数相加" class="headerlink" title="1.两数相加"></a>1.两数相加</h5><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。你可以按任意顺序返回答案。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">count</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt;<span class="built_in">twosum</span>(vector&lt;<span class="type">int</span>&gt; nums,<span class="type">int</span> target)&#123;</span><br><span class="line">        <span class="type">int</span> i,j;</span><br><span class="line">        i=<span class="number">0</span>;j=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(;i&lt;nums.<span class="built_in">size</span>()<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            j=i+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(;j&lt;nums.<span class="built_in">size</span>();j++;</span><br><span class="line">                <span class="keyword">if</span> (nums[i]+nums[j]==target)</span><br><span class="line">                 <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>&#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>() &#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; nums=&#123;<span class="number">2</span>,<span class="number">9</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">    count y ;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v=y.<span class="built_in">twosum</span>(nums,<span class="number">5</span>);</span><br><span class="line">    cout&lt;&lt;<span class="string">&#x27;&#123;&#x27;</span>&lt;&lt;v[<span class="number">0</span>]&lt;&lt;<span class="string">&#x27;,&#x27;</span>&lt;&lt;v[<span class="number">1</span>]&lt;&lt;<span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -164,7 +164,7 @@
   </entry>
   <entry>
     <title>运行命令</title>
-    <url>./yyl1546139844/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
+    <url>/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="win-r"><a href="#win-r" class="headerlink" title="win + r"></a>win + r</h1><p>gpedit.msc 本地组策略编辑器</p>
 <p>regedit 注册表编辑器</p>
 <p>shell：文件夹   打开</p>
@@ -181,7 +181,7 @@
   </entry>
   <entry>
     <title>配置ssh</title>
-    <url>./yyl1546139844/2022/08/18/%E9%85%8D%E7%BD%AEssh/</url>
+    <url>/2022/08/18/%E9%85%8D%E7%BD%AEssh/</url>
     <content><![CDATA[<p>1.生成ssh公钥</p>
 <p><code>ssh-keygen -t rsa</code></p>
 <p>回车</p>
@@ -203,7 +203,7 @@
   </entry>
   <entry>
     <title>JAVA</title>
-    <url>./yyl1546139844/2022/09/18/JAVA/</url>
+    <url>/2022/09/18/JAVA/</url>
     <content><![CDATA[<p>一.第一段程序</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Hello</span>&#123;                            <span class="comment">//文件名字要与类名相同</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -261,7 +261,7 @@
   </entry>
   <entry>
     <title>C++</title>
-    <url>./yyl1546139844/2022/09/18/C/</url>
+    <url>/2022/09/18/C/</url>
     <content><![CDATA[<p>一.第一段程序</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -296,7 +296,7 @@
   </entry>
   <entry>
     <title>matlab</title>
-    <url>./yyl1546139844/2022/09/28/matlab/</url>
+    <url>/2022/09/28/matlab/</url>
     <content><![CDATA[<p>一.清空</p>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clear all :清除workspace所以变量.</span><br><span class="line"></span><br><span class="line">clc : 清除命令.</span><br></pre></td></tr></table></figure>
 
@@ -325,7 +325,7 @@
   </entry>
   <entry>
     <title>mysql</title>
-    <url>./yyl1546139844/2022/10/09/mysql/</url>
+    <url>/2022/10/09/mysql/</url>
     <content><![CDATA[<p>一.MySQL安装和启动</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.下载官网:MySQL(https://mysql.com/)</span><br><span class="line">2.启动</span><br><span class="line">(1)win+r services.msc</span><br><span class="line">(2)net start mysql80     net stop mysql80  </span><br><span class="line">3.客户端连接</span><br><span class="line">(1)MySQL提供的客户端命令行工具</span><br><span class="line">(2)终端输入 mysql [-h 127.0.0.1] [-P 3306] -u root -p   (需要配置环境变量)</span><br></pre></td></tr></table></figure>
 
