@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>git-命令</title>
-    <url>/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
+    <url>./2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><p>touch 创建<br>git init 创建仓库<br>git status 查看状态<br>git add .  全部到缓存区<br>git commit -m “注释”<br>git log    查看仓库<br>git-log    间接查看<br>git reset –hard commitID  回退<br>git reflog     操作记录<br>git branch   查看分支<br>git branch 名字<br>git checkout 名字  切换分之<br>git checkout -b  创建并切换<br>git merge 名字   合并分之<br>git branch -d b1 检查删除<br>git branch -D b1 强制删除<br>ssh-keygen -t rsa   创建ssh<br>cat ～/.ssh/id_rsa.pub 查看ssh<br>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#105;&#116;&#x65;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#105;&#116;&#x65;&#x65;&#x2e;&#99;&#111;&#x6d;</a> 查看链接的ssh    <br>git remote add 仓库名字（origin） 地址   链接仓库    <br>git remote rm 仓库名称<br>git remote    查看链接的仓库<br>git push -f –set-upstream 远端仓库 本地分支名:远端分支名      可以简化后面三个        -f:强制推送  –set-upstream :链接远端分支<br>git branch -vv 查看链接的远端分支<br>git clone ssh地址 本地目录<br>git fetch 《remote name》 《branch name》<br>git pull 《remote name》 《branch name》</p>
 <p>仓库地址 <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x65;&#101;&#46;&#99;&#111;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x65;&#101;&#46;&#99;&#111;&#109;</a>:yyl1546139844/yyl.git</p>
 ]]></content>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title>html</title>
-    <url>/2022/08/15/html/</url>
+    <url>./2022/08/15/html/</url>
     <content><![CDATA[<h1 id="html-css"><a href="#html-css" class="headerlink" title="html/css"></a>html/css</h1><h2 id="一-文本属性"><a href="#一-文本属性" class="headerlink" title="一.文本属性"></a>一.文本属性</h2><p>文字整体为上边距，下边距和文本。</p>
 <h2 id="二-元素显示模式"><a href="#二-元素显示模式" class="headerlink" title="二.元素显示模式"></a>二.元素显示模式</h2><h3 id="行内元素，块元素，行内块元素"><a href="#行内元素，块元素，行内块元素" class="headerlink" title="行内元素，块元素，行内块元素"></a>行内元素，块元素，行内块元素</h3><p>行内元素：<code>&lt;h1&gt;&lt;p&gt;&lt;div&gt;&lt;ul&gt;&lt;ol&gt;&lt;li&gt;</code></p>
 <p>块元素:<code>&lt;a&gt;&lt;strong&gt;&lt;b&gt;&lt;em&gt;&lt;del&gt;&lt;s&gt;&lt;ins&gt;&lt;u&gt;&lt;span&gt;</code></p>
@@ -48,7 +48,7 @@
   </entry>
   <entry>
     <title>博客搭建</title>
-    <url>/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <url>./2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h3 id="Hexo零基础搭建个人博客"><a href="#Hexo零基础搭建个人博客" class="headerlink" title="Hexo零基础搭建个人博客"></a>Hexo零基础搭建个人博客</h3><p>Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress<br>插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有<br>数百个主题和插件。</p>
 <h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>1、安装Node.js<br>直接到官网上下载安装即可<a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
 <p>Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)<br>Node自带npm<br>2、安装Git<br>Windows：下载并安装 <a href="https://git-scm.com/download/win">git</a>.<br>Mac：使用 Homebrew, <a href="https://www.macports.org/">MacPorts</a> 或者下载 安装程序。<br>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code><br>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></p>
@@ -131,7 +131,7 @@
   </entry>
   <entry>
     <title>leetcode</title>
-    <url>/2022/08/16/leetcode/</url>
+    <url>./2022/08/16/leetcode/</url>
     <content><![CDATA[<h5 id="1-两数相加"><a href="#1-两数相加" class="headerlink" title="1.两数相加"></a>1.两数相加</h5><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。你可以按任意顺序返回答案。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">count</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt;<span class="built_in">twosum</span>(vector&lt;<span class="type">int</span>&gt; nums,<span class="type">int</span> target)&#123;</span><br><span class="line">        <span class="type">int</span> i,j;</span><br><span class="line">        i=<span class="number">0</span>;j=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(;i&lt;nums.<span class="built_in">size</span>()<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            j=i+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(;j&lt;nums.<span class="built_in">size</span>();j++;</span><br><span class="line">                <span class="keyword">if</span> (nums[i]+nums[j]==target)</span><br><span class="line">                 <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>&#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>() &#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; nums=&#123;<span class="number">2</span>,<span class="number">9</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">    count y ;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v=y.<span class="built_in">twosum</span>(nums,<span class="number">5</span>);</span><br><span class="line">    cout&lt;&lt;<span class="string">&#x27;&#123;&#x27;</span>&lt;&lt;v[<span class="number">0</span>]&lt;&lt;<span class="string">&#x27;,&#x27;</span>&lt;&lt;v[<span class="number">1</span>]&lt;&lt;<span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -164,7 +164,7 @@
   </entry>
   <entry>
     <title>运行命令</title>
-    <url>/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
+    <url>./2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="win-r"><a href="#win-r" class="headerlink" title="win + r"></a>win + r</h1><p>gpedit.msc 本地组策略编辑器</p>
 <p>regedit 注册表编辑器</p>
 <p>shell：文件夹   打开</p>
@@ -181,7 +181,7 @@
   </entry>
   <entry>
     <title>配置ssh</title>
-    <url>/2022/08/18/%E9%85%8D%E7%BD%AEssh/</url>
+    <url>./2022/08/18/%E9%85%8D%E7%BD%AEssh/</url>
     <content><![CDATA[<p>1.生成ssh公钥</p>
 <p><code>ssh-keygen -t rsa</code></p>
 <p>回车</p>
@@ -203,7 +203,7 @@
   </entry>
   <entry>
     <title>JAVA</title>
-    <url>/2022/09/18/JAVA/</url>
+    <url>./2022/09/18/JAVA/</url>
     <content><![CDATA[<p>一.第一段程序</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Hello</span>&#123;                            <span class="comment">//文件名字要与类名相同</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -261,7 +261,7 @@
   </entry>
   <entry>
     <title>C++</title>
-    <url>/2022/09/18/C/</url>
+    <url>./2022/09/18/C/</url>
     <content><![CDATA[<p>一.第一段程序</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -296,7 +296,7 @@
   </entry>
   <entry>
     <title>matlab</title>
-    <url>/2022/09/28/matlab/</url>
+    <url>./2022/09/28/matlab/</url>
     <content><![CDATA[<p>一.清空</p>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clear all :清除workspace所以变量.</span><br><span class="line"></span><br><span class="line">clc : 清除命令.</span><br></pre></td></tr></table></figure>
 
@@ -325,7 +325,7 @@
   </entry>
   <entry>
     <title>mysql</title>
-    <url>/2022/10/09/mysql/</url>
+    <url>./2022/10/09/mysql/</url>
     <content><![CDATA[<h3 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h3><h4 id="一-MySQL安装和启动"><a href="#一-MySQL安装和启动" class="headerlink" title="一.MySQL安装和启动"></a>一.MySQL安装和启动</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.下载官网:MySQL(https://mysql.com/)</span><br><span class="line">2.启动</span><br><span class="line">(1)win+r services.msc</span><br><span class="line">(2)net start mysql80     net stop mysql80  </span><br><span class="line">3.客户端连接</span><br><span class="line">(1)MySQL提供的客户端命令行工具</span><br><span class="line">(2)终端输入 mysql [-h 127.0.0.1] [-P 3306] -u root -p   (需要配置环境变量)</span><br></pre></td></tr></table></figure>
 
 <h4 id="二-SQL语法"><a href="#二-SQL语法" class="headerlink" title="二.SQL语法"></a>二.SQL语法</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.通用语法</span><br><span class="line">(1)SQL语句可以单行或多行书写，以分号结尾。</span><br><span class="line">(2)SQL语句可以使用空格/缩进来增强语句的可读性</span><br><span class="line">(3)MySQL数据库的SQL语句不区分大小写，关键字建议使用大写。</span><br><span class="line">(4)注释：</span><br><span class="line">单行注释：--注释内容或#注释内容（MySQL特有）</span><br><span class="line">多行注释：/*注释内容*/</span><br><span class="line">2.分类</span><br><span class="line">DDL Data Definition Language 数据定义语言，用来定义数据库对象（数据库，表，字段）</span><br><span class="line">DML Data Manipulation Language 数据操作语言，用来对数据库表中的数据进行增删改</span><br><span class="line">DQL Data Query Language 数据查询语言，用来查询数据库中表的记录</span><br><span class="line">DCL Data Control Language 数据控制语言，用来创建数据库用户、控制数据库的访问权限</span><br><span class="line">3.DDL</span><br><span class="line">(1)查询</span><br><span class="line">查询所有数据库</span><br><span class="line">SHOW DATABASES;</span><br><span class="line">查询当前数据库</span><br><span class="line">SELECT DATABASE()；</span><br><span class="line">创建</span><br><span class="line">CREATE DATABASE [IF NOT EXISTS] 数据库名[DEFAULT CHARSET 字符集][COLLATE 排序规则];</span><br><span class="line">删除</span><br><span class="line">DROP DATABASE [IF EXISTS]数据库名；</span><br><span class="line">使用</span><br><span class="line">USE 数据库名；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查询当前数据库所有表</span><br><span class="line">SHOW TABLES;</span><br><span class="line">查询表结构</span><br><span class="line">DESC表名;</span><br><span class="line">查询指定表的建表语句</span><br><span class="line">SHOW CREATE TABLE表名;</span><br><span class="line"></span><br><span class="line">DDL-表操作-创建</span><br><span class="line">CREATE TABLE `表名`（</span><br><span class="line">字段1 字段1类型[COMMENT 字段1注释]，</span><br><span class="line">字段2 字段2类型[COMMENT 字段2注释]，</span><br><span class="line">字段3 字段3类型[COMMENT 字段3注释]，</span><br><span class="line">....</span><br><span class="line">字段n字段n类型[COMMENT 字段n注释]</span><br><span class="line">)[COMMENT 表注释];</span><br><span class="line"></span><br><span class="line">DDL-表操作-修改</span><br><span class="line">添加</span><br><span class="line">ALTER TABLE `表名` ADD 字段名 类型 [COMMENT 注释] [约束];</span><br><span class="line">修改数据类型</span><br><span class="line">ALTER TABLE `表名` MODIFY 字段名 新数据类型（长度）;</span><br><span class="line">修改字段名和字段类型</span><br><span class="line">ALTER TABLE `表名` CHANGE 旧字段名 新字段名 类型（长度）[COMMENT注释]【约束】;</span><br><span class="line">删除字段</span><br><span class="line">ALTER TABLE `表名` drop 字段名;</span><br><span class="line">修改表名</span><br><span class="line">ALTER TABLE `表名` RENAME TO 新表名;</span><br><span class="line">删除表</span><br><span class="line">DROP TABLE [IF EXIST] 表名;</span><br><span class="line">删除指定表,并重新创建表         //用于清空数据</span><br><span class="line">TRUNCATE TABLE 表名;</span><br><span class="line">重命名 ALTER TABLE old RENAME TO new;</span><br><span class="line"></span><br><span class="line">DML-添加数据</span><br><span class="line">INSERT INTO表名(字段名1，字段名2，)VALUES(值1，值2，);</span><br><span class="line">给全部字段添加数据</span><br><span class="line">INSERT INTO表名VALUES(值1，值2,);</span><br><span class="line">批量添加数据</span><br><span class="line">INSERT INT0表名(字段名1，字段名2，)VALUES(随1，值2，…)，(值1，值2，)，(值1，值2，)；</span><br><span class="line">INSERT INTO表名VALUES(值1，值2,)，(值1，值2，)，(值1，值2，);</span><br><span class="line"></span><br><span class="line">DML-修改数据</span><br><span class="line">UPDATE 表名 SET 字段名1=值1，字段名2=值2 [WHERE条件]；</span><br><span class="line"></span><br><span class="line">DML-删除数据</span><br><span class="line">DELETE FROM 表名[WHERE条件];</span><br><span class="line"></span><br><span class="line">DQL-语法</span><br><span class="line">SELECT</span><br><span class="line">	字段列表</span><br><span class="line">FROM</span><br><span class="line">	表名列表</span><br><span class="line">WHERE</span><br><span class="line">	条件列表</span><br><span class="line">GROUP BY</span><br><span class="line">	分组字段列表</span><br><span class="line">HAVING</span><br><span class="line">	分组后条件列表</span><br><span class="line">ORDER BY</span><br><span class="line">	排序字段列表</span><br><span class="line">LIMIT</span><br><span class="line">	分页参数</span><br><span class="line">	</span><br><span class="line">DOL-基本查询</span><br><span class="line">1.查询多个字段</span><br><span class="line">SELECT 字段1，字段2，字段3.FROM表名；</span><br><span class="line">SELECT*FROM表名；</span><br><span class="line">2.设置别名</span><br><span class="line">SELECT字段1[AS别名1]，字段2[AS别名2].FROM表名;</span><br><span class="line">3.去除重复记录</span><br><span class="line">SELECT DISTINCT 字段列表 FROM 表名；</span><br><span class="line"></span><br><span class="line">DQL-条件查询</span><br><span class="line">1,语法</span><br><span class="line">SELECT 字段列表 FROM 表名 WHERE 条件列表;</span><br><span class="line"></span><br><span class="line">DQL-聚合函数</span><br><span class="line">1.介绍</span><br><span class="line">将一列数据作为一个整体，进行纵向计算。</span><br><span class="line">2.常见聚合函数</span><br><span class="line">函数     功能</span><br><span class="line">count  统计数量</span><br><span class="line">max    最大值</span><br><span class="line">min    最小值</span><br><span class="line">avg    平均值</span><br><span class="line">sum      求和</span><br><span class="line"></span><br><span class="line">DQL-分组查询</span><br><span class="line">1.语法</span><br><span class="line">SELECT字段列表FROM表名[WHERE条件]GROUP BY分组字段名[HAVING分组后过滤条件];</span><br><span class="line">\G   将每个数据每行输出</span><br><span class="line"></span><br><span class="line">DQL-排序查询</span><br><span class="line">1.语法</span><br><span class="line">SELECT字段列表FROM表名ORDER BY字段1排序方式1，字段2排序方式2;</span><br><span class="line">2.排序方式</span><br><span class="line">ASC:升序（默认值）</span><br><span class="line">DESC:降序</span><br><span class="line"></span><br><span class="line">DQL-分页查询</span><br><span class="line">1.语法</span><br><span class="line">SELECT 字段列表 FROM 表名 LIMT 起始索引，查询记录数；</span><br><span class="line"></span><br><span class="line">DCL-管理用户</span><br><span class="line">1.查询用户</span><br><span class="line">USE mysql;</span><br><span class="line">SELECT * FROM user;</span><br><span class="line">2.创建用户</span><br><span class="line">CREATE USER&#x27;用户名&#x27;@&#x27;主机名&#x27;IDENTIFIED BY&#x27;密码&#x27;；</span><br><span class="line">3.修改用户密码</span><br><span class="line">ALTER USER&#x27;用户名&#x27;@&#x27;主机名&#x27;IDENTIFIED WITH mysgl_native_password BY&#x27;新密码&#x27;；</span><br><span class="line">4.删除用户</span><br><span class="line">DROP USER&#x27;用户名&#x27;@&#x27;主机名&#x27;；</span><br><span class="line"></span><br><span class="line">DCL-权限控制</span><br><span class="line">MySQL中定义了很多种权限，但是常用的就以下几种：</span><br><span class="line">权限					说明</span><br><span class="line">ALL,ALL PRIVILEGES	所有权限</span><br><span class="line">SELECT				查询数据</span><br><span class="line">INSERT				插入数据</span><br><span class="line">UPDATE				修改数据</span><br><span class="line">DELETE				删除数据</span><br><span class="line">ALTER				修改表</span><br><span class="line">DROP				删除数据库/表/视图</span><br><span class="line">CREATE				创建数据库/表</span><br><span class="line"></span><br><span class="line">DCL-权限控制</span><br><span class="line">1.查询权限</span><br><span class="line">SHOW GRANTS FOR&#x27;用户名&#x27;@&#x27;主机名&#x27;；</span><br><span class="line">2.授予权限</span><br><span class="line">GRANT权限列表ON数据库名.表名TO&#x27;用户名&#x27;@&#x27;主机名&#x27;;</span><br><span class="line">3.撤销权限</span><br><span class="line">REVOKE权限列表ON 数据库名.表名FROM‘用户名&#x27;@&#x27;主机名&#x27;；;</span><br></pre></td></tr></table></figure>
