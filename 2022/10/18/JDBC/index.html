@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JDBC - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="yyl,"> 
+    <meta name="description" content="JDBC简介概念：JDBC(Java DataBase Connectivity) ：Java数据库连接技术：具体讲就是通过Java连接广泛的数据库，并对表中数据执行增、删、改、查等操作的技术。
+J,"> 
+    <meta name="author" content="yyl"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="JDBC - Hexo"/>
+    <meta name="twitter:description" content="JDBC简介概念：JDBC(Java DataBase Connectivity) ：Java数据库连接技术：具体讲就是通过Java连接广泛的数据库，并对表中数据执行增、删、改、查等操作的技术。
+J,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="JDBC - Hexo"/>
+    <meta property="og:description" content="JDBC简介概念：JDBC(Java DataBase Connectivity) ：Java数据库连接技术：具体讲就是通过Java连接广泛的数据库，并对表中数据执行增、删、改、查等操作的技术。
+J,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">JDBC</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">JDBC</h1>
+        <div class="stuff">
+            <span>十月 18, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/web/" rel="tag">web</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h3 id="JDBC简介"><a href="#JDBC简介" class="headerlink" title="JDBC简介"></a>JDBC简介</h3><p>概念：JDBC(Java DataBase Connectivity) ：Java数据库连接技术：具体讲就是通过Java连接广泛的数据库，并对表中数据执行增、删、改、查等操作的技术。</p>
+<p>JDBC是数据库与JAVA代码的桥梁.</p>
+<h3 id="JDBC相关接口"><a href="#JDBC相关接口" class="headerlink" title="JDBC相关接口"></a>JDBC相关接口</h3><table>
+<thead>
+<tr>
+<th>接口</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Driver</td>
+<td>驱动接口，定义建立链接的方式</td>
+</tr>
+<tr>
+<td>DriverManager</td>
+<td>工具类，用于管理驱动，可以获取数据库的链接</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>表示Java与数据库建立的连接对象（接口）</td>
+</tr>
+<tr>
+<td>PreparedStatement</td>
+<td>发送SQL语句的工具</td>
+</tr>
+<tr>
+<td>ResultSet</td>
+<td>结果集，用于获取查询语句的结果</td>
+</tr>
+</tbody></table>
+<p>JDBC是规范（接口）不是实现（类）<br>JDBC 是一种规范，由Sum公司它提供了一套完整的接口，由数据库厂商根据特点予以实现，因此只要学会接口的使用就可以轻松的用 JDBC编写适用于各种数据库的程序.</p>
+<p>Mysql提供的JDBC实现<br>Mysql提供的JDBC实现称为<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/connector/j/">Mysql Connector</a>,不同的数据库版本需要使用不同的Connector。<br>实际开发时根据数据库版本、JDK版本、选择不同的Connector。</p>
+<table>
+<thead>
+<tr>
+<th>Connector版本</th>
+<th>MySQL版本</th>
+<th>JDK版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8.0</td>
+<td>5.5,5.7,8.0</td>
+<td>JDK8.0以上</td>
+</tr>
+<tr>
+<td>5.1</td>
+<td>5.6,5.7,8.0</td>
+<td>JDK5.0以上</td>
+</tr>
+</tbody></table>
+<h3 id="JDBC环境搭建"><a href="#JDBC环境搭建" class="headerlink" title="JDBC环境搭建"></a>JDBC环境搭建</h3><p>在项目中引入数据库驱动jar包（jar文件：针对class文件的压缩格式包含了多个带包的class文件，类似于普通文件打包的zip、rar）。</p>
+<p>以idea为例:</p>
+<p>将mysql-connector-java.jar添加到项目环境中。 1. 右键选中项目，新建一个Directory名为lib，将jar包复制到lib文件夹中。 2. 右键选中jar包，Add as Library –&gt; OK。</p>
+<h3 id="JDBC的编程步骤"><a href="#JDBC的编程步骤" class="headerlink" title="JDBC的编程步骤"></a>JDBC的编程步骤</h3><ol>
+<li><p>加载驱动</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>获取链接 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span><span class="string">&quot;jdbc:mysql://127.0.0.1:3306/website&quot;</span>;</span><br><span class="line">String username=<span class="string">&quot;root&quot;</span>;</span><br><span class="line">String password=<span class="string">&quot;1546139844&quot;</span>;</span><br><span class="line"><span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> DriverManager.getConnection(url,username,password);</span><br></pre></td></tr></table></figure></li>
+<li><p>准备SQL以及发送SQL的工具 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span><span class="string">&quot;insert into website(name, domain, id,tags) VALUES\n&quot;</span> +</span><br><span class="line">        <span class="string">&quot;(&#x27;test&#x27;,&#x27;test&#x27;,29,5);&quot;</span>;</span><br><span class="line"><span class="type">Statement</span> <span class="variable">stmt</span> <span class="operator">=</span> conn.createStatement();</span><br><span class="line">   </span><br></pre></td></tr></table></figure></li>
+<li><p>执行SQL </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">cont</span> <span class="operator">=</span> stmt.executeUpdate(sql);</span><br></pre></td></tr></table></figure></li>
+<li><p>处理结果集 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(cont);</span><br><span class="line">   </span><br></pre></td></tr></table></figure></li>
+<li><p>释放资源</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stmt.close();</span><br><span class="line">conn.close();</span><br></pre></td></tr></table></figure>
+
+<h3 id="JDBC-API-详解"><a href="#JDBC-API-详解" class="headerlink" title="JDBC API 详解"></a>JDBC API 详解</h3><h4 id="1-DriverManger"><a href="#1-DriverManger" class="headerlink" title="1.DriverManger"></a>1.DriverManger</h4><p>(1)注册驱动</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>Driver类源代码中有静态代码实现注册驱动</p>
+<p>Mysql5.0后可以自动加载META-INF/services/java.sql.Driver中的驱动类以省略该行代码</p>
+<p>(2)获取链接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static Connection getConnection(url,username,password);</span><br></pre></td></tr></table></figure>
+
+<p>url:连接路径</p>
+<p>jdbc:mysql://ip地址:端口号/数据库名称?参数键值对1&amp;参数键值对2…;</p>
+<p>如果是本机3306端口号则可以简写jdbc:mysql:///数据库名称?</p>
+<p>useSSL=false  禁用安全连接方式,解决警告提示</p>
+<p>username:用户名</p>
+<p>password:密码</p>
+<h4 id="2-Connection"><a href="#2-Connection" class="headerlink" title="2.Connection"></a>2.Connection</h4><p>获取执行SQL的对象</p>
+<p>Statement createStatement()        普通执行SQL对象</p>
+<p>PreparedStatement preparedStatement() 预编译执行,防止SQL注入</p>
+<p>CallableStatement prapareCall(sql)   执行存储过程的对象</p>
+<p>事务管理</p>
+<p>setAutoCommit(boolean autoCommit);  设置自动提交事务</p>
+<p>commit();        提交事务</p>
+<p>rollback();        回滚</p>
+<h4 id="3-Statment"><a href="#3-Statment" class="headerlink" title="3.Statment"></a>3.Statment</h4><p>执行sql语句</p>
+<p>int executeUpdate(sql):DML DDL 语句   返回影响行数  DDL可能为零</p>
+<p>ResultSet esecuteQuery(sql):DQL语句    返回ResultSet 结果集对象</p>
+<h4 id="4-ResultSet"><a href="#4-ResultSet" class="headerlink" title="4.ResultSet"></a>4.ResultSet</h4><p>ResultSet（结果集对象）作用：<br>1.封装了DQL查询语句的结果<br>ResultSet stmt.executeQuery（sql）：执行DQL语句，返回ResultSet对象<br>获取查询结果<br>boolean next(）：（1）将光标从当前位置向前移动一行（2）判断当前行是否为有效行<br>返回值：<br>true：有效行，当前行有数据<br>false：无效行，当前行没有数据<br>XXX getXxx（参数）：获取数据<br>xxx：数据类型；如：int getint（参数）；String getString（参数）<br>参数：<br>int：列的编号，从1开始<br>String：列的名称</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while (rs.next)</span><br><span class="line">&#123;</span><br><span class="line">int n =getInt(1)          第一列</span><br><span class="line">String name =getInt(2)    第二列</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-PreparedStatement"><a href="#5-PreparedStatement" class="headerlink" title="5.PreparedStatement"></a>5.PreparedStatement</h4><p>预编译执行,防止SQL注入</p>
+<p>预编译SQL并执行SQL语句<br>1 获取PreparedStatement对象<br>//SQL语句中的参数值，使用？占位符替代<br>String sql = “select * from user where username = ? and password = ？”<br>//通过Connection对象获取，并传入对应的sql语句<br>PreparedStatement pstmt = conn.prepareStatement(sql）；<br>2 设置参数值<br>PreparedStatement对象：setXxx（参数1，参数2）：给？赋值<br>Xxx：数据类型；如setlnt（参数1，参数2）<br>参数：<br>参数1：？的位置编号，从1开始<br>参数2：？的值<br>3 执行SQL<br>executeUpdate(）；/executeQuery（）；：不需要再传递sql</p>
+<h3 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h3><p>数据库连接池是个容器，负责分配、管理数据库连接(Connection)<br>它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个：<br>释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏<br>好处：<br>资源重用<br>提升系统响应速度<br>·避免数据库连接遗漏</p>
+<p>//1.导入jar包</p>
+<p>DBCP   C3P0   Druid</p>
+<p>//2.定义配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">driverCassName=com.mysql.jdbc.Driver</span><br><span class="line">Url=jdbc:mysql:///db1？usesSL=false&amp;useServerPrepStmts=true</span><br><span class="line">username=root</span><br><span class="line">password=1234</span><br><span class="line">#初始化连接数量</span><br><span class="line">iitialsize=5</span><br><span class="line"># 最大连接数</span><br><span class="line">maxActive=10</span><br><span class="line">#最大等待时间</span><br><span class="line">maxWait=3000</span><br></pre></td></tr></table></figure>
+
+<p>1/3.加载配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Properties prop=new PropertiesO；</span><br><span class="line">prop.load(new FileInputstream( name: &quot;src/druid·properties”）);</span><br></pre></td></tr></table></figure>
+
+
+<p>//4获取连按池对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataSource dataSource = DruidDataSourceFactory.createDataSource（prop）；</span><br></pre></td></tr></table></figure>
+
+
+<p>//5.获取数据库连接Connection</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Connection connection = dataSource.getconnection()；</span><br><span class="line">System.out.printin(connection）；</span><br></pre></td></tr></table></figure>
+
+<h3 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h3><p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
+<p>简单来说简化jdbc开发步骤</p>
+<h4 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h4><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_20-02-10.png"></p>
+<h5 id="1-创建user表-添加数据"><a href="#1-创建user表-添加数据" class="headerlink" title="1.创建user表,添加数据"></a>1.创建user表,添加数据</h5><p>在数据库中创建相应的表,添加数据</p>
+<h5 id="2-创建模块-导入坐标"><a href="#2-创建模块-导入坐标" class="headerlink" title="2.创建模块,导入坐标"></a>2.创建模块,导入坐标</h5><p>在idea中创建模块</p>
+<p><a target="_blank" rel="noopener" href="https://mybatis.net.cn/">mybatis官网</a>有maven导入坐标的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;                           mybatis</span><br><span class="line">  &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.x.x&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;                          junit自动化测试框架</span><br><span class="line">&lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">&lt;version&gt;4.13&lt;/version&gt;</span><br><span class="line">&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">···&lt;--·添加s1f4j日志api·--&gt;              springboot logback日志   还需要配置文件</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">···&lt;groupId&gt;org.s1f4j&lt;/groupId&gt;</span><br><span class="line">.&lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">··&lt;version&gt;1.7.20&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-·添加1 ogback-c1 assic依赖·--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">··&lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">...&lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span><br><span class="line">.&lt;version&gt;1.2.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-·添加1 ogback-core依赖·-&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">··&lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">.&lt;artifactId&gt;logback-core&lt;/artifactId&gt;</span><br><span class="line">..&lt;version&gt;1.2.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-核心配置文件-mybatis-config-xml"><a href="#3-核心配置文件-mybatis-config-xml" class="headerlink" title="3.核心配置文件 mybatis-config.xml"></a>3.核心配置文件 mybatis-config.xml</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;environments default=&quot;development&quot;&gt;   通过default切换环境</span><br><span class="line">    &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">      &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">      &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">      //配置信息</span><br><span class="line">        &lt;property name=&quot;driver&quot; value=&quot;com.mysql.jdbc.Driver&quot;/&gt;  </span><br><span class="line">        &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/库名称?useSSL=false&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;username&quot; value=&quot;root&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;password&#125;&quot;/&gt;</span><br><span class="line">      &lt;/dataSource&gt;</span><br><span class="line">    &lt;/environment&gt;</span><br><span class="line">  &lt;/environments&gt;</span><br><span class="line">  &lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=&quot;org/mybatis/example/BlogMapper.xml&quot;/&gt;    sql映射文件的路径</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-sql映射文件-Mapper-xml"><a href="#4-sql映射文件-Mapper-xml" class="headerlink" title="4.sql映射文件 Mapper.xml"></a>4.sql映射文件 Mapper.xml</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line">  </span><br><span class="line">&lt;mapper namespace=&quot;namespace&quot;&gt;     名称空间名字</span><br><span class="line">  &lt;select id=&quot;selectid&quot; resultType=&quot;Blog&quot;&gt;  //id是唯一标识   Blog是返回的类型(pojo类名)</span><br><span class="line">    select * from Blog where id = #&#123;id&#125;  </span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="5-编码"><a href="#5-编码" class="headerlink" title="5.编码"></a>5.编码</h5><p>(1)定义pojo类名</p>
+<p>(2)加载核心配置文件,获取sqlsessionfactory</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String resource = &quot;org/mybatis/example/mybatis-config.xml&quot;;   //配置文件路径</span><br><span class="line">InputStream inputStream = Resources.getResourceAsStream(resource); //</span><br><span class="line">SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);</span><br></pre></td></tr></table></figure>
+
+<p>(3)获取sqlsession对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SqlSession sqlSession =sqlSessionFactory.openSession();</span><br></pre></td></tr></table></figure>
+
+<p>(4)执行sql语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list&lt;user&gt; users = sqlSession.selectList(namespace.selectid)</span><br></pre></td></tr></table></figure>
+
+<p>(5)释放资源</p>
+<p>sqlSession.close();</p>
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_20-52-46.png"></p>
+<h4 id="mapper代理"><a href="#mapper代理" class="headerlink" title="mapper代理"></a>mapper代理</h4><h5 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-06-02.png"></p>
+<h5 id="1-定义接口"><a href="#1-定义接口" class="headerlink" title="1.定义接口"></a>1.定义接口</h5><p>定义与SQL映射文件同名的Mapper接口，并且将Mapper接口和SQL映射文件放置在同一目录下</p>
+<p>在resources中新建directory 命名为将mapper接口的命名中的’.’改为’/‘</p>
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-16-10.png"></p>
+<h5 id="2-设置namespace"><a href="#2-设置namespace" class="headerlink" title="2.设置namespace"></a>2.设置namespace<img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-25-02.png"></h5><p>设置SQL映射文件的namespace,属性为Mapper接口全限定名</p>
+<p>以上图为例则为 com.itheima.mapper.UserMapper</p>
+<h5 id="3-定义mapper方法"><a href="#3-定义mapper方法" class="headerlink" title="3.定义mapper方法"></a>3.定义mapper方法</h5><p>在Mapper接口中定义方法，方法名就是SQL映射文件中sql语句的id,并保持参数类型和返回值类型一致</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List &lt;pojo类名&gt; selectid();</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-编码"><a href="#4-编码" class="headerlink" title="4.编码"></a>4.编码</h5><p>1.通过SqlSession的getMapper方法获取Mapper接口的代理对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mapper接口 mapper=sqlSession.getMapper(mapper接口名.class);</span><br></pre></td></tr></table></figure>
+
+<p>2.调用对应方法完成sq的执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List &lt;pojo类名&gt; users = mapper.方法名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>在mybaties中有对配置的<a target="_blank" rel="noopener" href="https://mybatis.net.cn/configuration.html">详细介绍</a></p>
+<h4 id="sql语句"><a href="#sql语句" class="headerlink" title="sql语句"></a>sql语句</h4><h5 id="字段名对应实体属性"><a href="#字段名对应实体属性" class="headerlink" title="字段名对应实体属性"></a>字段名对应实体属性</h5><p>数据库表的字段名称和实体类的属性名称不一样，则不能自动封装数据<br>*起别名：对不一样的列名起别名，让别名和实体类的属性名一样<br>*缺点：每次查询都要定义一次别名<br>*sqL片段<br>*缺点：不灵活<br>resultMap:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.定义&lt;resultMap&gt;标签</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-47-38.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2.在&lt;select&gt;标签中，使用resultMap属性替换resultType属性</span><br><span class="line">  &lt;select id=&quot;selectid&quot; resultMap=&quot;#id名&quot;&gt;  //id是唯一标识   Blog是返回的类型(pojo类名)</span><br><span class="line">    select * from Blog where id = #&#123;id&#125;  ;</span><br><span class="line">  &lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="参数占位符："><a href="#参数占位符：" class="headerlink" title="参数占位符："></a>参数占位符：</h5><p>1):执行SQL时，会将#{}占位符替换为？，将来自动设置参数值(在方法参数名前加上  @Param(“占位符”‘))<br>2)${}:拼SQL。会存在SQL注入问题<br>3.使用时机：<br>*参数传递，都使用#{}<br>*如果要对表名、列名进行动态设置，只能使用${}进行sql拼接。<br>2.parameterType:<br>*用于设置参数类型，该参数可以省略<br>3.SQL语句中特殊字符处理：<br>*转义字符<br>*&lt;[CDATA【内容】&gt;</p>
+<h5 id="SQL语句设置多个参数三种方式"><a href="#SQL语句设置多个参数三种方式" class="headerlink" title="SQL语句设置多个参数三种方式"></a>SQL语句设置多个参数三种方式</h5><p>1)散装参数：需要使用@Param(“SQL中的参数占位符名称”)<br>2)实体类封装参数<br>*只需要保证SQL中的参数名和实体类属性名对应上，即可设置成功<br>3)map集合<br>*只需要保证SQL中的参数名和map集合的键的名称对应上，即可设置成功</p>
+<h5 id="动态SQL"><a href="#动态SQL" class="headerlink" title="动态SQL"></a>动态SQL</h5><p>if:用于判断参数是否有值，使用test属性进行条件判断<br>*存在的问题：第一个条件不需要逻辑运算符<br>*解决方案：<br>1)使用恒等式让所有条件格式都一样<br>2)<where>标签替换where关键字</p>
+<p>·从多个条件中选择一个      choose(when,otherwise):选择，类似于Java中的switch语句</p>
+<h5 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;insert id=&quot;add&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;       inster标签  后面两个参数保证可以返回id</span><br><span class="line">    insert into website(name, domain,tags) VALUES</span><br><span class="line">(#&#123;name&#125;,#&#123;domain&#125;,#&#123;tags&#125;);</span><br><span class="line">&lt;/insert&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;update id=&quot;update&quot;&gt;</span><br><span class="line">    update website</span><br><span class="line">        &lt;set&gt;                              使用set标签防止格式错误</span><br><span class="line">        &lt;if test=&quot;domain!=null and domain!=&#x27;&#x27;&quot;&gt; domain=#&#123;domain&#125; ,&lt;/if&gt;       if条件判断</span><br><span class="line">        &lt;if test=&quot;name!=null and name!=&#x27;&#x27;&quot;&gt; name=#&#123;name&#125;,&lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;tags!=null&quot;&gt;           tags=#&#123;tags&#125;&lt;/if&gt;</span><br><span class="line">        &lt;/set&gt;</span><br><span class="line">    where id=#&#123;id&#125;;</span><br><span class="line">&lt;/update&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-21_19-16-30.png"></p>
+<h5 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-21_19-29-59.png"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">JDBC简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.</span> <span class="toc-text">JDBC相关接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">3.</span> <span class="toc-text">JDBC环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC%E7%9A%84%E7%BC%96%E7%A8%8B%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.</span> <span class="toc-text">JDBC的编程步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC-API-%E8%AF%A6%E8%A7%A3"><span class="toc-number">5.</span> <span class="toc-text">JDBC API 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-DriverManger"><span class="toc-number">5.1.</span> <span class="toc-text">1.DriverManger</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Connection"><span class="toc-number">5.2.</span> <span class="toc-text">2.Connection</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Statment"><span class="toc-number">5.3.</span> <span class="toc-text">3.Statment</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-ResultSet"><span class="toc-number">5.4.</span> <span class="toc-text">4.ResultSet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-PreparedStatement"><span class="toc-number">5.5.</span> <span class="toc-text">5.PreparedStatement</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-number">6.</span> <span class="toc-text">数据库连接池</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mybatis"><span class="toc-number">7.</span> <span class="toc-text">mybatis</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="toc-number">7.1.</span> <span class="toc-text">基本流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BAuser%E8%A1%A8-%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"><span class="toc-number">7.1.1.</span> <span class="toc-text">1.创建user表,添加数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9D%97-%E5%AF%BC%E5%85%A5%E5%9D%90%E6%A0%87"><span class="toc-number">7.1.2.</span> <span class="toc-text">2.创建模块,导入坐标</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-mybatis-config-xml"><span class="toc-number">7.1.3.</span> <span class="toc-text">3.核心配置文件 mybatis-config.xml</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-sql%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6-Mapper-xml"><span class="toc-number">7.1.4.</span> <span class="toc-text">4.sql映射文件 Mapper.xml</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E7%BC%96%E7%A0%81"><span class="toc-number">7.1.5.</span> <span class="toc-text">5.编码</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapper%E4%BB%A3%E7%90%86"><span class="toc-number">7.2.</span> <span class="toc-text">mapper代理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%9B%AE%E7%9A%84"><span class="toc-number">7.2.1.</span> <span class="toc-text">1.目的</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3"><span class="toc-number">7.2.2.</span> <span class="toc-text">1.定义接口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E8%AE%BE%E7%BD%AEnamespace"><span class="toc-number">7.2.3.</span> <span class="toc-text">2.设置namespace</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%AE%9A%E4%B9%89mapper%E6%96%B9%E6%B3%95"><span class="toc-number">7.2.4.</span> <span class="toc-text">3.定义mapper方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E7%BC%96%E7%A0%81"><span class="toc-number">7.2.5.</span> <span class="toc-text">4.编码</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">7.3.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sql%E8%AF%AD%E5%8F%A5"><span class="toc-number">7.4.</span> <span class="toc-text">sql语句</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E6%AE%B5%E5%90%8D%E5%AF%B9%E5%BA%94%E5%AE%9E%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-number">7.4.1.</span> <span class="toc-text">字段名对应实体属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E5%8D%A0%E4%BD%8D%E7%AC%A6%EF%BC%9A"><span class="toc-number">7.4.2.</span> <span class="toc-text">参数占位符：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SQL%E8%AF%AD%E5%8F%A5%E8%AE%BE%E7%BD%AE%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">7.4.3.</span> <span class="toc-text">SQL语句设置多个参数三种方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A8%E6%80%81SQL"><span class="toc-number">7.4.4.</span> <span class="toc-text">动态SQL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0"><span class="toc-number">7.4.5.</span> <span class="toc-text">添加</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9"><span class="toc-number">7.4.6.</span> <span class="toc-text">修改</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">7.4.7.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3"><span class="toc-number">7.4.8.</span> <span class="toc-text">注解</span></a></li></ol></li></ol></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>
