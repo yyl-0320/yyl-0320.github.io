@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>C++</title>
-    <url>/2022/09/18/C/</url>
+    <url>/2022/09/18/C++/</url>
     <content><![CDATA[<h3 id="一-第一段程序"><a href="#一-第一段程序" class="headerlink" title="一.第一段程序"></a>一.第一段程序</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="二-变量"><a href="#二-变量" class="headerlink" title="二.变量"></a>二.变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    	<span class="comment">//基本变量:</span></span><br><span class="line">        byte num2=<span class="number">35</span>;         <span class="comment">//字节型      1个字节   -128~127</span></span><br><span class="line">        <span class="type">short</span> num3=<span class="number">50</span>;        <span class="comment">//短整型      2个字节   -32768~32767</span></span><br><span class="line">    	<span class="type">unsigned</span> <span class="type">short</span> num7=<span class="number">8</span> <span class="comment">//           1个字节</span></span><br><span class="line">        <span class="type">int</span> num1=<span class="number">10</span>;          <span class="comment">//整形        4个字节   -2^31~2^31-1</span></span><br><span class="line">    	<span class="type">unsigned</span> <span class="type">int</span>          <span class="comment">//           4个字节</span></span><br><span class="line">        <span class="type">long</span> num4=<span class="number">3000000L</span>;   <span class="comment">//长整型      4个字节   -2^63~2^63-1      后面要加L</span></span><br><span class="line">        <span class="type">unsigned</span> <span class="type">long</span>         <span class="comment">//           4个字节</span></span><br><span class="line">        <span class="type">long</span> <span class="type">long</span>             <span class="comment">//           8个字节</span></span><br><span class="line">        <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span>    <span class="comment">//           8个字节</span></span><br><span class="line">    	<span class="type">float</span> num5=<span class="number">2.5F</span>;      <span class="comment">//单精度浮点数  4个字节   1.4013E-45~3.4028E+38  后边要加F</span></span><br><span class="line">        <span class="type">double</span> num6=<span class="number">1.2</span>;      <span class="comment">//双精度浮点型   8个字节  4.9E-324~1.7977E+308</span></span><br><span class="line">        <span class="type">long</span> <span class="type">double</span>           <span class="comment">//                     12个字节</span></span><br><span class="line">    	<span class="type">char</span> zifu1=<span class="string">&#x27;S&#x27;</span>;       <span class="comment">//字符型        1个字节  0~65535</span></span><br><span class="line">    	<span class="type">signed</span> <span class="type">char</span> zifu2=<span class="string">&#x27;s&#x27;</span> <span class="comment">//             1个字节</span></span><br><span class="line">        <span class="type">unsigned</span> <span class="type">char</span> zifu3=<span class="string">&#x27;s&#x27;</span><span class="comment">//            1个字节</span></span><br><span class="line">        <span class="type">wchar_t</span> zifu4=<span class="string">&#x27;s&#x27;</span>      <span class="comment">//             2个字节</span></span><br><span class="line">        <span class="type">bool</span> var1=<span class="literal">true</span>;        <span class="comment">//布尔类型      1个字节  true false</span></span><br><span class="line">                               <span class="comment">//*            8字节</span></span><br><span class="line">    	<span class="comment">//复合变量:</span></span><br><span class="line">    	<span class="type">int</span> num1=<span class="number">12</span>;</span><br><span class="line">    	<span class="type">int</span> &amp;num_1=num1;        <span class="comment">//相当于num1的另一个别名   对num_1的操作相当于对num1的</span></span><br><span class="line">    	<span class="type">int</span> &amp;num_2=<span class="number">12</span>;          <span class="comment">//不可以赋值为具体数</span></span><br><span class="line">    	<span class="type">int</span> *p=&amp;num1            <span class="comment">//指针     NULL:预处理变量 nullptr:特殊类型的字面值</span></span><br><span class="line">        <span class="type">int</span> *&amp;r=&amp;num1           <span class="comment">//指针引用  r相当于p</span></span><br><span class="line">        <span class="comment">//const:</span></span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> num1=<span class="number">1</span>        <span class="comment">//numl不可改变</span></span><br><span class="line">        <span class="keyword">extern</span> <span class="type">const</span> <span class="type">int</span> num1=<span class="number">1</span> <span class="comment">//其他文件可以访问</span></span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> &amp;r1 =num1;    <span class="comment">/* 都是合法的</span></span><br><span class="line"><span class="comment">    	const int &amp;r2 =1;        因为相当于const int &amp;r =temp;  指向了一个临时量 </span></span><br><span class="line"><span class="comment">    	const int &amp;r3 =num1*2;  */</span></span><br><span class="line">    	<span class="type">const</span> <span class="type">int</span> *p1=&amp;num1;	<span class="comment">//p1 是int常量的指针   底层const                指针常量意味着指针不能变</span></span><br><span class="line">    	<span class="type">int</span> *<span class="type">const</span> p2=&amp;num1;	<span class="comment">//p2 是一个int的常量指针   顶层const             指向int常量意味着 指针不能改变指向的内容的值</span></span><br><span class="line">    	<span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3=&amp;num1;<span class="comment">//p3是一个int常量的常量指针  即时顶层也是底层const          </span></span><br><span class="line">    	<span class="comment">//constexpr:是常量且编译时就能得到结果</span></span><br><span class="line">    	<span class="type">const</span> <span class="type">int</span> *p=&amp;num;		  <span class="comment">//底层const</span></span><br><span class="line">    	<span class="keyword">constexpr</span> <span class="type">int</span> *p=&amp;num;    <span class="comment">//顶层const</span></span><br><span class="line">    	<span class="comment">//类型别名:</span></span><br><span class="line">    	<span class="keyword">typedef</span> <span class="type">int</span> int1;         <span class="comment">//int1是int的同义词</span></span><br><span class="line">    	<span class="keyword">using</span> int1=<span class="type">int</span>;           <span class="comment">//int1是int的同义词</span></span><br><span class="line">    	<span class="keyword">typedef</span> <span class="type">int</span> *int2;        <span class="comment">//意思是int2是一个int的指针类型 相当于int*  但是 const int2 p =&amp;num;</span></span><br><span class="line">    																	   <span class="comment">// const int *p=&amp;num;</span></span><br><span class="line">    								<span class="comment">//                             二者并不相同  前者是顶层const 后者是底层const</span></span><br><span class="line">    	<span class="comment">//auto</span></span><br><span class="line">    	<span class="keyword">auto</span> num1=<span class="number">12</span>;               <span class="comment">//auto会自动识别类型,但是会忽略顶层const</span></span><br><span class="line">    	<span class="type">const</span> <span class="keyword">auto</span> num1=<span class="number">12</span>;         <span class="comment">//需要自己声明</span></span><br><span class="line">    	<span class="comment">//decltype</span></span><br><span class="line">    	<span class="type">int</span> num1 =<span class="number">12</span>;</span><br><span class="line">    	<span class="type">int</span> &amp;num= num1;</span><br><span class="line">    	<span class="keyword">decltype</span> (num1) n;              <span class="comment">// n是int</span></span><br><span class="line">    	<span class="keyword">decltype</span> ((num1)) n;            <span class="comment">//n是int&amp;  即引用</span></span><br><span class="line">    	<span class="keyword">decltype</span> (num)   n;             <span class="comment">//n是int&amp;</span></span><br><span class="line">    	<span class="keyword">decltype</span> (num+<span class="number">0</span>)  n;            <span class="comment">//n是int		</span></span><br><span class="line">        </span><br><span class="line">return0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -25,35 +25,199 @@
       </categories>
   </entry>
   <entry>
-    <title>C++</title>
-    <url>/2024/03/06/C++/</url>
-    <content><![CDATA[<p>一.第一段程序</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int main ()&#123;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>JDBC</title>
+    <url>/2022/10/18/JDBC/</url>
+    <content><![CDATA[<h3 id="JDBC简介"><a href="#JDBC简介" class="headerlink" title="JDBC简介"></a>JDBC简介</h3><p>概念：JDBC(Java DataBase Connectivity) ：Java数据库连接技术：具体讲就是通过Java连接广泛的数据库，并对表中数据执行增、删、改、查等操作的技术。</p>
+<p>JDBC是数据库与JAVA代码的桥梁.</p>
+<h3 id="JDBC相关接口"><a href="#JDBC相关接口" class="headerlink" title="JDBC相关接口"></a>JDBC相关接口</h3><table>
+<thead>
+<tr>
+<th>接口</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Driver</td>
+<td>驱动接口，定义建立链接的方式</td>
+</tr>
+<tr>
+<td>DriverManager</td>
+<td>工具类，用于管理驱动，可以获取数据库的链接</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>表示Java与数据库建立的连接对象（接口）</td>
+</tr>
+<tr>
+<td>PreparedStatement</td>
+<td>发送SQL语句的工具</td>
+</tr>
+<tr>
+<td>ResultSet</td>
+<td>结果集，用于获取查询语句的结果</td>
+</tr>
+</tbody></table>
+<p>JDBC是规范（接口）不是实现（类）<br>JDBC 是一种规范，由Sum公司它提供了一套完整的接口，由数据库厂商根据特点予以实现，因此只要学会接口的使用就可以轻松的用 JDBC编写适用于各种数据库的程序.</p>
+<p>Mysql提供的JDBC实现<br>Mysql提供的JDBC实现称为<a href="https://dev.mysql.com/downloads/connector/j/">Mysql Connector</a>,不同的数据库版本需要使用不同的Connector。<br>实际开发时根据数据库版本、JDK版本、选择不同的Connector。</p>
+<table>
+<thead>
+<tr>
+<th>Connector版本</th>
+<th>MySQL版本</th>
+<th>JDK版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8.0</td>
+<td>5.5,5.7,8.0</td>
+<td>JDK8.0以上</td>
+</tr>
+<tr>
+<td>5.1</td>
+<td>5.6,5.7,8.0</td>
+<td>JDK5.0以上</td>
+</tr>
+</tbody></table>
+<h3 id="JDBC环境搭建"><a href="#JDBC环境搭建" class="headerlink" title="JDBC环境搭建"></a>JDBC环境搭建</h3><p>在项目中引入数据库驱动jar包（jar文件：针对class文件的压缩格式包含了多个带包的class文件，类似于普通文件打包的zip、rar）。</p>
+<p>以idea为例:</p>
+<p>将mysql-connector-java.jar添加到项目环境中。 1. 右键选中项目，新建一个Directory名为lib，将jar包复制到lib文件夹中。 2. 右键选中jar包，Add as Library –&gt; OK。</p>
+<h3 id="JDBC的编程步骤"><a href="#JDBC的编程步骤" class="headerlink" title="JDBC的编程步骤"></a>JDBC的编程步骤</h3><ol>
+<li><p>加载驱动</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>获取链接 </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span><span class="string">&quot;jdbc:mysql://127.0.0.1:3306/website&quot;</span>;</span><br><span class="line">String username=<span class="string">&quot;root&quot;</span>;</span><br><span class="line">String password=<span class="string">&quot;1546139844&quot;</span>;</span><br><span class="line"><span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> DriverManager.getConnection(url,username,password);</span><br></pre></td></tr></table></figure></li>
+<li><p>准备SQL以及发送SQL的工具 </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span><span class="string">&quot;insert into website(name, domain, id,tags) VALUES\n&quot;</span> +</span><br><span class="line">        <span class="string">&quot;(&#x27;test&#x27;,&#x27;test&#x27;,29,5);&quot;</span>;</span><br><span class="line"><span class="type">Statement</span> <span class="variable">stmt</span> <span class="operator">=</span> conn.createStatement();</span><br><span class="line">   </span><br></pre></td></tr></table></figure></li>
+<li><p>执行SQL </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">cont</span> <span class="operator">=</span> stmt.executeUpdate(sql);</span><br></pre></td></tr></table></figure></li>
+<li><p>处理结果集 </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(cont);</span><br><span class="line">   </span><br></pre></td></tr></table></figure></li>
+<li><p>释放资源</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">stmt.close();</span><br><span class="line">conn.close();</span><br></pre></td></tr></table></figure>
 
-<p>二.变量</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int main()&#123;</span><br><span class="line">    	//基本变量:</span><br><span class="line">        byte num2=35;         //字节型      1个字节   -128~127</span><br><span class="line">        short num3=50;        //短整型      2个字节   -32768~32767</span><br><span class="line">    	unsigned short num7=8 //           1个字节</span><br><span class="line">        int num1=10;          //整形        4个字节   -2^31~2^31-1</span><br><span class="line">    	unsigned int          //           4个字节</span><br><span class="line">        long num4=3000000L;   //长整型      4个字节   -2^63~2^63-1      后面要加L</span><br><span class="line">        unsigned long         //           4个字节</span><br><span class="line">        long long             //           8个字节</span><br><span class="line">        unsigned long long    //           8个字节</span><br><span class="line">    	float num5=2.5F;      //单精度浮点数  4个字节   1.4013E-45~3.4028E+38  后边要加F</span><br><span class="line">        double num6=1.2;      //双精度浮点型   8个字节  4.9E-324~1.7977E+308</span><br><span class="line">        long double           //                     12个字节</span><br><span class="line">    	char zifu1=&#x27;S&#x27;;       //字符型        1个字节  0~65535</span><br><span class="line">    	signed char zifu2=&#x27;s&#x27; //             1个字节</span><br><span class="line">        unsigned char zifu3=&#x27;s&#x27;//            1个字节</span><br><span class="line">        wchar_t zifu4=&#x27;s&#x27;      //             2个字节</span><br><span class="line">        bool var1=true;        //布尔类型      1个字节  true false</span><br><span class="line">                               //*            8字节</span><br><span class="line">    	//复合变量:</span><br><span class="line">    	int num1=12;</span><br><span class="line">    	int &amp;num_1=num1;        //相当于num1的另一个别名   对num_1的操作相当于对num1的</span><br><span class="line">    	int &amp;num_2=12;          //不可以赋值为具体数</span><br><span class="line">    	int *p=&amp;num1            //指针     NULL:预处理变量 nullptr:特殊类型的字面值</span><br><span class="line">        int *&amp;r=&amp;num1           //指针引用  r相当于p</span><br><span class="line">        //const:</span><br><span class="line">        const int num1=1        //numl不可改变</span><br><span class="line">        extern const int num1=1 //其他文件可以访问</span><br><span class="line">        const int &amp;r1 =num1;    /* 都是合法的</span><br><span class="line">    	const int &amp;r2 =1;        因为相当于const int &amp;r =temp;  指向了一个临时量 </span><br><span class="line">    	const int &amp;r3 =num1*2;  */</span><br><span class="line">    	const int *p1=&amp;num1;	//p1 是int常量的指针   底层const                指针常量意味着指针不能变</span><br><span class="line">    	int *const p2=&amp;num1;	//p2 是一个int的常量指针   顶层const             指向int常量意味着 指针不能改变指向的内容的值</span><br><span class="line">    	const int *const p3=&amp;num1;//p3是一个int常量的常量指针  即时顶层也是底层const          </span><br><span class="line">    	//constexpr:是常量且编译时就能得到结果</span><br><span class="line">    	const int *p=&amp;num;		  //底层const</span><br><span class="line">    	constexpr int *p=&amp;num;    //顶层const</span><br><span class="line">    	//类型别名:</span><br><span class="line">    	typedef int int1;         //int1是int的同义词</span><br><span class="line">    	using int1=int;           //int1是int的同义词</span><br><span class="line">    	typedef int *int2;        //意思是int2是一个int的指针类型 相当于int*  但是 const int2 p =&amp;num;</span><br><span class="line">    																	   // const int *p=&amp;num;</span><br><span class="line">    								//                             二者并不相同  前者是顶层const 后者是底层const</span><br><span class="line">    	//auto</span><br><span class="line">    	auto num1=12;               //auto会自动识别类型,但是会忽略顶层const</span><br><span class="line">    	const auto num1=12;         //需要自己声明</span><br><span class="line">    	//decltype</span><br><span class="line">    	int num1 =12;</span><br><span class="line">    	int &amp;num= num1;</span><br><span class="line">    	decltype (num1) n;              // n是int</span><br><span class="line">    	decltype ((num1)) n;            //n是int&amp;  即引用</span><br><span class="line">    	decltype (num)   n;             //n是int&amp;</span><br><span class="line">    	decltype (num+0)  n;            //n是int		</span><br><span class="line">        </span><br><span class="line">return0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JDBC-API-详解"><a href="#JDBC-API-详解" class="headerlink" title="JDBC API 详解"></a>JDBC API 详解</h3><h4 id="1-DriverManger"><a href="#1-DriverManger" class="headerlink" title="1.DriverManger"></a>1.DriverManger</h4><p>(1)注册驱动</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br></pre></td></tr></table></figure>
 
-<p>三.数据转换</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int main()&#123;</span><br><span class="line">        u&#x27;sd&#x27;               //char12_t</span><br><span class="line">        U&#x27;s&#x27;                //char32_t</span><br><span class="line">        L&#x27;s&#x27;                //wchar_t</span><br><span class="line">        u8&#x27;s&#x27;               //unf-8  char</span><br><span class="line">        12u                 //unsigned</span><br><span class="line">        12l                 //long</span><br><span class="line">        12ll                //long long</span><br><span class="line">        12.2f               //float</span><br><span class="line">        12.2l               //long double</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Driver类源代码中有静态代码实现注册驱动</p>
+<p>Mysql5.0后可以自动加载META-INF/services/java.sql.Driver中的驱动类以省略该行代码</p>
+<p>(2)获取链接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">static Connection getConnection(url,username,password);</span><br></pre></td></tr></table></figure>
 
-<p>四.方法的定义与调用</p>
-<p>五.选择语句</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">x #include &lt;iostream&gt;         </span><br><span class="line">    int main()&#123;</span><br><span class="line">    //if:</span><br><span class="line">    if()                     //若满足条件则执行后面的语句</span><br><span class="line">    &#123;&#125;                 </span><br><span class="line">    else if()</span><br><span class="line">    &#123;&#125;                       //若满足条件则执行后面的语句</span><br><span class="line">    else</span><br><span class="line">    &#123;&#125;</span><br><span class="line">     //switch:</span><br><span class="line">     switch(5)&#123;</span><br><span class="line">         case 1:</span><br><span class="line">             break;</span><br><span class="line">         case 2:</span><br><span class="line">             break;</span><br><span class="line">         case 3:</span><br><span class="line">             break;</span><br><span class="line">         case 4:</span><br><span class="line">             break;</span><br><span class="line">         case 5:</span><br><span class="line">             break;</span><br><span class="line">     &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>url:连接路径</p>
+<p>jdbc:mysql://ip地址:端口号/数据库名称?参数键值对1&amp;参数键值对2…;</p>
+<p>如果是本机3306端口号则可以简写jdbc:mysql:///数据库名称?</p>
+<p>useSSL=false  禁用安全连接方式,解决警告提示</p>
+<p>username:用户名</p>
+<p>password:密码</p>
+<h4 id="2-Connection"><a href="#2-Connection" class="headerlink" title="2.Connection"></a>2.Connection</h4><p>获取执行SQL的对象</p>
+<p>Statement createStatement()        普通执行SQL对象</p>
+<p>PreparedStatement preparedStatement() 预编译执行,防止SQL注入</p>
+<p>CallableStatement prapareCall(sql)   执行存储过程的对象</p>
+<p>事务管理</p>
+<p>setAutoCommit(boolean autoCommit);  设置自动提交事务</p>
+<p>commit();        提交事务</p>
+<p>rollback();        回滚</p>
+<h4 id="3-Statment"><a href="#3-Statment" class="headerlink" title="3.Statment"></a>3.Statment</h4><p>执行sql语句</p>
+<p>int executeUpdate(sql):DML DDL 语句   返回影响行数  DDL可能为零</p>
+<p>ResultSet esecuteQuery(sql):DQL语句    返回ResultSet 结果集对象</p>
+<h4 id="4-ResultSet"><a href="#4-ResultSet" class="headerlink" title="4.ResultSet"></a>4.ResultSet</h4><p>ResultSet（结果集对象）作用：<br>1.封装了DQL查询语句的结果<br>ResultSet stmt.executeQuery（sql）：执行DQL语句，返回ResultSet对象<br>获取查询结果<br>boolean next(）：（1）将光标从当前位置向前移动一行（2）判断当前行是否为有效行<br>返回值：<br>true：有效行，当前行有数据<br>false：无效行，当前行没有数据<br>XXX getXxx（参数）：获取数据<br>xxx：数据类型；如：int getint（参数）；String getString（参数）<br>参数：<br>int：列的编号，从1开始<br>String：列的名称</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while (rs.next)</span><br><span class="line">&#123;</span><br><span class="line">int n =getInt(1)          第一列</span><br><span class="line">String name =getInt(2)    第二列</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>六.循环语句</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;            </span><br><span class="line">int main ()&#123;           </span><br><span class="line">    int val=0,nums=0;</span><br><span class="line">    //while:</span><br><span class="line">    int val=0,nums=0;</span><br><span class="line">	while(++val&lt;=10)           //循环十次</span><br><span class="line">    &#123;</span><br><span class="line">        nums+=val;             // nums = nums + val;</span><br><span class="line">        if(val==5)</span><br><span class="line">            break;             //break 跳出循环</span><br><span class="line">        if(val==3)</span><br><span class="line">            continue;         //continue 结束本次循环,开始下次</span><br><span class="line">    &#125;</span><br><span class="line">    while(std::cin&gt;&gt;val)</span><br><span class="line">        nums+=val;            //循环一直进行直达遇到 文件结束符或者错误</span><br><span class="line">    &#125;</span><br><span class="line">    //for循环</span><br><span class="line">    int nums=0;</span><br><span class="line">    for(int val= 1;val&lt;=10;++val)</span><br><span class="line">        nums+=val;</span><br><span class="line">    //do...while:</span><br><span class="line">    do&#123;&#125;while()               //至少进行一次循环</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>七.数组</p>
-<p>八.类和对象</p>
-<p>输入与输出</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;              //输入流istream 和输出流ostream</span><br><span class="line">int main ()&#123;                     //标准库所有的名字都在namespace std 中</span><br><span class="line">    std::cout&lt;&lt;&quot;adf&quot;&lt;&lt;std::end1;  //cout 标准输出  等价于 (std::cout&lt;&lt;&quot;adf&quot;)&lt;&lt;std::end1;  </span><br><span class="line">    int n;                      </span><br><span class="line">    std::cin&gt;&gt;v1;                //cin  标准输入</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>结构体</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt; </span><br><span class="line">struct student&#123;                  //定义结构体</span><br><span class="line">  int id;</span><br><span class="line">   int age;</span><br><span class="line">&#125;;</span><br><span class="line">int main ()&#123;            </span><br><span class="line">	student st1;</span><br><span class="line">    st1.id=0;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-PreparedStatement"><a href="#5-PreparedStatement" class="headerlink" title="5.PreparedStatement"></a>5.PreparedStatement</h4><p>预编译执行,防止SQL注入</p>
+<p>预编译SQL并执行SQL语句<br>1 获取PreparedStatement对象<br>//SQL语句中的参数值，使用？占位符替代<br>String sql = “select * from user where username = ? and password = ？”<br>//通过Connection对象获取，并传入对应的sql语句<br>PreparedStatement pstmt = conn.prepareStatement(sql）；<br>2 设置参数值<br>PreparedStatement对象：setXxx（参数1，参数2）：给？赋值<br>Xxx：数据类型；如setlnt（参数1，参数2）<br>参数：<br>参数1：？的位置编号，从1开始<br>参数2：？的值<br>3 执行SQL<br>executeUpdate(）；/executeQuery（）；：不需要再传递sql</p>
+<h3 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h3><p>数据库连接池是个容器，负责分配、管理数据库连接(Connection)<br>它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个：<br>释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏<br>好处：<br>资源重用<br>提升系统响应速度<br>·避免数据库连接遗漏</p>
+<p>//1.导入jar包</p>
+<p>DBCP   C3P0   Druid</p>
+<p>//2.定义配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">driverCassName=com.mysql.jdbc.Driver</span><br><span class="line">Url=jdbc:mysql:///db1？usesSL=false&amp;useServerPrepStmts=true</span><br><span class="line">username=root</span><br><span class="line">password=1234</span><br><span class="line">#初始化连接数量</span><br><span class="line">iitialsize=5</span><br><span class="line"># 最大连接数</span><br><span class="line">maxActive=10</span><br><span class="line">#最大等待时间</span><br><span class="line">maxWait=3000</span><br></pre></td></tr></table></figure>
 
-<p>定义头文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#ifndef head.h                  //若没有定义则执行    ifdef</span><br><span class="line">#define head.h                  //定义head.h</span><br><span class="line">struct student&#123;                 /*防止重复定义*/</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+<p>1/3.加载配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Properties prop=new PropertiesO；</span><br><span class="line">prop.load(new FileInputstream( name: &quot;src/druid·properties”）);</span><br></pre></td></tr></table></figure>
+
+
+<p>//4获取连按池对象</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DataSource dataSource = DruidDataSourceFactory.createDataSource（prop）；</span><br></pre></td></tr></table></figure>
+
+
+<p>//5.获取数据库连接Connection</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Connection connection = dataSource.getconnection()；</span><br><span class="line">System.out.printin(connection）；</span><br></pre></td></tr></table></figure>
+
+<h3 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h3><p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
+<p>简单来说简化jdbc开发步骤</p>
+<h4 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h4><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_20-02-10.png"></p>
+<h5 id="1-创建user表-添加数据"><a href="#1-创建user表-添加数据" class="headerlink" title="1.创建user表,添加数据"></a>1.创建user表,添加数据</h5><p>在数据库中创建相应的表,添加数据</p>
+<h5 id="2-创建模块-导入坐标"><a href="#2-创建模块-导入坐标" class="headerlink" title="2.创建模块,导入坐标"></a>2.创建模块,导入坐标</h5><p>在idea中创建模块</p>
+<p><a href="https://mybatis.net.cn/">mybatis官网</a>有maven导入坐标的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;                           mybatis</span><br><span class="line">  &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.x.x&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;                          junit自动化测试框架</span><br><span class="line">&lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">&lt;version&gt;4.13&lt;/version&gt;</span><br><span class="line">&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">···&lt;--·添加s1f4j日志api·--&gt;              springboot logback日志   还需要配置文件</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">···&lt;groupId&gt;org.s1f4j&lt;/groupId&gt;</span><br><span class="line">.&lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">··&lt;version&gt;1.7.20&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-·添加1 ogback-c1 assic依赖·--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">··&lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">...&lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span><br><span class="line">.&lt;version&gt;1.2.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-·添加1 ogback-core依赖·-&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">··&lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">.&lt;artifactId&gt;logback-core&lt;/artifactId&gt;</span><br><span class="line">..&lt;version&gt;1.2.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-核心配置文件-mybatis-config-xml"><a href="#3-核心配置文件-mybatis-config-xml" class="headerlink" title="3.核心配置文件 mybatis-config.xml"></a>3.核心配置文件 mybatis-config.xml</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;environments default=&quot;development&quot;&gt;   通过default切换环境</span><br><span class="line">    &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">      &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">      &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">      //配置信息</span><br><span class="line">        &lt;property name=&quot;driver&quot; value=&quot;com.mysql.jdbc.Driver&quot;/&gt;  </span><br><span class="line">        &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/库名称?useSSL=false&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;username&quot; value=&quot;root&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;password&#125;&quot;/&gt;</span><br><span class="line">      &lt;/dataSource&gt;</span><br><span class="line">    &lt;/environment&gt;</span><br><span class="line">  &lt;/environments&gt;</span><br><span class="line">  &lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=&quot;org/mybatis/example/BlogMapper.xml&quot;/&gt;    sql映射文件的路径</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-sql映射文件-Mapper-xml"><a href="#4-sql映射文件-Mapper-xml" class="headerlink" title="4.sql映射文件 Mapper.xml"></a>4.sql映射文件 Mapper.xml</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line">  </span><br><span class="line">&lt;mapper namespace=&quot;namespace&quot;&gt;     名称空间名字</span><br><span class="line">  &lt;select id=&quot;selectid&quot; resultType=&quot;Blog&quot;&gt;  //id是唯一标识   Blog是返回的类型(pojo类名)</span><br><span class="line">    select * from Blog where id = #&#123;id&#125;  </span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="5-编码"><a href="#5-编码" class="headerlink" title="5.编码"></a>5.编码</h5><p>(1)定义pojo类名</p>
+<p>(2)加载核心配置文件,获取sqlsessionfactory</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String resource = &quot;org/mybatis/example/mybatis-config.xml&quot;;   //配置文件路径</span><br><span class="line">InputStream inputStream = Resources.getResourceAsStream(resource); //</span><br><span class="line">SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);</span><br></pre></td></tr></table></figure>
+
+<p>(3)获取sqlsession对象</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SqlSession sqlSession =sqlSessionFactory.openSession();</span><br></pre></td></tr></table></figure>
+
+<p>(4)执行sql语句</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list&lt;user&gt; users = sqlSession.selectList(namespace.selectid)</span><br></pre></td></tr></table></figure>
+
+<p>(5)释放资源</p>
+<p>sqlSession.close();</p>
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_20-52-46.png"></p>
+<h4 id="mapper代理"><a href="#mapper代理" class="headerlink" title="mapper代理"></a>mapper代理</h4><h5 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-06-02.png"></p>
+<h5 id="1-定义接口"><a href="#1-定义接口" class="headerlink" title="1.定义接口"></a>1.定义接口</h5><p>定义与SQL映射文件同名的Mapper接口，并且将Mapper接口和SQL映射文件放置在同一目录下</p>
+<p>在resources中新建directory 命名为将mapper接口的命名中的’.’改为’/‘</p>
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-16-10.png"></p>
+<h5 id="2-设置namespace"><a href="#2-设置namespace" class="headerlink" title="2.设置namespace"></a>2.设置namespace<img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-25-02.png"></h5><p>设置SQL映射文件的namespace,属性为Mapper接口全限定名</p>
+<p>以上图为例则为 com.itheima.mapper.UserMapper</p>
+<h5 id="3-定义mapper方法"><a href="#3-定义mapper方法" class="headerlink" title="3.定义mapper方法"></a>3.定义mapper方法</h5><p>在Mapper接口中定义方法，方法名就是SQL映射文件中sql语句的id,并保持参数类型和返回值类型一致</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List &lt;pojo类名&gt; selectid();</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-编码"><a href="#4-编码" class="headerlink" title="4.编码"></a>4.编码</h5><p>1.通过SqlSession的getMapper方法获取Mapper接口的代理对象</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Mapper接口 mapper=sqlSession.getMapper(mapper接口名.class);</span><br></pre></td></tr></table></figure>
+
+<p>2.调用对应方法完成sq的执行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List &lt;pojo类名&gt; users = mapper.方法名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>在mybaties中有对配置的<a href="https://mybatis.net.cn/configuration.html">详细介绍</a></p>
+<h4 id="sql语句"><a href="#sql语句" class="headerlink" title="sql语句"></a>sql语句</h4><h5 id="字段名对应实体属性"><a href="#字段名对应实体属性" class="headerlink" title="字段名对应实体属性"></a>字段名对应实体属性</h5><p>数据库表的字段名称和实体类的属性名称不一样，则不能自动封装数据<br>*起别名：对不一样的列名起别名，让别名和实体类的属性名一样<br>*缺点：每次查询都要定义一次别名<br>*sqL片段<br>*缺点：不灵活<br>resultMap:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.定义&lt;resultMap&gt;标签</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-47-38.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.在&lt;select&gt;标签中，使用resultMap属性替换resultType属性</span><br><span class="line">  &lt;select id=&quot;selectid&quot; resultMap=&quot;#id名&quot;&gt;  //id是唯一标识   Blog是返回的类型(pojo类名)</span><br><span class="line">    select * from Blog where id = #&#123;id&#125;  ;</span><br><span class="line">  &lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="参数占位符："><a href="#参数占位符：" class="headerlink" title="参数占位符："></a>参数占位符：</h5><p>1):执行SQL时，会将#{}占位符替换为？，将来自动设置参数值(在方法参数名前加上  @Param(“占位符”‘))<br>2)${}:拼SQL。会存在SQL注入问题<br>3.使用时机：<br>*参数传递，都使用#{}<br>*如果要对表名、列名进行动态设置，只能使用${}进行sql拼接。<br>2.parameterType:<br>*用于设置参数类型，该参数可以省略<br>3.SQL语句中特殊字符处理：<br>*转义字符<br>*&lt;[CDATA【内容】&gt;</p>
+<h5 id="SQL语句设置多个参数三种方式"><a href="#SQL语句设置多个参数三种方式" class="headerlink" title="SQL语句设置多个参数三种方式"></a>SQL语句设置多个参数三种方式</h5><p>1)散装参数：需要使用@Param(“SQL中的参数占位符名称”)<br>2)实体类封装参数<br>*只需要保证SQL中的参数名和实体类属性名对应上，即可设置成功<br>3)map集合<br>*只需要保证SQL中的参数名和map集合的键的名称对应上，即可设置成功</p>
+<h5 id="动态SQL"><a href="#动态SQL" class="headerlink" title="动态SQL"></a>动态SQL</h5><p>if:用于判断参数是否有值，使用test属性进行条件判断<br>*存在的问题：第一个条件不需要逻辑运算符<br>*解决方案：<br>1)使用恒等式让所有条件格式都一样<br>2)<where>标签替换where关键字</p>
+<p>·从多个条件中选择一个      choose(when,otherwise):选择，类似于Java中的switch语句</p>
+<h5 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;insert id=&quot;add&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;       inster标签  后面两个参数保证可以返回id</span><br><span class="line">    insert into website(name, domain,tags) VALUES</span><br><span class="line">(#&#123;name&#125;,#&#123;domain&#125;,#&#123;tags&#125;);</span><br><span class="line">&lt;/insert&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;update id=&quot;update&quot;&gt;</span><br><span class="line">    update website</span><br><span class="line">        &lt;set&gt;                              使用set标签防止格式错误</span><br><span class="line">        &lt;if test=&quot;domain!=null and domain!=&#x27;&#x27;&quot;&gt; domain=#&#123;domain&#125; ,&lt;/if&gt;       if条件判断</span><br><span class="line">        &lt;if test=&quot;name!=null and name!=&#x27;&#x27;&quot;&gt; name=#&#123;name&#125;,&lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;tags!=null&quot;&gt;           tags=#&#123;tags&#125;&lt;/if&gt;</span><br><span class="line">        &lt;/set&gt;</span><br><span class="line">    where id=#&#123;id&#125;;</span><br><span class="line">&lt;/update&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-21_19-16-30.png"></p>
+<h5 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-21_19-29-59.png"></p>
 ]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+        <tag>web</tag>
+      </tags>
   </entry>
   <entry>
     <title>JAVA</title>
@@ -565,19 +729,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git-命令</title>
-    <url>/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><p>touch 创建<br>git init 创建仓库<br>git status 查看状态<br>git add .  全部到缓存区<br>git commit -m “注释”<br>git log    查看仓库<br>git-log    间接查看<br>git reset –hard commitID  回退<br>git reflog     操作记录<br>git branch   查看分支<br>git branch 名字<br>git checkout 名字  切换分之<br>git checkout -b  创建并切换<br>git merge 名字   合并分之<br>git branch -d b1 检查删除<br>git branch -D b1 强制删除<br>ssh-keygen -t rsa   创建ssh<br>cat ～/.ssh/id_rsa.pub 查看ssh<br>ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x65;&#101;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x65;&#101;&#x2e;&#99;&#x6f;&#109;</a> 查看链接的ssh    <br>git remote add 仓库名字（origin） 地址   链接仓库    <br>git remote rm 仓库名称<br>git remote    查看链接的仓库<br>git push -f –set-upstream 远端仓库 本地分支名:远端分支名      可以简化后面三个        -f:强制推送  –set-upstream :链接远端分支<br>git branch -vv 查看链接的远端分支<br>git clone ssh地址 本地目录<br>git fetch 《remote name》 《branch name》<br>git pull 《remote name》 《branch name》</p>
-<p>仓库地址 <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#116;&#101;&#x65;&#46;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#103;&#x69;&#116;&#101;&#x65;&#46;&#99;&#111;&#x6d;</a>:yyl1546139844/yyl.git</p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux</title>
     <url>/2022/11/03/Linux/</url>
     <content><![CDATA[<h3 id="一-Linux简介与安装"><a href="#一-Linux简介与安装" class="headerlink" title="一.Linux简介与安装"></a>一.Linux简介与安装</h3><h3 id="二-Linux基础命令"><a href="#二-Linux基础命令" class="headerlink" title="二.Linux基础命令"></a>二.Linux基础命令</h3><h4 id="1-Linux目录结构"><a href="#1-Linux目录结构" class="headerlink" title="1.Linux目录结构"></a>1.Linux目录结构</h4><p><img src="https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027214128.png" alt="image-20221027214128453"></p>
@@ -947,201 +1098,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>JDBC</title>
-    <url>/2022/10/18/JDBC/</url>
-    <content><![CDATA[<h3 id="JDBC简介"><a href="#JDBC简介" class="headerlink" title="JDBC简介"></a>JDBC简介</h3><p>概念：JDBC(Java DataBase Connectivity) ：Java数据库连接技术：具体讲就是通过Java连接广泛的数据库，并对表中数据执行增、删、改、查等操作的技术。</p>
-<p>JDBC是数据库与JAVA代码的桥梁.</p>
-<h3 id="JDBC相关接口"><a href="#JDBC相关接口" class="headerlink" title="JDBC相关接口"></a>JDBC相关接口</h3><table>
-<thead>
-<tr>
-<th>接口</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Driver</td>
-<td>驱动接口，定义建立链接的方式</td>
-</tr>
-<tr>
-<td>DriverManager</td>
-<td>工具类，用于管理驱动，可以获取数据库的链接</td>
-</tr>
-<tr>
-<td>Connection</td>
-<td>表示Java与数据库建立的连接对象（接口）</td>
-</tr>
-<tr>
-<td>PreparedStatement</td>
-<td>发送SQL语句的工具</td>
-</tr>
-<tr>
-<td>ResultSet</td>
-<td>结果集，用于获取查询语句的结果</td>
-</tr>
-</tbody></table>
-<p>JDBC是规范（接口）不是实现（类）<br>JDBC 是一种规范，由Sum公司它提供了一套完整的接口，由数据库厂商根据特点予以实现，因此只要学会接口的使用就可以轻松的用 JDBC编写适用于各种数据库的程序.</p>
-<p>Mysql提供的JDBC实现<br>Mysql提供的JDBC实现称为<a href="https://dev.mysql.com/downloads/connector/j/">Mysql Connector</a>,不同的数据库版本需要使用不同的Connector。<br>实际开发时根据数据库版本、JDK版本、选择不同的Connector。</p>
-<table>
-<thead>
-<tr>
-<th>Connector版本</th>
-<th>MySQL版本</th>
-<th>JDK版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>8.0</td>
-<td>5.5,5.7,8.0</td>
-<td>JDK8.0以上</td>
-</tr>
-<tr>
-<td>5.1</td>
-<td>5.6,5.7,8.0</td>
-<td>JDK5.0以上</td>
-</tr>
-</tbody></table>
-<h3 id="JDBC环境搭建"><a href="#JDBC环境搭建" class="headerlink" title="JDBC环境搭建"></a>JDBC环境搭建</h3><p>在项目中引入数据库驱动jar包（jar文件：针对class文件的压缩格式包含了多个带包的class文件，类似于普通文件打包的zip、rar）。</p>
-<p>以idea为例:</p>
-<p>将mysql-connector-java.jar添加到项目环境中。 1. 右键选中项目，新建一个Directory名为lib，将jar包复制到lib文件夹中。 2. 右键选中jar包，Add as Library –&gt; OK。</p>
-<h3 id="JDBC的编程步骤"><a href="#JDBC的编程步骤" class="headerlink" title="JDBC的编程步骤"></a>JDBC的编程步骤</h3><ol>
-<li><p>加载驱动</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br></pre></td></tr></table></figure></li>
-<li><p>获取链接 </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span><span class="string">&quot;jdbc:mysql://127.0.0.1:3306/website&quot;</span>;</span><br><span class="line">String username=<span class="string">&quot;root&quot;</span>;</span><br><span class="line">String password=<span class="string">&quot;1546139844&quot;</span>;</span><br><span class="line"><span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> DriverManager.getConnection(url,username,password);</span><br></pre></td></tr></table></figure></li>
-<li><p>准备SQL以及发送SQL的工具 </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span><span class="string">&quot;insert into website(name, domain, id,tags) VALUES\n&quot;</span> +</span><br><span class="line">        <span class="string">&quot;(&#x27;test&#x27;,&#x27;test&#x27;,29,5);&quot;</span>;</span><br><span class="line"><span class="type">Statement</span> <span class="variable">stmt</span> <span class="operator">=</span> conn.createStatement();</span><br><span class="line">   </span><br></pre></td></tr></table></figure></li>
-<li><p>执行SQL </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">cont</span> <span class="operator">=</span> stmt.executeUpdate(sql);</span><br></pre></td></tr></table></figure></li>
-<li><p>处理结果集 </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(cont);</span><br><span class="line">   </span><br></pre></td></tr></table></figure></li>
-<li><p>释放资源</p>
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">stmt.close();</span><br><span class="line">conn.close();</span><br></pre></td></tr></table></figure>
-
-<h3 id="JDBC-API-详解"><a href="#JDBC-API-详解" class="headerlink" title="JDBC API 详解"></a>JDBC API 详解</h3><h4 id="1-DriverManger"><a href="#1-DriverManger" class="headerlink" title="1.DriverManger"></a>1.DriverManger</h4><p>(1)注册驱动</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>Driver类源代码中有静态代码实现注册驱动</p>
-<p>Mysql5.0后可以自动加载META-INF/services/java.sql.Driver中的驱动类以省略该行代码</p>
-<p>(2)获取链接</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">static Connection getConnection(url,username,password);</span><br></pre></td></tr></table></figure>
-
-<p>url:连接路径</p>
-<p>jdbc:mysql://ip地址:端口号/数据库名称?参数键值对1&amp;参数键值对2…;</p>
-<p>如果是本机3306端口号则可以简写jdbc:mysql:///数据库名称?</p>
-<p>useSSL=false  禁用安全连接方式,解决警告提示</p>
-<p>username:用户名</p>
-<p>password:密码</p>
-<h4 id="2-Connection"><a href="#2-Connection" class="headerlink" title="2.Connection"></a>2.Connection</h4><p>获取执行SQL的对象</p>
-<p>Statement createStatement()        普通执行SQL对象</p>
-<p>PreparedStatement preparedStatement() 预编译执行,防止SQL注入</p>
-<p>CallableStatement prapareCall(sql)   执行存储过程的对象</p>
-<p>事务管理</p>
-<p>setAutoCommit(boolean autoCommit);  设置自动提交事务</p>
-<p>commit();        提交事务</p>
-<p>rollback();        回滚</p>
-<h4 id="3-Statment"><a href="#3-Statment" class="headerlink" title="3.Statment"></a>3.Statment</h4><p>执行sql语句</p>
-<p>int executeUpdate(sql):DML DDL 语句   返回影响行数  DDL可能为零</p>
-<p>ResultSet esecuteQuery(sql):DQL语句    返回ResultSet 结果集对象</p>
-<h4 id="4-ResultSet"><a href="#4-ResultSet" class="headerlink" title="4.ResultSet"></a>4.ResultSet</h4><p>ResultSet（结果集对象）作用：<br>1.封装了DQL查询语句的结果<br>ResultSet stmt.executeQuery（sql）：执行DQL语句，返回ResultSet对象<br>获取查询结果<br>boolean next(）：（1）将光标从当前位置向前移动一行（2）判断当前行是否为有效行<br>返回值：<br>true：有效行，当前行有数据<br>false：无效行，当前行没有数据<br>XXX getXxx（参数）：获取数据<br>xxx：数据类型；如：int getint（参数）；String getString（参数）<br>参数：<br>int：列的编号，从1开始<br>String：列的名称</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while (rs.next)</span><br><span class="line">&#123;</span><br><span class="line">int n =getInt(1)          第一列</span><br><span class="line">String name =getInt(2)    第二列</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="5-PreparedStatement"><a href="#5-PreparedStatement" class="headerlink" title="5.PreparedStatement"></a>5.PreparedStatement</h4><p>预编译执行,防止SQL注入</p>
-<p>预编译SQL并执行SQL语句<br>1 获取PreparedStatement对象<br>//SQL语句中的参数值，使用？占位符替代<br>String sql = “select * from user where username = ? and password = ？”<br>//通过Connection对象获取，并传入对应的sql语句<br>PreparedStatement pstmt = conn.prepareStatement(sql）；<br>2 设置参数值<br>PreparedStatement对象：setXxx（参数1，参数2）：给？赋值<br>Xxx：数据类型；如setlnt（参数1，参数2）<br>参数：<br>参数1：？的位置编号，从1开始<br>参数2：？的值<br>3 执行SQL<br>executeUpdate(）；/executeQuery（）；：不需要再传递sql</p>
-<h3 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h3><p>数据库连接池是个容器，负责分配、管理数据库连接(Connection)<br>它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个：<br>释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏<br>好处：<br>资源重用<br>提升系统响应速度<br>·避免数据库连接遗漏</p>
-<p>//1.导入jar包</p>
-<p>DBCP   C3P0   Druid</p>
-<p>//2.定义配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">driverCassName=com.mysql.jdbc.Driver</span><br><span class="line">Url=jdbc:mysql:///db1？usesSL=false&amp;useServerPrepStmts=true</span><br><span class="line">username=root</span><br><span class="line">password=1234</span><br><span class="line">#初始化连接数量</span><br><span class="line">iitialsize=5</span><br><span class="line"># 最大连接数</span><br><span class="line">maxActive=10</span><br><span class="line">#最大等待时间</span><br><span class="line">maxWait=3000</span><br></pre></td></tr></table></figure>
-
-<p>1/3.加载配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Properties prop=new PropertiesO；</span><br><span class="line">prop.load(new FileInputstream( name: &quot;src/druid·properties”）);</span><br></pre></td></tr></table></figure>
-
-
-<p>//4获取连按池对象</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DataSource dataSource = DruidDataSourceFactory.createDataSource（prop）；</span><br></pre></td></tr></table></figure>
-
-
-<p>//5.获取数据库连接Connection</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Connection connection = dataSource.getconnection()；</span><br><span class="line">System.out.printin(connection）；</span><br></pre></td></tr></table></figure>
-
-<h3 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h3><p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
-<p>简单来说简化jdbc开发步骤</p>
-<h4 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h4><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_20-02-10.png"></p>
-<h5 id="1-创建user表-添加数据"><a href="#1-创建user表-添加数据" class="headerlink" title="1.创建user表,添加数据"></a>1.创建user表,添加数据</h5><p>在数据库中创建相应的表,添加数据</p>
-<h5 id="2-创建模块-导入坐标"><a href="#2-创建模块-导入坐标" class="headerlink" title="2.创建模块,导入坐标"></a>2.创建模块,导入坐标</h5><p>在idea中创建模块</p>
-<p><a href="https://mybatis.net.cn/">mybatis官网</a>有maven导入坐标的代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;                           mybatis</span><br><span class="line">  &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.x.x&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;                          junit自动化测试框架</span><br><span class="line">&lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">&lt;version&gt;4.13&lt;/version&gt;</span><br><span class="line">&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">···&lt;--·添加s1f4j日志api·--&gt;              springboot logback日志   还需要配置文件</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">···&lt;groupId&gt;org.s1f4j&lt;/groupId&gt;</span><br><span class="line">.&lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">··&lt;version&gt;1.7.20&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-·添加1 ogback-c1 assic依赖·--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">··&lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">...&lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span><br><span class="line">.&lt;version&gt;1.2.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-·添加1 ogback-core依赖·-&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">··&lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">.&lt;artifactId&gt;logback-core&lt;/artifactId&gt;</span><br><span class="line">..&lt;version&gt;1.2.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-核心配置文件-mybatis-config-xml"><a href="#3-核心配置文件-mybatis-config-xml" class="headerlink" title="3.核心配置文件 mybatis-config.xml"></a>3.核心配置文件 mybatis-config.xml</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;environments default=&quot;development&quot;&gt;   通过default切换环境</span><br><span class="line">    &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">      &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">      &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">      //配置信息</span><br><span class="line">        &lt;property name=&quot;driver&quot; value=&quot;com.mysql.jdbc.Driver&quot;/&gt;  </span><br><span class="line">        &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/库名称?useSSL=false&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;username&quot; value=&quot;root&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;password&#125;&quot;/&gt;</span><br><span class="line">      &lt;/dataSource&gt;</span><br><span class="line">    &lt;/environment&gt;</span><br><span class="line">  &lt;/environments&gt;</span><br><span class="line">  &lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=&quot;org/mybatis/example/BlogMapper.xml&quot;/&gt;    sql映射文件的路径</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="4-sql映射文件-Mapper-xml"><a href="#4-sql映射文件-Mapper-xml" class="headerlink" title="4.sql映射文件 Mapper.xml"></a>4.sql映射文件 Mapper.xml</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line">  </span><br><span class="line">&lt;mapper namespace=&quot;namespace&quot;&gt;     名称空间名字</span><br><span class="line">  &lt;select id=&quot;selectid&quot; resultType=&quot;Blog&quot;&gt;  //id是唯一标识   Blog是返回的类型(pojo类名)</span><br><span class="line">    select * from Blog where id = #&#123;id&#125;  </span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="5-编码"><a href="#5-编码" class="headerlink" title="5.编码"></a>5.编码</h5><p>(1)定义pojo类名</p>
-<p>(2)加载核心配置文件,获取sqlsessionfactory</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String resource = &quot;org/mybatis/example/mybatis-config.xml&quot;;   //配置文件路径</span><br><span class="line">InputStream inputStream = Resources.getResourceAsStream(resource); //</span><br><span class="line">SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);</span><br></pre></td></tr></table></figure>
-
-<p>(3)获取sqlsession对象</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SqlSession sqlSession =sqlSessionFactory.openSession();</span><br></pre></td></tr></table></figure>
-
-<p>(4)执行sql语句</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list&lt;user&gt; users = sqlSession.selectList(namespace.selectid)</span><br></pre></td></tr></table></figure>
-
-<p>(5)释放资源</p>
-<p>sqlSession.close();</p>
-<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_20-52-46.png"></p>
-<h4 id="mapper代理"><a href="#mapper代理" class="headerlink" title="mapper代理"></a>mapper代理</h4><h5 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-06-02.png"></p>
-<h5 id="1-定义接口"><a href="#1-定义接口" class="headerlink" title="1.定义接口"></a>1.定义接口</h5><p>定义与SQL映射文件同名的Mapper接口，并且将Mapper接口和SQL映射文件放置在同一目录下</p>
-<p>在resources中新建directory 命名为将mapper接口的命名中的’.’改为’/‘</p>
-<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-16-10.png"></p>
-<h5 id="2-设置namespace"><a href="#2-设置namespace" class="headerlink" title="2.设置namespace"></a>2.设置namespace<img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-25-02.png"></h5><p>设置SQL映射文件的namespace,属性为Mapper接口全限定名</p>
-<p>以上图为例则为 com.itheima.mapper.UserMapper</p>
-<h5 id="3-定义mapper方法"><a href="#3-定义mapper方法" class="headerlink" title="3.定义mapper方法"></a>3.定义mapper方法</h5><p>在Mapper接口中定义方法，方法名就是SQL映射文件中sql语句的id,并保持参数类型和返回值类型一致</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List &lt;pojo类名&gt; selectid();</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="4-编码"><a href="#4-编码" class="headerlink" title="4.编码"></a>4.编码</h5><p>1.通过SqlSession的getMapper方法获取Mapper接口的代理对象</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Mapper接口 mapper=sqlSession.getMapper(mapper接口名.class);</span><br></pre></td></tr></table></figure>
-
-<p>2.调用对应方法完成sq的执行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List &lt;pojo类名&gt; users = mapper.方法名;</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>在mybaties中有对配置的<a href="https://mybatis.net.cn/configuration.html">详细介绍</a></p>
-<h4 id="sql语句"><a href="#sql语句" class="headerlink" title="sql语句"></a>sql语句</h4><h5 id="字段名对应实体属性"><a href="#字段名对应实体属性" class="headerlink" title="字段名对应实体属性"></a>字段名对应实体属性</h5><p>数据库表的字段名称和实体类的属性名称不一样，则不能自动封装数据<br>*起别名：对不一样的列名起别名，让别名和实体类的属性名一样<br>*缺点：每次查询都要定义一次别名<br>*sqL片段<br>*缺点：不灵活<br>resultMap:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.定义&lt;resultMap&gt;标签</span><br></pre></td></tr></table></figure>
-
-<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-47-38.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.在&lt;select&gt;标签中，使用resultMap属性替换resultType属性</span><br><span class="line">  &lt;select id=&quot;selectid&quot; resultMap=&quot;#id名&quot;&gt;  //id是唯一标识   Blog是返回的类型(pojo类名)</span><br><span class="line">    select * from Blog where id = #&#123;id&#125;  ;</span><br><span class="line">  &lt;/select&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="参数占位符："><a href="#参数占位符：" class="headerlink" title="参数占位符："></a>参数占位符：</h5><p>1):执行SQL时，会将#{}占位符替换为？，将来自动设置参数值(在方法参数名前加上  @Param(“占位符”‘))<br>2)${}:拼SQL。会存在SQL注入问题<br>3.使用时机：<br>*参数传递，都使用#{}<br>*如果要对表名、列名进行动态设置，只能使用${}进行sql拼接。<br>2.parameterType:<br>*用于设置参数类型，该参数可以省略<br>3.SQL语句中特殊字符处理：<br>*转义字符<br>*&lt;[CDATA【内容】&gt;</p>
-<h5 id="SQL语句设置多个参数三种方式"><a href="#SQL语句设置多个参数三种方式" class="headerlink" title="SQL语句设置多个参数三种方式"></a>SQL语句设置多个参数三种方式</h5><p>1)散装参数：需要使用@Param(“SQL中的参数占位符名称”)<br>2)实体类封装参数<br>*只需要保证SQL中的参数名和实体类属性名对应上，即可设置成功<br>3)map集合<br>*只需要保证SQL中的参数名和map集合的键的名称对应上，即可设置成功</p>
-<h5 id="动态SQL"><a href="#动态SQL" class="headerlink" title="动态SQL"></a>动态SQL</h5><p>if:用于判断参数是否有值，使用test属性进行条件判断<br>*存在的问题：第一个条件不需要逻辑运算符<br>*解决方案：<br>1)使用恒等式让所有条件格式都一样<br>2)<where>标签替换where关键字</p>
-<p>·从多个条件中选择一个      choose(when,otherwise):选择，类似于Java中的switch语句</p>
-<h5 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;insert id=&quot;add&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;       inster标签  后面两个参数保证可以返回id</span><br><span class="line">    insert into website(name, domain,tags) VALUES</span><br><span class="line">(#&#123;name&#125;,#&#123;domain&#125;,#&#123;tags&#125;);</span><br><span class="line">&lt;/insert&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;update id=&quot;update&quot;&gt;</span><br><span class="line">    update website</span><br><span class="line">        &lt;set&gt;                              使用set标签防止格式错误</span><br><span class="line">        &lt;if test=&quot;domain!=null and domain!=&#x27;&#x27;&quot;&gt; domain=#&#123;domain&#125; ,&lt;/if&gt;       if条件判断</span><br><span class="line">        &lt;if test=&quot;name!=null and name!=&#x27;&#x27;&quot;&gt; name=#&#123;name&#125;,&lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;tags!=null&quot;&gt;           tags=#&#123;tags&#125;&lt;/if&gt;</span><br><span class="line">        &lt;/set&gt;</span><br><span class="line">    where id=#&#123;id&#125;;</span><br><span class="line">&lt;/update&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-21_19-16-30.png"></p>
-<h5 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-21_19-29-59.png"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>html</title>
     <url>/2022/08/15/html/</url>
     <content><![CDATA[<h1 id="html-css"><a href="#html-css" class="headerlink" title="html/css"></a>html/css</h1><h2 id="一-文本属性"><a href="#一-文本属性" class="headerlink" title="一.文本属性"></a>一.文本属性</h2><p>文字整体为上边距，下边距和文本。</p>
@@ -1173,6 +1129,19 @@
       </categories>
       <tags>
         <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git-命令</title>
+    <url>/2022/08/15/git-%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><p>touch 创建<br>git init 创建仓库<br>git status 查看状态<br>git add .  全部到缓存区<br>git commit -m “注释”<br>git log    查看仓库<br>git-log    间接查看<br>git reset –hard commitID  回退<br>git reflog     操作记录<br>git branch   查看分支<br>git branch 名字<br>git checkout 名字  切换分之<br>git checkout -b  创建并切换<br>git merge 名字   合并分之<br>git branch -d b1 检查删除<br>git branch -D b1 强制删除<br>ssh-keygen -t rsa   创建ssh<br>cat ～/.ssh/id_rsa.pub 查看ssh<br>ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#101;&#101;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#101;&#101;&#x2e;&#99;&#x6f;&#109;</a> 查看链接的ssh    <br>git remote add 仓库名字（origin） 地址   链接仓库    <br>git remote rm 仓库名称<br>git remote    查看链接的仓库<br>git push -f –set-upstream 远端仓库 本地分支名:远端分支名      可以简化后面三个        -f:强制推送  –set-upstream :链接远端分支<br>git branch -vv 查看链接的远端分支<br>git clone ssh地址 本地目录<br>git fetch 《remote name》 《branch name》<br>git pull 《remote name》 《branch name》</p>
+<p>仓库地址 <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x65;&#x65;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x65;&#x65;&#46;&#x63;&#x6f;&#109;</a>:yyl1546139844/yyl.git</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>命令</tag>
       </tags>
   </entry>
   <entry>
@@ -1320,6 +1289,33 @@
       </tags>
   </entry>
   <entry>
+    <title>leetcode_JAVA</title>
+    <url>/2022/10/05/leetcode-JAVA/</url>
+    <content><![CDATA[<h5 id="1-两数相加"><a href="#1-两数相加" class="headerlink" title="1.两数相加"></a>1.两数相加</h5><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。你可以按任意顺序返回答案。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode1</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] TwoSum(<span class="type">int</span> [] nums,<span class="type">int</span> target)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> i,j;</span><br><span class="line">        i=<span class="number">0</span>;j=<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> [] sum=<span class="keyword">new</span> <span class="title class_">int</span>[] &#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(;i&lt;nums.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            j=i+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(;j&lt;nums.length;j++)</span><br><span class="line">                <span class="keyword">if</span> (nums[i]+nums[j]==target)&#123;</span><br><span class="line">                    sum [<span class="number">0</span>]=i;sum [<span class="number">1</span>]=j;</span><br><span class="line">                    <span class="keyword">return</span> sum;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2.两数相加"></a>2.两数相加</h5><p>给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。请你将两个数相加，并以相同形式返回一个表示和的链表。你可以假设除了数字 0 之外，这两个数都不会以 0 开头</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span><span class="number">0</span>;                                      <span class="comment">//用y记录两数相加是否大于十</span></span><br><span class="line">        ListNode p=l1;                                <span class="comment">//p指向l1第一个节点</span></span><br><span class="line">        ListNode q=l2;									<span class="comment">//q指向l2第一个节点</span></span><br><span class="line">        ListNode q_f=l2;								<span class="comment">//q_f指向q的前一个结点</span></span><br><span class="line">        <span class="keyword">while</span> (q!=<span class="literal">null</span> &amp;&amp; p!=<span class="literal">null</span>) &#123;                   <span class="comment">//首先计算l1和l2长度相同的节点值</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> p.val + q.val+y;                  <span class="comment">//y是上两个后大于十时候进的1</span></span><br><span class="line">            q.val=a%<span class="number">10</span>;                                <span class="comment">//将和存放在q中</span></span><br><span class="line">            <span class="keyword">if</span>(a&gt;=<span class="number">10</span>)									<span class="comment">//判断和是否要进1</span></span><br><span class="line">                y = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                y = <span class="number">0</span>;</span><br><span class="line">            p=p.next;                                  <span class="comment">//p指向下一个节点</span></span><br><span class="line">            q_f=q;                                     <span class="comment">//q_f指向当前q节点</span></span><br><span class="line">            q=q.next;								<span class="comment">//q指向下一个节点</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//当前的状态是l1和l2相同长度的部分已经加完并且存放在l2当中,进数存放在y中,下一步需要将l1或l2中多出去的节点接在l2后面,即需要使得q_f节点的next指针指向多余节点的第一个节点,q节点指向多于节点的第一个节点.(若长的链表为l2则本身就满足此情况即不需要操作)</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(q==<span class="literal">null</span> &amp;&amp;p!=<span class="literal">null</span>)					</span><br><span class="line">        &#123;q_f.next=p;q=q_f.next;&#125;                      <span class="comment">//完成上述操作</span></span><br><span class="line">        <span class="keyword">if</span>(y==<span class="number">0</span>)                                     <span class="comment">//没有需要进的数则直接返回</span></span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(q==<span class="literal">null</span>)&#123;                             <span class="comment">//两链表长度相同且需要进1</span></span><br><span class="line">                ListNode last=<span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>,<span class="literal">null</span>);  <span class="comment">//新建节点值为1接在q_f后面</span></span><br><span class="line">                q_f.next=last;</span><br><span class="line">                <span class="keyword">return</span> l2;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">while</span> (q!=<span class="literal">null</span> &amp;&amp; q.val==<span class="number">9</span>)         <span class="comment">//只要节点值为9才需要继续操作否则直接加一即可,所以找到最后一个q的节点,并且使得走过节点的值都为0(9+1=10),y不变还为1</span></span><br><span class="line">                &#123;</span><br><span class="line">                    q.val=<span class="number">0</span>;</span><br><span class="line">                    q_f=q;</span><br><span class="line">                    q=q.next;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (q==<span class="literal">null</span>)                      <span class="comment">//如果最后一个9是最后一个节点(类似19999999),新建节点值为1链接在最后</span></span><br><span class="line">                &#123;</span><br><span class="line">                    ListNode last=<span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>,<span class="literal">null</span>);</span><br><span class="line">                    q_f.next=last;</span><br><span class="line">                    <span class="keyword">return</span> l2;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;q.val=q.val+<span class="number">1</span>;&#125;              <span class="comment">//否则直接加一返回</span></span><br><span class="line">                <span class="keyword">return</span> l2;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="3-最长字串"><a href="#3-最长字串" class="headerlink" title="3.最长字串"></a>3.最长字串</h5><p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode3</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthOfLongestSubstring</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] schar= <span class="keyword">new</span> <span class="title class_">char</span>[s.length()];             <span class="comment">//字符串转为schar字符数组</span></span><br><span class="line">        schar=s.toCharArray();</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span> ,j=<span class="number">1</span>,n=<span class="number">1</span>,m=<span class="number">0</span>;                       <span class="comment">//n记录当前的无重子串长度,m记录历史中最长的无重子串长度</span></span><br><span class="line">        <span class="keyword">while</span> (i&lt;s.length()) &#123;                     </span><br><span class="line">            <span class="keyword">while</span> (j&lt;s.length()) &#123;</span><br><span class="line">                <span class="type">int</span> a=<span class="number">0</span>;							<span class="comment">//a记录是否有重复字符</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l=i; l&lt;j; l++) &#123;          <span class="comment">//检查从i到j是否有重复</span></span><br><span class="line">                    <span class="keyword">if</span> (schar[l]==schar[j]) &#123;</span><br><span class="line">                        a =<span class="number">0</span>;                      <span class="comment">//若有重复,a置为0;跳出循环</span></span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> &#123;</span><br><span class="line">                        a =<span class="number">1</span>;                       <span class="comment">//无重复a置为1</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (a==<span class="number">1</span>) &#123;                        <span class="comment">//无重复,当前无重复子串长度加一</span></span><br><span class="line">                    n=n+<span class="number">1</span>;</span><br><span class="line">                    j++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">break</span>;                         <span class="comment">//有重复直接跳出循环</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (n&gt;m) &#123;                             <span class="comment">//如果当前子串长度大于记载的最大值则替换</span></span><br><span class="line">                m=n;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(a==<span class="number">1</span>)&#123;                              <span class="comment">//若无重复从下一个i开始继续检测</span></span><br><span class="line">                i++;</span><br><span class="line">                <span class="keyword">if</span>(j==i)&#123; j=j+<span class="number">1</span>;n=<span class="number">1</span>;&#125;             <span class="comment">//若ji相等则j加一,无重复子串长度为一</span></span><br><span class="line">                <span class="keyword">else</span>&#123; n=n-<span class="number">1</span>;&#125;                     <span class="comment">//i进了一位所以当前无重复子串减少一位</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;                                 <span class="comment">//如果有重复则从重复字符下一位开始检测</span></span><br><span class="line">                <span class="keyword">if</span>(i==l+<span class="number">1</span>)</span><br><span class="line">                 <span class="keyword">break</span>;</span><br><span class="line">                <span class="type">int</span> cont=l+<span class="number">1</span>-i;</span><br><span class="line">                i=l+<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(j==i)&#123; j=j+<span class="number">1</span>;n=<span class="number">1</span>;&#125;</span><br><span class="line">                <span class="keyword">else</span>&#123; n=n-cont;&#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-中位数"><a href="#4-中位数" class="headerlink" title="4.中位数"></a>4.中位数</h5><p>给定两个大小分别为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的 中位数 。算法的时间复杂度应该为 O(log (m+n)) 。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> first.f1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.swing.*;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode4</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">findMedianSortedArrays</span><span class="params">(<span class="type">int</span>[] nums1, <span class="type">int</span>[] nums2)</span> &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; nums3=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();         <span class="comment">//nums3是动态数组</span></span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;nums1.length &amp;&amp;j&lt;nums2.length)             <span class="comment">//依次比较数组大小</span></span><br><span class="line">        &#123; </span><br><span class="line">            <span class="keyword">if</span> (nums1[i]&lt;nums2[j])</span><br><span class="line">                nums3.add(nums1[i++]);                    <span class="comment">//将小的值放入动态数组中</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                nums3.add(nums2[j++]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i==nums1.length)                             <span class="comment">//将数组的剩余部分放入动态数组中</span></span><br><span class="line">            <span class="keyword">while</span>(j&lt;nums2.length)</span><br><span class="line">                nums3.add(nums2[j++]);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">while</span>(i&lt;nums1.length)</span><br><span class="line">                nums3.add(nums1[i++]);</span><br><span class="line">        <span class="keyword">if</span> ((nums1.length+nums2.length)%<span class="number">2</span>==<span class="number">1</span>)           <span class="comment">//根据动态数组长度,返回中位数</span></span><br><span class="line">            <span class="keyword">return</span> nums3.get((nums1.length+nums2.length-<span class="number">1</span>)/<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> ((<span class="type">double</span>)nums3.get((nums1.length+nums2.length-<span class="number">1</span>)/<span class="number">2</span>)+(<span class="type">double</span>)nums3.get((nums1.length+nums2.length-<span class="number">1</span>)/<span class="number">2</span>+<span class="number">1</span>))/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-回文子串"><a href="#5-回文子串" class="headerlink" title="5.回文子串"></a>5.回文子串</h5><p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode5</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">longestPalindrome</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] s1=<span class="keyword">new</span> <span class="title class_">char</span>[s.length()];          <span class="comment">//s1相当于s的字符数组</span></span><br><span class="line">        s1=s.toCharArray();                     </span><br><span class="line">        <span class="type">char</span>[] s2=<span class="keyword">new</span> <span class="title class_">char</span>[s.length()];			 <span class="comment">//用s2来匹配是否是回文字串</span></span><br><span class="line">        s2=s.toCharArray();</span><br><span class="line">        <span class="type">int</span> cont=<span class="number">0</span>;                              <span class="comment">//cont为回文子串长度</span></span><br><span class="line">        <span class="type">int</span> start=<span class="number">0</span>;                             <span class="comment">//start为回文子串开始的位置</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;s.length(); i++) &#123;       <span class="comment">//从s1的第一个字符开始匹配</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j=i+cont;j&lt;s.length(); j++) &#123; <span class="comment">//从s2与s1相同的位置加上当前记录的最大回文子串的长度开始匹配</span></span><br><span class="line">                <span class="type">int</span> n=i;                           <span class="comment">//用m和n代替j和i防止j和i改变</span></span><br><span class="line">                <span class="type">int</span> m=j;</span><br><span class="line">                <span class="keyword">for</span> (; m&gt;=i; ) &#123;                   <span class="comment">//如果字符等则依次匹配</span></span><br><span class="line">                    <span class="keyword">if</span> (s2[m]==s1[n]) &#123;n++;m--;&#125;</span><br><span class="line">                    <span class="keyword">else</span> &#123;<span class="keyword">break</span>;&#125;                    <span class="comment">//如果不等则跳出循环</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (m&gt;=i) &#123;&#125;                         <span class="comment">//如果m大于i说明没有匹配完即i到j中间不是回文子串</span></span><br><span class="line">                <span class="keyword">else</span>  &#123;</span><br><span class="line">                    <span class="keyword">if</span> (cont&lt;j-i+<span class="number">1</span>) &#123;               <span class="comment">//是回文子串则计算当前最大长度是否大于此回文子串长度,如果小于则替换</span></span><br><span class="line">                        cont=j-i+<span class="number">1</span>;</span><br><span class="line">                        start=i;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">char</span>[] s4=<span class="keyword">new</span> <span class="title class_">char</span>[cont];                <span class="comment">//s4存放最大回文子串</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;cont;i++)                 <span class="comment">//从start开始的cont个字符就是最大回文子串</span></span><br><span class="line">            s4[i]=s1[start++];</span><br><span class="line">        String s5=<span class="keyword">new</span> <span class="title class_">String</span>(s4);</span><br><span class="line">        <span class="keyword">return</span> s5;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>leetcode</category>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>刷题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>leetcode</title>
     <url>/2022/08/16/leetcode/</url>
     <content><![CDATA[<p>C++解法</p>
@@ -1349,33 +1345,6 @@
       <categories>
         <category>leetcode</category>
         <category>c++</category>
-      </categories>
-      <tags>
-        <tag>刷题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>leetcode_JAVA</title>
-    <url>/2022/10/05/leetcode-JAVA/</url>
-    <content><![CDATA[<h5 id="1-两数相加"><a href="#1-两数相加" class="headerlink" title="1.两数相加"></a>1.两数相加</h5><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。你可以按任意顺序返回答案。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode1</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] TwoSum(<span class="type">int</span> [] nums,<span class="type">int</span> target)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> i,j;</span><br><span class="line">        i=<span class="number">0</span>;j=<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> [] sum=<span class="keyword">new</span> <span class="title class_">int</span>[] &#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(;i&lt;nums.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            j=i+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(;j&lt;nums.length;j++)</span><br><span class="line">                <span class="keyword">if</span> (nums[i]+nums[j]==target)&#123;</span><br><span class="line">                    sum [<span class="number">0</span>]=i;sum [<span class="number">1</span>]=j;</span><br><span class="line">                    <span class="keyword">return</span> sum;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2.两数相加"></a>2.两数相加</h5><p>给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。请你将两个数相加，并以相同形式返回一个表示和的链表。你可以假设除了数字 0 之外，这两个数都不会以 0 开头</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span><span class="number">0</span>;                                      <span class="comment">//用y记录两数相加是否大于十</span></span><br><span class="line">        ListNode p=l1;                                <span class="comment">//p指向l1第一个节点</span></span><br><span class="line">        ListNode q=l2;									<span class="comment">//q指向l2第一个节点</span></span><br><span class="line">        ListNode q_f=l2;								<span class="comment">//q_f指向q的前一个结点</span></span><br><span class="line">        <span class="keyword">while</span> (q!=<span class="literal">null</span> &amp;&amp; p!=<span class="literal">null</span>) &#123;                   <span class="comment">//首先计算l1和l2长度相同的节点值</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> p.val + q.val+y;                  <span class="comment">//y是上两个后大于十时候进的1</span></span><br><span class="line">            q.val=a%<span class="number">10</span>;                                <span class="comment">//将和存放在q中</span></span><br><span class="line">            <span class="keyword">if</span>(a&gt;=<span class="number">10</span>)									<span class="comment">//判断和是否要进1</span></span><br><span class="line">                y = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                y = <span class="number">0</span>;</span><br><span class="line">            p=p.next;                                  <span class="comment">//p指向下一个节点</span></span><br><span class="line">            q_f=q;                                     <span class="comment">//q_f指向当前q节点</span></span><br><span class="line">            q=q.next;								<span class="comment">//q指向下一个节点</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//当前的状态是l1和l2相同长度的部分已经加完并且存放在l2当中,进数存放在y中,下一步需要将l1或l2中多出去的节点接在l2后面,即需要使得q_f节点的next指针指向多余节点的第一个节点,q节点指向多于节点的第一个节点.(若长的链表为l2则本身就满足此情况即不需要操作)</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(q==<span class="literal">null</span> &amp;&amp;p!=<span class="literal">null</span>)					</span><br><span class="line">        &#123;q_f.next=p;q=q_f.next;&#125;                      <span class="comment">//完成上述操作</span></span><br><span class="line">        <span class="keyword">if</span>(y==<span class="number">0</span>)                                     <span class="comment">//没有需要进的数则直接返回</span></span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(q==<span class="literal">null</span>)&#123;                             <span class="comment">//两链表长度相同且需要进1</span></span><br><span class="line">                ListNode last=<span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>,<span class="literal">null</span>);  <span class="comment">//新建节点值为1接在q_f后面</span></span><br><span class="line">                q_f.next=last;</span><br><span class="line">                <span class="keyword">return</span> l2;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">while</span> (q!=<span class="literal">null</span> &amp;&amp; q.val==<span class="number">9</span>)         <span class="comment">//只要节点值为9才需要继续操作否则直接加一即可,所以找到最后一个q的节点,并且使得走过节点的值都为0(9+1=10),y不变还为1</span></span><br><span class="line">                &#123;</span><br><span class="line">                    q.val=<span class="number">0</span>;</span><br><span class="line">                    q_f=q;</span><br><span class="line">                    q=q.next;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (q==<span class="literal">null</span>)                      <span class="comment">//如果最后一个9是最后一个节点(类似19999999),新建节点值为1链接在最后</span></span><br><span class="line">                &#123;</span><br><span class="line">                    ListNode last=<span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>,<span class="literal">null</span>);</span><br><span class="line">                    q_f.next=last;</span><br><span class="line">                    <span class="keyword">return</span> l2;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;q.val=q.val+<span class="number">1</span>;&#125;              <span class="comment">//否则直接加一返回</span></span><br><span class="line">                <span class="keyword">return</span> l2;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="3-最长字串"><a href="#3-最长字串" class="headerlink" title="3.最长字串"></a>3.最长字串</h5><p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode3</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthOfLongestSubstring</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] schar= <span class="keyword">new</span> <span class="title class_">char</span>[s.length()];             <span class="comment">//字符串转为schar字符数组</span></span><br><span class="line">        schar=s.toCharArray();</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span> ,j=<span class="number">1</span>,n=<span class="number">1</span>,m=<span class="number">0</span>;                       <span class="comment">//n记录当前的无重子串长度,m记录历史中最长的无重子串长度</span></span><br><span class="line">        <span class="keyword">while</span> (i&lt;s.length()) &#123;                     </span><br><span class="line">            <span class="keyword">while</span> (j&lt;s.length()) &#123;</span><br><span class="line">                <span class="type">int</span> a=<span class="number">0</span>;							<span class="comment">//a记录是否有重复字符</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l=i; l&lt;j; l++) &#123;          <span class="comment">//检查从i到j是否有重复</span></span><br><span class="line">                    <span class="keyword">if</span> (schar[l]==schar[j]) &#123;</span><br><span class="line">                        a =<span class="number">0</span>;                      <span class="comment">//若有重复,a置为0;跳出循环</span></span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> &#123;</span><br><span class="line">                        a =<span class="number">1</span>;                       <span class="comment">//无重复a置为1</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (a==<span class="number">1</span>) &#123;                        <span class="comment">//无重复,当前无重复子串长度加一</span></span><br><span class="line">                    n=n+<span class="number">1</span>;</span><br><span class="line">                    j++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">break</span>;                         <span class="comment">//有重复直接跳出循环</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (n&gt;m) &#123;                             <span class="comment">//如果当前子串长度大于记载的最大值则替换</span></span><br><span class="line">                m=n;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(a==<span class="number">1</span>)&#123;                              <span class="comment">//若无重复从下一个i开始继续检测</span></span><br><span class="line">                i++;</span><br><span class="line">                <span class="keyword">if</span>(j==i)&#123; j=j+<span class="number">1</span>;n=<span class="number">1</span>;&#125;             <span class="comment">//若ji相等则j加一,无重复子串长度为一</span></span><br><span class="line">                <span class="keyword">else</span>&#123; n=n-<span class="number">1</span>;&#125;                     <span class="comment">//i进了一位所以当前无重复子串减少一位</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;                                 <span class="comment">//如果有重复则从重复字符下一位开始检测</span></span><br><span class="line">                <span class="keyword">if</span>(i==l+<span class="number">1</span>)</span><br><span class="line">                 <span class="keyword">break</span>;</span><br><span class="line">                <span class="type">int</span> cont=l+<span class="number">1</span>-i;</span><br><span class="line">                i=l+<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(j==i)&#123; j=j+<span class="number">1</span>;n=<span class="number">1</span>;&#125;</span><br><span class="line">                <span class="keyword">else</span>&#123; n=n-cont;&#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="4-中位数"><a href="#4-中位数" class="headerlink" title="4.中位数"></a>4.中位数</h5><p>给定两个大小分别为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的 中位数 。算法的时间复杂度应该为 O(log (m+n)) 。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> first.f1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.swing.*;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode4</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">findMedianSortedArrays</span><span class="params">(<span class="type">int</span>[] nums1, <span class="type">int</span>[] nums2)</span> &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; nums3=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();         <span class="comment">//nums3是动态数组</span></span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;nums1.length &amp;&amp;j&lt;nums2.length)             <span class="comment">//依次比较数组大小</span></span><br><span class="line">        &#123; </span><br><span class="line">            <span class="keyword">if</span> (nums1[i]&lt;nums2[j])</span><br><span class="line">                nums3.add(nums1[i++]);                    <span class="comment">//将小的值放入动态数组中</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                nums3.add(nums2[j++]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i==nums1.length)                             <span class="comment">//将数组的剩余部分放入动态数组中</span></span><br><span class="line">            <span class="keyword">while</span>(j&lt;nums2.length)</span><br><span class="line">                nums3.add(nums2[j++]);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">while</span>(i&lt;nums1.length)</span><br><span class="line">                nums3.add(nums1[i++]);</span><br><span class="line">        <span class="keyword">if</span> ((nums1.length+nums2.length)%<span class="number">2</span>==<span class="number">1</span>)           <span class="comment">//根据动态数组长度,返回中位数</span></span><br><span class="line">            <span class="keyword">return</span> nums3.get((nums1.length+nums2.length-<span class="number">1</span>)/<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> ((<span class="type">double</span>)nums3.get((nums1.length+nums2.length-<span class="number">1</span>)/<span class="number">2</span>)+(<span class="type">double</span>)nums3.get((nums1.length+nums2.length-<span class="number">1</span>)/<span class="number">2</span>+<span class="number">1</span>))/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="5-回文子串"><a href="#5-回文子串" class="headerlink" title="5.回文子串"></a>5.回文子串</h5><p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">leetcode5</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">longestPalindrome</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] s1=<span class="keyword">new</span> <span class="title class_">char</span>[s.length()];          <span class="comment">//s1相当于s的字符数组</span></span><br><span class="line">        s1=s.toCharArray();                     </span><br><span class="line">        <span class="type">char</span>[] s2=<span class="keyword">new</span> <span class="title class_">char</span>[s.length()];			 <span class="comment">//用s2来匹配是否是回文字串</span></span><br><span class="line">        s2=s.toCharArray();</span><br><span class="line">        <span class="type">int</span> cont=<span class="number">0</span>;                              <span class="comment">//cont为回文子串长度</span></span><br><span class="line">        <span class="type">int</span> start=<span class="number">0</span>;                             <span class="comment">//start为回文子串开始的位置</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;s.length(); i++) &#123;       <span class="comment">//从s1的第一个字符开始匹配</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j=i+cont;j&lt;s.length(); j++) &#123; <span class="comment">//从s2与s1相同的位置加上当前记录的最大回文子串的长度开始匹配</span></span><br><span class="line">                <span class="type">int</span> n=i;                           <span class="comment">//用m和n代替j和i防止j和i改变</span></span><br><span class="line">                <span class="type">int</span> m=j;</span><br><span class="line">                <span class="keyword">for</span> (; m&gt;=i; ) &#123;                   <span class="comment">//如果字符等则依次匹配</span></span><br><span class="line">                    <span class="keyword">if</span> (s2[m]==s1[n]) &#123;n++;m--;&#125;</span><br><span class="line">                    <span class="keyword">else</span> &#123;<span class="keyword">break</span>;&#125;                    <span class="comment">//如果不等则跳出循环</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (m&gt;=i) &#123;&#125;                         <span class="comment">//如果m大于i说明没有匹配完即i到j中间不是回文子串</span></span><br><span class="line">                <span class="keyword">else</span>  &#123;</span><br><span class="line">                    <span class="keyword">if</span> (cont&lt;j-i+<span class="number">1</span>) &#123;               <span class="comment">//是回文子串则计算当前最大长度是否大于此回文子串长度,如果小于则替换</span></span><br><span class="line">                        cont=j-i+<span class="number">1</span>;</span><br><span class="line">                        start=i;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">char</span>[] s4=<span class="keyword">new</span> <span class="title class_">char</span>[cont];                <span class="comment">//s4存放最大回文子串</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;cont;i++)                 <span class="comment">//从start开始的cont个字符就是最大回文子串</span></span><br><span class="line">            s4[i]=s1[start++];</span><br><span class="line">        String s5=<span class="keyword">new</span> <span class="title class_">String</span>(s4);</span><br><span class="line">        <span class="keyword">return</span> s5;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>leetcode</category>
-        <category>java</category>
       </categories>
       <tags>
         <tag>刷题</tag>
@@ -1446,6 +1415,106 @@
       </categories>
       <tags>
         <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建</title>
+    <url>/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h3 id="Hexo零基础搭建个人博客"><a href="#Hexo零基础搭建个人博客" class="headerlink" title="Hexo零基础搭建个人博客"></a>Hexo零基础搭建个人博客</h3><p>Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress<br>插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有<br>数百个主题和插件。</p>
+<h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>1、安装Node.js<br>直接到官网上下载安装即可<a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<p>Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)<br>Node自带npm<br>2、安装Git<br>Windows：下载并安装 <a href="https://git-scm.com/download/win">git</a>.<br>Mac：使用 Homebrew, <a href="https://www.macports.org/">MacPorts</a> 或者下载 安装程序。<br>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code><br>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.png"></p>
+<p>npm下载慢的话也可以下载淘宝下载源cnpm</p>
+<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<h4 id="二、开始安装Hexo"><a href="#二、开始安装Hexo" class="headerlink" title="二、开始安装Hexo"></a>二、开始安装Hexo</h4><p>1、安装hexo(cd进入到你要创立博客的文件内)<br><code>npm install -g hexo-cli</code><br><code>或者</code><br><code>cnpm install -g hexo-cli</code><br>安装完成可输入hexo -v查看版本</p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/2.png"></p>
+<p>2、初始化hexo，新建存储博客的文件夹<br><code>hexo init myblog</code></p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/3.png"></p>
+<p>3、进入文件夹，安装一下npm<br>cd myblog<br>npm install<br>可以看到我们的hexo站点就已经安装好了，接下来就可以直接启动他了</p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/4.png"></p>
+<p>4、启动服务站点<br><code>hexo g</code><br><code>hexo server</code></p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/5.png"></p>
+<p>访问<a href="http://localhost:4000/">http://localhost:4000/</a> 至此hero就搭建好了。可以在本地访问了</p>
+<h4 id="三、Gitee上建站访问"><a href="#三、Gitee上建站访问" class="headerlink" title="三、Gitee上建站访问"></a>三、Gitee上建站访问</h4><p>可在github或者gitee上建站，gitee国内访问快一些</p>
+<p>1、新建仓库<br>仓库名和路径格式必须是：用户名 只有这样，将来要部署到Gite e page的时候，才会被识别.</p>
+<p>2、将hexo博客站点上传到gitee上<br>这里需要安装一个hexo的上传插件deploy-git</p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>3、修改hexo配置文件指定仓库路径<br>可在文件夹中直接打开文件，也可通过vim直接编辑</p>
+<p>找到Deployment加上（注意空格）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: 你的仓库路径</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/7.png"></p>
+<p>在URL中找到url地址改为<a href="https://gitee.com/XXX/XXX.git">https://gitee.com/XXX/XXX.git</a>     XXX为你的用户名</p>
+<p>在url 下面添加 <code>root: ./XXX</code>     XXX为你的用户名</p>
+<p>4、推送hexo站点文件<br>之后就可以推送博客站点到gitee上了</p>
+<p>推送命令<br><code>hexo d</code><br>扩展：</p>
+<p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
+<p>推送中会要求输入gitee的用户名和密码（如果不想每次都输可以<a href="/2022/08/18/%E9%85%8D%E7%BD%AEssh/" title="配置ssh">配置ssh</a>，我这里就不做演示了）</p>
+<p>然后就可以看到gitee上有推上来的文件了</p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/8.png"></p>
+<p>5、配置Pages服务<br>目前我们站点还无法访问需要开启Gitee Pages（gitee需要开启，github不需要）</p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/9.png"></p>
+<p>审核通过启动我们就可以访问啦。</p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/10.png"></p>
+<p>gitee上传新文件之后，需要手动更新一下，更新后的页面才会生效</p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png"></p>
+<p>多说一句：如果觉得这个访问路径太长了，我们可以去买一个域名，将该路径绑定到域名上，即可通过域名访问了。</p>
+<h4 id="四、GitHub上建站访问"><a href="#四、GitHub上建站访问" class="headerlink" title="四、GitHub上建站访问"></a>四、GitHub上建站访问</h4><p>在gitee上建站发现有限制条件，所有也可以采用github建站的方式。</p>
+<p>步骤和gitee一样。</p>
+<p>1、新建guthub仓库<br>仓库名称限制了为你的：用户名+.github.io</p>
+<p>2、安装hexo上传插件<br><code>npm install hexo-deployer-git --save</code><br>3、修改hexo配置文件指定仓库路径<br>可在文件夹中直接打开文件，也可通过vim直接编辑</p>
+<p><code>vim _config.yml #找到Deploymentdeploy:  type: git  repo: 你的github仓库路径  branch: master</code><br><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/12.png"></p>
+<p>4、推送站点到github<br><code>推送命令hexo d</code><br>推送过程中需要输入你的github用户名和密码。但是在2021年8月14日开始github官方就加强安全访问。不能通过原有账号密码git访问，密码需要用官方的token或者采用ssh公私钥访问。否则会出现鉴权失败（用户名密码错误）</p>
+<p>解决方式就是获取token，登录github设置setting-&gt;Developer Settings-&gt;Prosonal access tokens 创建一个新token。然后就可以拿这个token当密码输入了。用户名和token输入后，上传成功。</p>
+<p>建议使用<a href="/2022/08/18/%E9%85%8D%E7%BD%AEssh/" title="配置ssh">配置ssh</a></p>
+<h4 id="5、尝试访问"><a href="#5、尝试访问" class="headerlink" title="5、尝试访问"></a>5、尝试访问</h4><p>输入你的仓库名称,即可访问成功。</p>
+<p><a href="https://xxx.github.io/">https://XXX.github.io/</a></p>
+<h4 id="五、更换主题"><a href="#五、更换主题" class="headerlink" title="五、更换主题"></a>五、更换主题</h4><p>到GitHub上搜索hexo主题或者hero自带的主题<a href="https://hexo.io/themes/%E3%80%82">https://hexo.io/themes/。</a></p>
+<p>1、找一个喜欢的。</p>
+<p>按照各自的主题文档上面一步步操作即可。</p>
+<p>一般步骤：</p>
+<p>1、下载解压2、放到主题包themes文件夹下面3、在hero配置文件_config.yml中修改为喜欢主题的名字4、hero server启动即可访问</p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/13.png"></p>
+<h4 id="六、更新仓库"><a href="#六、更新仓库" class="headerlink" title="六、更新仓库"></a>六、更新仓库</h4><p>本地调试完之后。就可以更新到github上了</p>
+<p>//清理hexo clean//构建静态文件hexo g//上传至仓库hexo d</p>
+<h4 id="七、写文章"><a href="#七、写文章" class="headerlink" title="七、写文章"></a>七、写文章</h4><p>在站点文件夹中打开 git ，输入hexo new 博客名称。hexo会在source文件夹下_posts的创建一个markdowm的文件。这就是你要编写的文章。</p>
+<p>在上传更新到github上立马能够查看到。</p>
+<p>//清理hexo clean//构建静态文件hexo g//上传至仓库(上传报错多位网络原因，多上传几次即可)hexo d</p>
+<p>草稿箱<br>很多时候我们需要先写成草稿，而暂时不发布出去。draft page就可以满足我们的要求，我们的网站上是看不到草稿文件的。</p>
+<p>//新建草稿文件hexo new draft b//预览草稿文件hexo server –draft//发布草稿hexo publish b</p>
+<h4 id="八、新建页面"><a href="#八、新建页面" class="headerlink" title="八、新建页面"></a>八、新建页面</h4><p>有时我们不满足主题自由的一些页面，希望自己添加一些页面。</p>
+<p>我们可以新建页面,新建页面则会在hexo的source中新建该页面文件并生成md文件，这就是你要编辑的博客页了。</p>
+<p><code>hexo new page &quot;resouces&quot;</code></p>
+<p>然后打开主题的配置文件_config.yml，在菜单属性menu中的添加如下（注意不是Hexo的配置文件）</p>
+<p>将页面路径联接到页面上去</p>
+<p>菜单自定义名称：/生成的页面名称</p>
+<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/14.png"></p>
+<p>当我们点击资源时后会跳转到我们自定义的博客页了</p>
+<h4 id="九、常见问题"><a href="#九、常见问题" class="headerlink" title="九、常见问题"></a>九、常见问题</h4><h5 id="1-文章插入图片"><a href="#1-文章插入图片" class="headerlink" title="1.文章插入图片"></a>1.文章插入图片</h5><p>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true<br>安装插件:<code>npm install https://github.com/CodeFalling/hexo-asset-image -- save</code><br>运行hexo n “XXXXXX”,生成XXXXX.md博文时就会在/source/_posts目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。<br>添加图片:在想添加的位置写入<code>![](图片名字),例如![](1.png)</code>。</p>
+<h5 id="2-文章内跳转另一篇文章"><a href="#2-文章内跳转另一篇文章" class="headerlink" title="2.文章内跳转另一篇文章"></a>2.文章内跳转另一篇文章</h5><p><code>&#123;%post_link 文章名称(不加后缀) 显示文字%&#125;</code></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>运行命令</title>
+    <url>/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="win-r"><a href="#win-r" class="headerlink" title="win + r"></a>win + r</h1><p>gpedit.msc 本地组策略编辑器</p>
+<p>regedit 注册表编辑器</p>
+<p>shell：文件夹   打开</p>
+<p>msconfig 系统配置</p>
+<p>cmd 终端</p>
+<p>services.msc  本地服务</p>
+]]></content>
+      <categories>
+        <category>windows运行</category>
+      </categories>
+      <tags>
+        <tag>命令</tag>
       </tags>
   </entry>
   <entry>
@@ -1578,106 +1647,6 @@
       </categories>
       <tags>
         <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>运行命令</title>
-    <url>/2022/08/15/%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="win-r"><a href="#win-r" class="headerlink" title="win + r"></a>win + r</h1><p>gpedit.msc 本地组策略编辑器</p>
-<p>regedit 注册表编辑器</p>
-<p>shell：文件夹   打开</p>
-<p>msconfig 系统配置</p>
-<p>cmd 终端</p>
-<p>services.msc  本地服务</p>
-]]></content>
-      <categories>
-        <category>windows运行</category>
-      </categories>
-      <tags>
-        <tag>命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建</title>
-    <url>/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h3 id="Hexo零基础搭建个人博客"><a href="#Hexo零基础搭建个人博客" class="headerlink" title="Hexo零基础搭建个人博客"></a>Hexo零基础搭建个人博客</h3><p>Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress<br>插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有<br>数百个主题和插件。</p>
-<h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>1、安装Node.js<br>直接到官网上下载安装即可<a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
-<p>Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)<br>Node自带npm<br>2、安装Git<br>Windows：下载并安装 <a href="https://git-scm.com/download/win">git</a>.<br>Mac：使用 Homebrew, <a href="https://www.macports.org/">MacPorts</a> 或者下载 安装程序。<br>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code><br>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.png"></p>
-<p>npm下载慢的话也可以下载淘宝下载源cnpm</p>
-<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
-<h4 id="二、开始安装Hexo"><a href="#二、开始安装Hexo" class="headerlink" title="二、开始安装Hexo"></a>二、开始安装Hexo</h4><p>1、安装hexo(cd进入到你要创立博客的文件内)<br><code>npm install -g hexo-cli</code><br><code>或者</code><br><code>cnpm install -g hexo-cli</code><br>安装完成可输入hexo -v查看版本</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/2.png"></p>
-<p>2、初始化hexo，新建存储博客的文件夹<br><code>hexo init myblog</code></p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/3.png"></p>
-<p>3、进入文件夹，安装一下npm<br>cd myblog<br>npm install<br>可以看到我们的hexo站点就已经安装好了，接下来就可以直接启动他了</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/4.png"></p>
-<p>4、启动服务站点<br><code>hexo g</code><br><code>hexo server</code></p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/5.png"></p>
-<p>访问<a href="http://localhost:4000/">http://localhost:4000/</a> 至此hero就搭建好了。可以在本地访问了</p>
-<h4 id="三、Gitee上建站访问"><a href="#三、Gitee上建站访问" class="headerlink" title="三、Gitee上建站访问"></a>三、Gitee上建站访问</h4><p>可在github或者gitee上建站，gitee国内访问快一些</p>
-<p>1、新建仓库<br>仓库名和路径格式必须是：用户名 只有这样，将来要部署到Gite e page的时候，才会被识别.</p>
-<p>2、将hexo博客站点上传到gitee上<br>这里需要安装一个hexo的上传插件deploy-git</p>
-<p><code>npm install hexo-deployer-git --save</code></p>
-<p>3、修改hexo配置文件指定仓库路径<br>可在文件夹中直接打开文件，也可通过vim直接编辑</p>
-<p>找到Deployment加上（注意空格）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: 你的仓库路径</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/7.png"></p>
-<p>在URL中找到url地址改为<a href="https://gitee.com/XXX/XXX.git">https://gitee.com/XXX/XXX.git</a>     XXX为你的用户名</p>
-<p>在url 下面添加 <code>root: ./XXX</code>     XXX为你的用户名</p>
-<p>4、推送hexo站点文件<br>之后就可以推送博客站点到gitee上了</p>
-<p>推送命令<br><code>hexo d</code><br>扩展：</p>
-<p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
-<p>推送中会要求输入gitee的用户名和密码（如果不想每次都输可以<a href="/2022/08/18/%E9%85%8D%E7%BD%AEssh/" title="配置ssh">配置ssh</a>，我这里就不做演示了）</p>
-<p>然后就可以看到gitee上有推上来的文件了</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/8.png"></p>
-<p>5、配置Pages服务<br>目前我们站点还无法访问需要开启Gitee Pages（gitee需要开启，github不需要）</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/9.png"></p>
-<p>审核通过启动我们就可以访问啦。</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/10.png"></p>
-<p>gitee上传新文件之后，需要手动更新一下，更新后的页面才会生效</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png"></p>
-<p>多说一句：如果觉得这个访问路径太长了，我们可以去买一个域名，将该路径绑定到域名上，即可通过域名访问了。</p>
-<h4 id="四、GitHub上建站访问"><a href="#四、GitHub上建站访问" class="headerlink" title="四、GitHub上建站访问"></a>四、GitHub上建站访问</h4><p>在gitee上建站发现有限制条件，所有也可以采用github建站的方式。</p>
-<p>步骤和gitee一样。</p>
-<p>1、新建guthub仓库<br>仓库名称限制了为你的：用户名+.github.io</p>
-<p>2、安装hexo上传插件<br><code>npm install hexo-deployer-git --save</code><br>3、修改hexo配置文件指定仓库路径<br>可在文件夹中直接打开文件，也可通过vim直接编辑</p>
-<p><code>vim _config.yml #找到Deploymentdeploy:  type: git  repo: 你的github仓库路径  branch: master</code><br><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/12.png"></p>
-<p>4、推送站点到github<br><code>推送命令hexo d</code><br>推送过程中需要输入你的github用户名和密码。但是在2021年8月14日开始github官方就加强安全访问。不能通过原有账号密码git访问，密码需要用官方的token或者采用ssh公私钥访问。否则会出现鉴权失败（用户名密码错误）</p>
-<p>解决方式就是获取token，登录github设置setting-&gt;Developer Settings-&gt;Prosonal access tokens 创建一个新token。然后就可以拿这个token当密码输入了。用户名和token输入后，上传成功。</p>
-<p>建议使用<a href="/2022/08/18/%E9%85%8D%E7%BD%AEssh/" title="配置ssh">配置ssh</a></p>
-<h4 id="5、尝试访问"><a href="#5、尝试访问" class="headerlink" title="5、尝试访问"></a>5、尝试访问</h4><p>输入你的仓库名称,即可访问成功。</p>
-<p><a href="https://xxx.github.io/">https://XXX.github.io/</a></p>
-<h4 id="五、更换主题"><a href="#五、更换主题" class="headerlink" title="五、更换主题"></a>五、更换主题</h4><p>到GitHub上搜索hexo主题或者hero自带的主题<a href="https://hexo.io/themes/%E3%80%82">https://hexo.io/themes/。</a></p>
-<p>1、找一个喜欢的。</p>
-<p>按照各自的主题文档上面一步步操作即可。</p>
-<p>一般步骤：</p>
-<p>1、下载解压2、放到主题包themes文件夹下面3、在hero配置文件_config.yml中修改为喜欢主题的名字4、hero server启动即可访问</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/13.png"></p>
-<h4 id="六、更新仓库"><a href="#六、更新仓库" class="headerlink" title="六、更新仓库"></a>六、更新仓库</h4><p>本地调试完之后。就可以更新到github上了</p>
-<p>//清理hexo clean//构建静态文件hexo g//上传至仓库hexo d</p>
-<h4 id="七、写文章"><a href="#七、写文章" class="headerlink" title="七、写文章"></a>七、写文章</h4><p>在站点文件夹中打开 git ，输入hexo new 博客名称。hexo会在source文件夹下_posts的创建一个markdowm的文件。这就是你要编写的文章。</p>
-<p>在上传更新到github上立马能够查看到。</p>
-<p>//清理hexo clean//构建静态文件hexo g//上传至仓库(上传报错多位网络原因，多上传几次即可)hexo d</p>
-<p>草稿箱<br>很多时候我们需要先写成草稿，而暂时不发布出去。draft page就可以满足我们的要求，我们的网站上是看不到草稿文件的。</p>
-<p>//新建草稿文件hexo new draft b//预览草稿文件hexo server –draft//发布草稿hexo publish b</p>
-<h4 id="八、新建页面"><a href="#八、新建页面" class="headerlink" title="八、新建页面"></a>八、新建页面</h4><p>有时我们不满足主题自由的一些页面，希望自己添加一些页面。</p>
-<p>我们可以新建页面,新建页面则会在hexo的source中新建该页面文件并生成md文件，这就是你要编辑的博客页了。</p>
-<p><code>hexo new page &quot;resouces&quot;</code></p>
-<p>然后打开主题的配置文件_config.yml，在菜单属性menu中的添加如下（注意不是Hexo的配置文件）</p>
-<p>将页面路径联接到页面上去</p>
-<p>菜单自定义名称：/生成的页面名称</p>
-<p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/14.png"></p>
-<p>当我们点击资源时后会跳转到我们自定义的博客页了</p>
-<h4 id="九、常见问题"><a href="#九、常见问题" class="headerlink" title="九、常见问题"></a>九、常见问题</h4><h5 id="1-文章插入图片"><a href="#1-文章插入图片" class="headerlink" title="1.文章插入图片"></a>1.文章插入图片</h5><p>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true<br>安装插件:<code>npm install https://github.com/CodeFalling/hexo-asset-image -- save</code><br>运行hexo n “XXXXXX”,生成XXXXX.md博文时就会在/source/_posts目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。<br>添加图片:在想添加的位置写入<code>![](图片名字),例如![](1.png)</code>。</p>
-<h5 id="2-文章内跳转另一篇文章"><a href="#2-文章内跳转另一篇文章" class="headerlink" title="2.文章内跳转另一篇文章"></a>2.文章内跳转另一篇文章</h5><p><code>&#123;%post_link 文章名称(不加后缀) 显示文字%&#125;</code></p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>搭建</tag>
       </tags>
   </entry>
   <entry>
