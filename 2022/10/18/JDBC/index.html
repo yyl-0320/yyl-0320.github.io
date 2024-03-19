@@ -193,7 +193,7 @@ J,"/>
 
 <h3 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h3><p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
 <p>简单来说简化jdbc开发步骤</p>
-<h4 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h4><p><img src="/2022/10/18/JDBC/myblog\source_posts\JDBC\Snipaste_2022-10-20_20-02-10.png"></p>
+<h4 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h4><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_20-02-10.png"></p>
 <h5 id="1-创建user表-添加数据"><a href="#1-创建user表-添加数据" class="headerlink" title="1.创建user表,添加数据"></a>1.创建user表,添加数据</h5><p>在数据库中创建相应的表,添加数据</p>
 <h5 id="2-创建模块-导入坐标"><a href="#2-创建模块-导入坐标" class="headerlink" title="2.创建模块,导入坐标"></a>2.创建模块,导入坐标</h5><p>在idea中创建模块</p>
 <p><a target="_blank" rel="noopener" href="https://mybatis.net.cn/">mybatis官网</a>有maven导入坐标的代码</p>
@@ -216,12 +216,12 @@ J,"/>
 
 <p>(5)释放资源</p>
 <p>sqlSession.close();</p>
-<p><img src="/2022/10/18/JDBC/myblog\source_posts\JDBC\Snipaste_2022-10-20_20-52-46.png"></p>
-<h4 id="mapper代理"><a href="#mapper代理" class="headerlink" title="mapper代理"></a>mapper代理</h4><h5 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h5><p><img src="/2022/10/18/JDBC/myblog\source_posts\JDBC\Snipaste_2022-10-20_21-06-02.png"></p>
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_20-52-46.png"></p>
+<h4 id="mapper代理"><a href="#mapper代理" class="headerlink" title="mapper代理"></a>mapper代理</h4><h5 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-06-02.png"></p>
 <h5 id="1-定义接口"><a href="#1-定义接口" class="headerlink" title="1.定义接口"></a>1.定义接口</h5><p>定义与SQL映射文件同名的Mapper接口，并且将Mapper接口和SQL映射文件放置在同一目录下</p>
 <p>在resources中新建directory 命名为将mapper接口的命名中的’.’改为’/‘</p>
-<p><img src="/2022/10/18/JDBC/myblog\source_posts\JDBC\Snipaste_2022-10-20_21-16-10.png"></p>
-<h5 id="2-设置namespace"><a href="#2-设置namespace" class="headerlink" title="2.设置namespace"></a>2.设置namespace<img src="/2022/10/18/JDBC/myblog\source_posts\JDBC\Snipaste_2022-10-20_21-25-02.png"></h5><p>设置SQL映射文件的namespace,属性为Mapper接口全限定名</p>
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-16-10.png"></p>
+<h5 id="2-设置namespace"><a href="#2-设置namespace" class="headerlink" title="2.设置namespace"></a>2.设置namespace<img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-25-02.png"></h5><p>设置SQL映射文件的namespace,属性为Mapper接口全限定名</p>
 <p>以上图为例则为 com.itheima.mapper.UserMapper</p>
 <h5 id="3-定义mapper方法"><a href="#3-定义mapper方法" class="headerlink" title="3.定义mapper方法"></a>3.定义mapper方法</h5><p>在Mapper接口中定义方法，方法名就是SQL映射文件中sql语句的id,并保持参数类型和返回值类型一致</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List &lt;pojo类名&gt; selectid();</span><br></pre></td></tr></table></figure>
@@ -238,14 +238,14 @@ J,"/>
 <h4 id="sql语句"><a href="#sql语句" class="headerlink" title="sql语句"></a>sql语句</h4><h5 id="字段名对应实体属性"><a href="#字段名对应实体属性" class="headerlink" title="字段名对应实体属性"></a>字段名对应实体属性</h5><p>数据库表的字段名称和实体类的属性名称不一样，则不能自动封装数据<br>*起别名：对不一样的列名起别名，让别名和实体类的属性名一样<br>*缺点：每次查询都要定义一次别名<br>*sqL片段<br>*缺点：不灵活<br>resultMap:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.定义&lt;resultMap&gt;标签</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2022/10/18/JDBC/myblog\source_posts\JDBC\Snipaste_2022-10-20_21-47-38.png"></p>
+<p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-20_21-47-38.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2.在&lt;select&gt;标签中，使用resultMap属性替换resultType属性</span><br><span class="line">  &lt;select id=&quot;selectid&quot; resultMap=&quot;#id名&quot;&gt;  //id是唯一标识   Blog是返回的类型(pojo类名)</span><br><span class="line">    select * from Blog where id = #&#123;id&#125;  ;</span><br><span class="line">  &lt;/select&gt;</span><br></pre></td></tr></table></figure>
 
 
 
 <h5 id="参数占位符："><a href="#参数占位符：" class="headerlink" title="参数占位符："></a>参数占位符：</h5><p>1):执行SQL时，会将#{}占位符替换为？，将来自动设置参数值(在方法参数名前加上  @Param(“占位符”‘))<br>2)${}:拼SQL。会存在SQL注入问题<br>3.使用时机：<br>*参数传递，都使用#{}<br>*如果要对表名、列名进行动态设置，只能使用${}进行sql拼接。<br>2.parameterType:<br>*用于设置参数类型，该参数可以省略<br>3.SQL语句中特殊字符处理：<br>*转义字符<br>*&lt;[CDATA【内容】&gt;</p>
 <h5 id="SQL语句设置多个参数三种方式"><a href="#SQL语句设置多个参数三种方式" class="headerlink" title="SQL语句设置多个参数三种方式"></a>SQL语句设置多个参数三种方式</h5><p>1)散装参数：需要使用@Param(“SQL中的参数占位符名称”)<br>2)实体类封装参数<br>*只需要保证SQL中的参数名和实体类属性名对应上，即可设置成功<br>3)map集合<br>*只需要保证SQL中的参数名和map集合的键的名称对应上，即可设置成功</p>
-<h5 id="动态SQL"><a href="#动态SQL" class="headerlink" title="动态SQL"></a>动态SQL</h5><p>if:用于判断参数是否有值，使用test属性进行条件判断<br>*存在的问题：第一个条件不需要逻辑运算符<br>*解决方案：<br>1)使用恒等式让所有条件格式都一样<br>2)<where>标签替换where关键字</where></p>
+<h5 id="动态SQL"><a href="#动态SQL" class="headerlink" title="动态SQL"></a>动态SQL</h5><p>if:用于判断参数是否有值，使用test属性进行条件判断<br>*存在的问题：第一个条件不需要逻辑运算符<br>*解决方案：<br>1)使用恒等式让所有条件格式都一样<br>2)<where>标签替换where关键字</p>
 <p>·从多个条件中选择一个      choose(when,otherwise):选择，类似于Java中的switch语句</p>
 <h5 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;insert id=&quot;add&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;       inster标签  后面两个参数保证可以返回id</span><br><span class="line">    insert into website(name, domain,tags) VALUES</span><br><span class="line">(#&#123;name&#125;,#&#123;domain&#125;,#&#123;tags&#125;);</span><br><span class="line">&lt;/insert&gt;</span><br></pre></td></tr></table></figure>
 
@@ -253,8 +253,8 @@ J,"/>
 
 
 
-<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><p><img src="/2022/10/18/JDBC/myblog\source_posts\JDBC\Snipaste_2022-10-21_19-16-30.png"></p>
-<h5 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h5><p><img src="/2022/10/18/JDBC/myblog\source_posts\JDBC\Snipaste_2022-10-21_19-29-59.png"></p>
+<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-21_19-16-30.png"></p>
+<h5 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h5><p><img src="D:\myblog\source_posts\JDBC\Snipaste_2022-10-21_19-29-59.png"></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
