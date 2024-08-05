@@ -139,7 +139,7 @@
 <p>菜单自定义名称：/生成的页面名称</p>
 <p><img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/14.png"></p>
 <p>当我们点击资源时后会跳转到我们自定义的博客页了</p>
-<h4 id="九、常见问题"><a href="#九、常见问题" class="headerlink" title="九、常见问题"></a>九、常见问题</h4><h5 id="1-文章插入图片"><a href="#1-文章插入图片" class="headerlink" title="1.文章插入图片"></a>1.文章插入图片</h5><p>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true<br>安装插件:<code>npm install https://github.com/CodeFalling/hexo-asset-image -- save</code><br>运行hexo n “XXXXXX”,生成XXXXX.md博文时就会在/source/_posts目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。<br>添加图片:在想添加的位置写入<code>![](图片名字),例如![](1.png)</code>。</p>
+<h4 id="九、常见问题"><a href="#九、常见问题" class="headerlink" title="九、常见问题"></a>九、常见问题</h4><h5 id="1-文章插入图片"><a href="#1-文章插入图片" class="headerlink" title="1.文章插入图片"></a>1.文章插入图片</h5><p>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true<br><del>安装插件:`npm install <a target="_blank" rel="noopener" href="https://github.com/CodeFalling/hexo-asset-image">https://github.com/CodeFalling/hexo-asset-image</a> – save</del><code>(此为另一种方法，使用下列方法不要安装) 运行hexo n &quot;XXXXXX&quot;,生成XXXXX.md博文时就会在/source/_posts目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。 添加图片:在想添加的位置写入</code><img src="/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97">,例如<img src="/2022/08/14/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.png">`。</p>
 <h5 id="2-文章内跳转另一篇文章"><a href="#2-文章内跳转另一篇文章" class="headerlink" title="2.文章内跳转另一篇文章"></a>2.文章内跳转另一篇文章</h5><p><code>&#123;%post_link 文章名称(不加后缀) 显示文字%&#125;</code></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
