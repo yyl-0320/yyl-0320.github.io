@@ -2026,4 +2026,72 @@
         <tag>windows应用</tag>
       </tags>
   </entry>
+  <entry>
+    <title>HttpClient</title>
+    <url>/2024/08/06/HttpClient/</url>
+    <content><![CDATA[<p>HttpClient</p>
+<p>1.介绍</p>
+<p>HttpClient是Apache Jakarta Common 下的子项目，可以用来提供高效的，最新的，功能丰富的支持HTTP协议的客户端变成包，它支持HTTP协议最新的版本和建议。</p>
+<p>2.准备</p>
+<p>导入maven坐标httpclinent</p>
+<p>3.使用</p>
+<p>Get请求</p>
+<p>创建HttpClient对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">CloseableHttpClient</span> <span class="variable">httpClient</span> <span class="operator">=</span> HttpClients.createDefault();</span><br></pre></td></tr></table></figure>
+
+<p>创建Http请求对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">HttpGet httpGet - <span class="keyword">new</span> <span class="title class_">HttpGet</span>(url);</span><br></pre></td></tr></table></figure>
+
+<p>调用HttpClient的execute方法发送请求</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CloseableHttpResponse response = httpClient.execute(httpGet)</span><br></pre></td></tr></table></figure>
+
+<p>关闭资源</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">response.close();</span><br><span class="line">httpClient.close();</span><br></pre></td></tr></table></figure>
+
+<p>Post请求</p>
+<p>创建HttpClient对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">CloseableHttpClient</span> <span class="variable">httpClient</span> <span class="operator">=</span> HttpClients.createDefault();</span><br></pre></td></tr></table></figure>
+
+<p>创建Http请求对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HttpGet</span> <span class="variable">httpPost</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HttpPost</span>(url);</span><br><span class="line"><span class="type">StringEntity</span> <span class="variable">entity</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringEntity</span>(Json);</span><br><span class="line">entity.setContentEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">entity.setContentType(<span class="string">&quot;application/json&quot;</span>);</span><br><span class="line">httpPost.setEntity(entity);</span><br></pre></td></tr></table></figure>
+
+<p>调用HttpClient的execute方法发送请求</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CloseableHttpResponse response = httpClient.execute(httpGet)</span><br></pre></td></tr></table></figure>
+
+<p>关闭资源</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">response.close();</span><br><span class="line">httpClient.close();</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebSocket</title>
+    <url>/2024/08/06/WebSocket/</url>
+    <content><![CDATA[<p>1.介绍</p>
+<p>WebSocket是基于Tcp的一种新的网络协议，它实现了浏览器与服务器全双工通信，浏览器和服务器只需要完成一次握手，两者就可以建立持久型的链接，并实现双向的数据传输。</p>
+<p>2.Java实现WebSocket</p>
+<p>准备</p>
+<p>导入maven坐标websocket</p>
+<p>需要配置类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * WebSocket配置类，用于注册WebSocket的Bean</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebSocketConfiguration</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> ServerEndpointExporter <span class="title function_">serverEndpointExporter</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ServerEndpointExporter</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>实现</p>
+<p>用作链接的类需要加注解，@Component，@ServerEndpoint（”url”）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * WebSocket服务</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ServerEndpoint(&quot;/ws/&#123;sid&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebSocketServer</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//存放会话对象</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Session&gt; sessionMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 连接建立成功调用的方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@OnOpen</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onOpen</span><span class="params">(Session session, <span class="meta">@PathParam(&quot;sid&quot;)</span> String sid)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;客户端：&quot;</span> + sid + <span class="string">&quot;建立连接&quot;</span>);</span><br><span class="line">        sessionMap.put(sid, session);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 收到客户端消息后调用的方法</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> message 客户端发送过来的消息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@OnMessage</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onMessage</span><span class="params">(String message, <span class="meta">@PathParam(&quot;sid&quot;)</span> String sid)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;收到来自客户端：&quot;</span> + sid + <span class="string">&quot;的信息:&quot;</span> + message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 连接关闭调用的方法</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> sid</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@OnClose</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onClose</span><span class="params">(<span class="meta">@PathParam(&quot;sid&quot;)</span> String sid)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;连接断开:&quot;</span> + sid);</span><br><span class="line">        sessionMap.remove(sid);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 群发</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sendToAllClient</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        Collection&lt;Session&gt; sessions = sessionMap.values();</span><br><span class="line">        <span class="keyword">for</span> (Session session : sessions) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">//服务器向客户端发送消息</span></span><br><span class="line">                session.getBasicRemote().sendText(message);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
 </search>
