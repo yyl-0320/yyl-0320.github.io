@@ -10,7 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="yyl,"> 
-    
+    <meta name="description" content="Apache POI是一个处理Miscrosoft Office各种文件格式的开源项目。
+依赖：
+maven导入poi和poi-ooxml
+命令：
+1234567891011121314151617,"> 
     <meta name="author" content="yyl"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -19,7 +23,11 @@
     
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="Apache_POI - Hexo"/>
-    
+    <meta name="twitter:description" content="Apache POI是一个处理Miscrosoft Office各种文件格式的开源项目。
+依赖：
+maven导入poi和poi-ooxml
+命令：
+1234567891011121314151617,"/>
     
     
     
@@ -27,7 +35,11 @@
     <meta property="og:site_name" content="Hexo"/>
     <meta property="og:type" content="object"/>
     <meta property="og:title" content="Apache_POI - Hexo"/>
-    
+    <meta property="og:description" content="Apache POI是一个处理Miscrosoft Office各种文件格式的开源项目。
+依赖：
+maven导入poi和poi-ooxml
+命令：
+1234567891011121314151617,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -69,7 +81,13 @@
 
         </div>
         <div class="content markdown">
-            
+            <p>Apache POI是一个处理Miscrosoft Office各种文件格式的开源项目。</p>
+<p>依赖：</p>
+<p>maven导入poi和poi-ooxml</p>
+<p>命令：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">     <span class="comment">//写文件</span></span><br><span class="line"><span class="comment">//在内存中创建excel文件</span></span><br><span class="line">      <span class="type">XSSFWorkbook</span> <span class="variable">excel</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">XSSFWorkbook</span>();</span><br><span class="line">      <span class="comment">//在excel中创建Sheet页</span></span><br><span class="line">      <span class="type">XSSFSheet</span> <span class="variable">sheet</span> <span class="operator">=</span> excel.createSheet(<span class="string">&quot;info&quot;</span>);</span><br><span class="line">      <span class="comment">//在Sheet中创建第一行</span></span><br><span class="line">      <span class="type">XSSFRow</span> <span class="variable">row</span> <span class="operator">=</span> sheet.createRow(<span class="number">0</span>);</span><br><span class="line">      <span class="comment">//在第一行中创建第一格</span></span><br><span class="line">      row.createCell(<span class="number">0</span>).setCellValue(<span class="string">&quot;姓名&quot;</span>);</span><br><span class="line">      row.createCell(<span class="number">1</span>).setCellValue(<span class="string">&quot;城市&quot;</span>);</span><br><span class="line">      <span class="comment">//在第二行创建第一格</span></span><br><span class="line">      row = sheet.createRow(<span class="number">1</span>);</span><br><span class="line">      row.createCell(<span class="number">0</span>).setCellValue(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">      row.createCell(<span class="number">1</span>).setCellValue(<span class="string">&quot;北京&quot;</span>);</span><br><span class="line">      <span class="type">FileOutputStream</span> <span class="variable">out</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(<span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;D:\\info.xlsx&quot;</span>));</span><br><span class="line">      excel.write(out);</span><br><span class="line">      out.close();</span><br><span class="line">      excel.close();</span><br><span class="line"></span><br><span class="line"><span class="comment">//读取文件</span></span><br><span class="line">      <span class="type">FileInputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;D:\\info.xlsx&quot;</span>));</span><br><span class="line">      <span class="comment">//在内存中创建Excel文件</span></span><br><span class="line">      <span class="type">XSSFWorkbook</span> <span class="variable">excel</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">XSSFWorkbook</span>(inputStream);</span><br><span class="line">      <span class="comment">//读取Excel文件的数据的第一行</span></span><br><span class="line">      <span class="type">XSSFSheet</span> <span class="variable">xssfSheet</span> <span class="operator">=</span> excel.getSheetAt(<span class="number">0</span>);</span><br><span class="line">      <span class="comment">//获取Sheet中最后一行的序号</span></span><br><span class="line">      <span class="type">int</span> <span class="variable">lastRowNum</span> <span class="operator">=</span> xssfSheet.getLastRowNum();</span><br><span class="line">      <span class="comment">//循环读取每一行的每个单元格</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;=lastRowNum;i++)&#123;</span><br><span class="line">          <span class="type">XSSFRow</span> <span class="variable">row</span> <span class="operator">=</span> xssfSheet.getRow(i);</span><br><span class="line">          <span class="type">String</span> <span class="variable">cellValue1</span> <span class="operator">=</span> row.getCell(<span class="number">0</span>).getStringCellValue();</span><br><span class="line">          <span class="type">String</span> <span class="variable">cellValue2</span> <span class="operator">=</span> row.getCell(<span class="number">1</span>).getStringCellValue();</span><br><span class="line">          System.out.println(cellValue2+cellValue1);</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">      inputStream.close();</span><br><span class="line">      excel.close();</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
